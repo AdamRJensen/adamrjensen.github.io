@@ -1,9 +1,13 @@
 scipy
 numpy
 matplotlib
+seaborn
 pandas
+nilearn
 ipywidgets
 colorspacious
+makeitpop
+xarray
 myst_nb
 sphinx
 sphinx-panels
