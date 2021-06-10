@@ -260,3 +260,5 @@ blog_post_pattern = "posts/*"
 ogp_site_url = "https://adamrjensen.com"
 ogp_image = "https://adamrjensen.com/_static/profile.png"
 
+def setup(app):
+    app.add_css_file("custom.css")
