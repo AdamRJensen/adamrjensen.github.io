@@ -156,7 +156,7 @@ needs_sphinx = '1.2'
 extensions = [
     'myst_nb',
     'ablog',
-    'sphinxext.opengraph',
+    #'sphinxext.opengraph',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -253,6 +253,8 @@ html_sidebars = {
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 # html_show_copyright = True
+
+blog_post_pattern = "posts/*"
 
 # OpenGraph config
 ogp_site_url = "https://adamrjensen.com"
