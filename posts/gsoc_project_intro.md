@@ -5,6 +5,7 @@ tags: pvlib, solar, open science, gsoc
 ---
 
 # pvlib - a one stop source for solar resource data
+![gsoc and pvlib logo](/images/gsoc_at_pvlib.png)
 
 This title at least, represents the aim of my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project that I will be completing during the next two months. In short, I'll be extending [pvlib python’s](https://pvlib-python.readthedocs.io/en/stable/) current iotools functionalities to allow seamless access to all major open-source solar resource databases.
 
@@ -32,9 +33,10 @@ You can already check out some of the existing pvlib functions for retrieving da
 Also, if you know of a data source that I have not include, but probably should have, please do let me know!
 
 ## Google Summer of Code
-If you're wondering what exactly Google Summer of Code is, then I can promise I'll do a post on that in a few weeks time, when I know more myself. For now you can read the official project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
+So what is Google Summer of Code? It is essentially a then I can promise I'll do a post on that in a few weeks time, when I know more myself. For now you can read the official project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
 
 
+## What's next?
 
 
 
