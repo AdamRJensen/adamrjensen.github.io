@@ -86,7 +86,7 @@ html_sidebars = {
             ],
     }
 
-disqus_shortname = ' adamrjensen'
+disqus_shortname = 'adamrjensen'
 
 # -- Blog Feed Options --------------------------------------------------------
 
