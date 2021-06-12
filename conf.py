@@ -87,6 +87,8 @@ html_sidebars = {
             ],
     }
 
+disqus_shortname = ' adamrjensen-com.disqus.com'
+
 # -- Blog Feed Options --------------------------------------------------------
 
 # Turn feeds by setting :confval:`blog_baseurl` configuration variable.
