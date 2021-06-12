@@ -55,7 +55,7 @@ blog_baseurl = "http://adamrjensen.com/"
 
 # Number of seconds (default is ``5``) that a redirect page waits before
 # refreshing the page to redirect to the post.
-# post_redirect_refresh = 5
+post_redirect_refresh = 1
 
 # When ``True``, post title and excerpt is always taken from the section that
 # contains the :rst:dir:`post` directive, instead of the document. This is the
