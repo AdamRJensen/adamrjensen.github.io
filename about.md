@@ -1,4 +1,4 @@
-#About me
+# About me
 
 I’m a Ph.D. candidate at the Technical University of Denmark, working on modeling and assessing solar energy systems and solar resource assessment.
 
