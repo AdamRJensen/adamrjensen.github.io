@@ -11,11 +11,11 @@ This title at least, represents the aim of my [Google Summer of Code (GSoC)](htt
 
 And why would I do that you ask? Well first of all I am a bit of a solar geek, but more importantly, solar resource data is essential to every step, from the preliminary design stage (where accurate data is crucial to determine the profitability of a project) to post-project completion during plant operation (where solar resource assessment is used to forecast and verify system performance).
 
-While pvlib currently has capabilities for reading a number of different file formats and supports access to sources for solar resource data, the library currently only supports direct access to a few of the many available sources and only covers a limited part of the world, primarily focusing on North America.
+pvlib currently supports direct access to a few of the many available sources and only covers a limited part of the world, primarily focusing on North America.
 
 
 ## Data sources
-The aim of this project is to extend the current capabilities of the iotools within pvlib python, by developing harmonized access functions for all major open-source solar resource databases and filetypes, including:
+During the project I'llb be adding functions to the iotools within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):
 - [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/) 
 - [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
 - [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
@@ -24,7 +24,7 @@ The aim of this project is to extend the current capabilities of the iotools wit
 - [CAMS radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
 - [Climate One Building](http://climate.onebuilding.org/)
 
-Each of the above datasets have their own streths, and differs by geographical coverage, time resoultion, and accuracy.
+Each of the above datasets have their own streths, and differs by geographical coverage, time resoultion, and accuracy. But I'll cover this in more detail in a later blog post.
 
 ```{note}
 You can already check out some of the existing pvlib functions for retrieving data. For example, satellite derived solar irradiance and clear-sky data from [CAMS](https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_cams.html) and ground measurements from the [Solar Radiation Monitoring Laboratory (SRML) monitoring stations](https://pvlib-python.readthedocs.io/en/stable/generated/pvlib.iotools.read_srml_month_from_solardat.html#pvlib.iotools.read_srml_month_from_solardat).
