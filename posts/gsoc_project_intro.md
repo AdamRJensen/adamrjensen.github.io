@@ -7,7 +7,7 @@ tags: pvlib, solar, open science, gsoc
 # pvlib - a one stop source for solar resource data
 ![gsoc and pvlib logo](/images/gsoc_at_pvlib.png)
 
-This title at least, represents the aim of my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project that I will be completing during the next two months. In short, I'll be extending [pvlib python’s](https://pvlib-python.readthedocs.io/en/stable/) current iotools functionalities to allow seamless access to all major open-source solar resource databases.
+This title at least, represents the aim of my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project that I will be completing during the next 10 weeks. In short, I'll be extending [pvlib python’s](https://pvlib-python.readthedocs.io/en/stable/) current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
 
 And why would I do that you ask? Well first of all I am a bit of a solar geek, but more importantly, solar resource data is essential to every step, from the preliminary design stage (where accurate data is crucial to determine the profitability of a project) to post-project completion during plant operation (where solar resource assessment is used to forecast and verify system performance).
 
@@ -27,17 +27,21 @@ The aim of this project is to extend the current capabilities of the iotools wit
 Each of the above datasets have their own streths, and differs by geographical coverage, time resoultion, and accuracy.
 
 ```{note}
-You can already check out some of the existing pvlib functions for retrieving data. For example, satellite derived solar irradiance data from [NREL's National Solar Radiation Database (NSRDB)](https://pvlib-python.readthedocs.io/en/stable/generated/pvlib.iotools.get_psm3.html#pvlib.iotools.get_psm3) and ground measurements from the [Solar Radiation Monitoring Laboratory (SRML) monitoring stations](https://pvlib-python.readthedocs.io/en/stable/generated/pvlib.iotools.read_srml_month_from_solardat.html#pvlib.iotools.read_srml_month_from_solardat).
+You can already check out some of the existing pvlib functions for retrieving data. For example, satellite derived solar irradiance and clear-sky data from [CAMS](https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_cams.html) and ground measurements from the [Solar Radiation Monitoring Laboratory (SRML) monitoring stations](https://pvlib-python.readthedocs.io/en/stable/generated/pvlib.iotools.read_srml_month_from_solardat.html#pvlib.iotools.read_srml_month_from_solardat).
 ```
 
-Also, if you know of a data source that I have not include, but probably should have, please do let me know!
+If you think that I've missed any important open-source datasets, please let me know!
 
 ## Google Summer of Code
-So what is Google Summer of Code? It is essentially a then I can promise I'll do a post on that in a few weeks time, when I know more myself. For now you can read the official project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
+Google Summer of Code (GSoC) is a global program that aims at getting students writing actual code and taking active part in the open-source community. During the 10 week program, the organization provides a mentor that guides the student through the process.
 
+I'm very fortunate to have a phenomenal mentor, [Kevin Anderson](https://github.com/kanderso-nrel).
+
+For now you can read my official project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
 
 ## What's next?
+I just completed adding [CAMS support to pvlib python](https://github.com/pvlib/pvlib-python/pull/1175). CAMS provides satelitte derived solar radiation Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.
 
+Now I am working on writing tests for the functions I've written for retriving and reading hourly data from PVGIS.
 
-
-
+So stay tuned for more news on how you easily can get your hands on solar radiation data and leave comment below if you have any questions in getting started with retrieving CAMS data!
