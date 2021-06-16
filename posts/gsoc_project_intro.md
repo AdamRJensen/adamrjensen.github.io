@@ -21,9 +21,9 @@ During the project I'll be adding functions to the iotools within pvlib python, 
 - [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/) 
 - [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
 - [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
-- [PVIGS hourly data](https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation)
+- [PVGIS hourly data](https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation)
 - [CAMS McClear](http://www.soda-pro.com/web-services/radiation/cams-mcclear)
-- [CAMS radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
+- [CAMS Radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
 - [Climate One Building](http://climate.onebuilding.org/)
 
 Each of the above datasets have their own strengths and differs by geographical coverage, time resolution, and accuracy. If this sounds a bit overwhelming, fret not; this will be the topic of a later blog post.
@@ -35,15 +35,15 @@ You can already check out some of the existing pvlib functions for retrieving da
 If you think that I’ve missed any important open-source datasets, please let me know!
 
 ## Google Summer of Code
-You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with each project, but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students writing code and taking active part in one of the many open-source communities.
+You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project, but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students writing code and taking active part in the open-source community.
 
-During the 10 week program, the student is paired with a mentor from one of the pre-qualified organizations, who guides the student through the process. And this is where [Kevin](https://github.com/kanderso-nrel) comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s the reason why this project exists.
+During the 10 week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where [Kevin Anderson](https://github.com/kanderso-nrel) comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.
 
-If you're interested, you can read my official GSoC project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
+If you're interested, you can find my official GSoC project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
 
 ## What’s next?
 I just completed adding [CAMS support to pvlib python](https://github.com/pvlib/pvlib-python/pull/1175). CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.
 
 Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving and reading hourly data from PVGIS.
 
-So stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data!
+So stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data.
