@@ -204,7 +204,7 @@ html_theme = 'pydata_sphinx_theme'
 # documentation.
 html_theme_options = {
   "github_url": "https://github.com/adamrjensen/",
-  #"google_analytics_id": "",
+  "google_analytics_id": "UA-192349084-1",
   "navbar_end": ["navbar-icon-links.html", "search-field.html"],
   "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
 }
