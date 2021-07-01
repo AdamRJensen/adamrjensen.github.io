@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Adam R. Jensen"
+project = "Predictably Sunny"
 copyright = "2021, Adam R. Jensen"
 author = "Adam R. Jensen"
 
@@ -28,7 +28,7 @@ author = "Adam R. Jensen"
 blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = "Adam R. Jensen's Blog"
+blog_title = "Predictably Sunny"
 
 # Base URL for the website, required for generating feeds.
 blog_baseurl = "http://predictablysunny.com/"
