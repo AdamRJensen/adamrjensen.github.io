@@ -31,7 +31,7 @@ blog_path = 'blog'
 blog_title = "Adam R. Jensen's Blog"
 
 # Base URL for the website, required for generating feeds.
-blog_baseurl = "http://adamrjensen.com/"
+blog_baseurl = "http://predictablysunny.com/"
 
 # Choose to archive only post titles. Archiving only titles can speed
 # up project building.
@@ -258,8 +258,8 @@ html_sidebars = {
 blog_post_pattern = "posts/*"
 
 # OpenGraph config
-ogp_site_url = "https://adamrjensen.com"
-ogp_image = "https://adamrjensen.com/_static/profile.png"
+ogp_site_url = "https://predictablysunny.com"
+ogp_image = "https://predictablysunny.com/_static/profile.png"
 
 # Adds custom css templates, necessary for the custom "hello.html" template
 def setup(app):
