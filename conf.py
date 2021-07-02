@@ -47,7 +47,7 @@ blog_baseurl = "http://predictablysunny.com/"
 # Default is ``0``, meaning no image.  Setting this to ``1`` will include
 # the first image, when available, to the excerpt.  This option can be set
 # on a per post basis using :rst:dir:`post` directive option ``image``.
-post_auto_image = 1
+# post_auto_image = 0
 
 # Number of seconds (default is ``5``) that a redirect page waits before
 # refreshing the page to redirect to the post.
@@ -121,6 +121,10 @@ fontawesome_included = True
 # Disqus_ short name for the blog.
 disqus_shortname = 'adamrjensen'
 
+# -- OpenGraph config ---------------------------------------------------------
+ogp_site_url = "https://predictablysunny.com"
+ogp_image = "https://predictablysunny.com/_static/profile.jpg"
+
 # -- Sphinx Options -----------------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -129,9 +133,7 @@ disqus_shortname = 'adamrjensen'
 extensions = [
     'myst_nb',
     'ablog',
-    #'sphinxext.opengraph',
-    #'sphinxext.rediraffe',
-
+    'sphinxext.opengraph',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -197,10 +199,10 @@ html_sidebars = {
 
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-# html_show_sphinx = True
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-# html_show_copyright = True
+html_show_copyright = False
 
 blog_post_pattern = "posts/*"
 
