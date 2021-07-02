@@ -33,10 +33,6 @@ blog_title = "Predictably Sunny"
 # Base URL for the website, required for generating feeds.
 blog_baseurl = "http://predictablysunny.com/"
 
-# Choose to archive only post titles. Archiving only titles can speed
-# up project building.
-# blog_archive_titles = False
-
 # -- Blog Post Related --------------------------------------------------------
 
 # Format date for a post.
@@ -51,23 +47,11 @@ blog_baseurl = "http://predictablysunny.com/"
 # Default is ``0``, meaning no image.  Setting this to ``1`` will include
 # the first image, when available, to the excerpt.  This option can be set
 # on a per post basis using :rst:dir:`post` directive option ``image``.
-# post_auto_image = 0
+post_auto_image = 1
 
 # Number of seconds (default is ``5``) that a redirect page waits before
 # refreshing the page to redirect to the post.
 post_redirect_refresh = 1
-
-# When ``True``, post title and excerpt is always taken from the section that
-# contains the :rst:dir:`post` directive, instead of the document. This is the
-# behavior when :rst:dir:`post` is used multiple times in a document. Default
-# is ``False``.
-# post_always_section = False
-
-# When ``False``, the :rst:dir:`orphan` directive is not automatically set
-# for each post. Without this directive, Sphinx will warn about posts that
-# are not explicitly referenced via another document. :rst:dir:`orphan` can
-# be set on a per-post basis as well if this is false. Default is ``True``.
-# post_auto_orphan = True
 
 # -- ABlog Sidebars -------------------------------------------------------
 
@@ -85,8 +69,6 @@ html_sidebars = {
             #'searchbox.html',
             ],
     }
-
-disqus_shortname = 'adamrjensen'
 
 # -- Blog Feed Options --------------------------------------------------------
 
@@ -137,19 +119,9 @@ fontawesome_included = True
 
 # You can enable Disqus_ by setting ``disqus_shortname`` variable.
 # Disqus_ short name for the blog.
-# disqus_shortname = None
-
-# Choose to disqus pages that are not posts, default is ``False``.
-# disqus_pages = False
-
-# Choose to disqus posts that are drafts (without a published date),
-# default is ``False``.
-# disqus_drafts = False
+disqus_shortname = 'adamrjensen'
 
 # -- Sphinx Options -----------------------------------------------------------
-
-# If your project needs a minimal Sphinx version, state it here.
-needs_sphinx = '1.2'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -158,26 +130,15 @@ extensions = [
     'myst_nb',
     'ablog',
     #'sphinxext.opengraph',
+    #'sphinxext.rediraffe',
+
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
-# The suffix(es) of source filenames.
-# source_suffix = ".rst"
-
-# The encoding of source files.
-# source_encoding = 'utf-8-sig'
-
 # The master toctree document.
 master_doc = "index"
-
-
-# There are two options for replacing |today|: either, you set today to some
-# non-false value, then it is used:
-# today = ''
-# Else, today_fmt is used as the format for a strftime call.
-# today_fmt = '%%B %%d, %%Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -185,13 +146,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**/pandoc_ipynb/inputs/
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
-
-# A list of ignored prefixes for module index sorting.
-# modindex_common_prefix = []
-
-# If true, keep warnings as "system message" paragraphs in the built documents.
-# keep_warnings = False
-
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -209,13 +163,6 @@ html_theme_options = {
   "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
 }
 
-# The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
-# html_title = None
-
-# A shorter title for the navigation bar.  Default is the same as html_title.
-# html_short_title = None
-
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # html_logo = None
@@ -223,7 +170,7 @@ html_theme_options = {
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-# html_favicon = None
+html_favicon = '_static/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
