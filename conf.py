@@ -133,7 +133,7 @@ ogp_image = "https://predictablysunny.com/_static/profile.jpg"
 extensions = [
     'myst_nb',
     'ablog',
-    'sphinxext.opengraph',
+    #'sphinxext.opengraph',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -207,8 +207,8 @@ html_show_copyright = False
 blog_post_pattern = "posts/*"
 
 # OpenGraph config
-ogp_site_url = "https://predictablysunny.com"
-ogp_image = "https://predictablysunny.com/_static/profile.png"
+#ogp_site_url = "https://predictablysunny.com"
+#ogp_image = "https://predictablysunny.com/_static/profile.png"
 
 # Adds custom css templates, necessary for the custom "hello.html" template
 def setup(app):
