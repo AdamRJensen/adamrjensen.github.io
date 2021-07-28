@@ -2,7 +2,7 @@ scipy
 numpy
 matplotlib
 pandas
-myst_ynb
+myst_nb
 sphinx
 ablog
 sphinxcontrib-bibtex
