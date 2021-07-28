@@ -51,7 +51,7 @@ blog_baseurl = "http://predictablysunny.com/"
 
 # Number of seconds (default is ``5``) that a redirect page waits before
 # refreshing the page to redirect to the post.
-post_redirect_refresh = 1
+# post_redirect_refresh = 1
 
 # -- ABlog Sidebars -------------------------------------------------------
 
@@ -120,10 +120,6 @@ fontawesome_included = True
 # You can enable Disqus_ by setting ``disqus_shortname`` variable.
 # Disqus_ short name for the blog.
 disqus_shortname = 'adamrjensen'
-
-# -- OpenGraph config ---------------------------------------------------------
-ogp_site_url = "https://predictablysunny.com"
-ogp_image = "https://predictablysunny.com/_static/profile.jpg"
 
 # -- Sphinx Options -----------------------------------------------------------
 
@@ -199,10 +195,10 @@ html_sidebars = {
 
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
+# html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = False
+# html_show_copyright = False
 
 blog_post_pattern = "posts/*"
 
