@@ -6,5 +6,8 @@ myst_nb
 sphinx
 ablog
 sphinxcontrib-bibtex
+sphinxext-opengraph
+sphinx-panels
 pydata-sphinx-theme
 folium
+xarray
