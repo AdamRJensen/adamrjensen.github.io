@@ -1,10 +1,9 @@
----
-author: Adam R. Jensen
-date : 2021-06-10
-tags: pvlib, solar, open science, gsoc
----
-
 # pvlib - a one stop source for solar resource data
+```{post} 2021-06-10
+:author: Adam R. Jensen
+:tags: pvlib, solar, open science, gsoc
+```
+
 This title at least represents the aim of my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project that I will be completing during the next 10 weeks. In short, I’ll be extending [pvlib python’s](https://pvlib-python.readthedocs.io/en/stable/) current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
 ![gsoc and pvlib logo](/images/gsoc_at_pvlib.png)
 

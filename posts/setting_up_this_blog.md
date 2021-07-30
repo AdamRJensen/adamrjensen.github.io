@@ -1,5 +1,8 @@
 # Setting up this blog
-
+```{post}
+:author: Adam R. Jensen
+:tags: open science, gsoc
+```
 
 
 

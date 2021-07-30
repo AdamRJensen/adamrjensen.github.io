@@ -1,5 +1,8 @@
 # Data formats
-
+```{post} 2021-07-19
+:author: Adam R. Jensen
+:tags: pvlib, solar, open science, gsoc
+```
 
 Two of the most important considerations is what kind of data you want to include and who (what) should be able to read the files. At this day and age it is a requirement that the file is easily parsed by software, though often it is nice to also be human-readable
 
