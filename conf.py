@@ -36,7 +36,7 @@ blog_baseurl = "http://predictablysunny.com/"
 # -- Blog Post Related --------------------------------------------------------
 
 # Format date for a post.
-# post_date_format = '%%b %%d, %%Y'
+post_date_format = '%%-d %%n, %%Y'
 
 # Number of paragraphs (default is ``1``) that will be displayed as an excerpt
 # from the post. Setting this ``0`` will result in displaying no post excerpt
@@ -129,7 +129,7 @@ disqus_shortname = 'adamrjensen'
 extensions = [
     'myst_nb',
     'ablog',
-    #'sphinxext.opengraph',
+    'sphinxext.opengraph',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -203,8 +203,8 @@ html_sidebars = {
 blog_post_pattern = "posts/*"
 
 # OpenGraph config
-#ogp_site_url = "https://predictablysunny.com"
-#ogp_image = "https://predictablysunny.com/_static/profile.png"
+ogp_site_url = "https://predictablysunny.com"
+ogp_image = "https://predictablysunny.com/_static/profile.png"
 
 # Adds custom css templates, necessary for the custom "hello.html" template
 def setup(app):
