@@ -36,7 +36,7 @@ blog_baseurl = "http://predictablysunny.com/"
 # -- Blog Post Related --------------------------------------------------------
 
 # Format date for a post.
-post_date_format = '%%-d %%n, %%Y'
+post_date_format = '%%d %%n, %%Y'
 
 # Number of paragraphs (default is ``1``) that will be displayed as an excerpt
 # from the post. Setting this ``0`` will result in displaying no post excerpt
