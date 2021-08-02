@@ -11,3 +11,4 @@ sphinx-panels
 pydata-sphinx-theme
 folium
 xarray
+pvlib
