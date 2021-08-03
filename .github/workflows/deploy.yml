@@ -23,11 +23,6 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Export credentials
-      run: |
-        export BSRN_FTP_USERNAME=$(BSRN_FTP_USERNAME)
-        export BSRN_FTP_PASSWORD=$(BSRN_FTP_PASSWORD)
-
     # Build the book
     - name: Build the site
       run: |
