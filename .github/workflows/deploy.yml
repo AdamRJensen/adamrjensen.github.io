@@ -31,6 +31,8 @@ jobs:
     # Build the book
     - name: Build the site
       run: |
+        export BSRN_FTP_USERNAME=$(BSRN_FTP_USERNAME)
+        export BSRN_FTP_PASSWORD=$(BSRN_FTP_PASSWORD)
         make dirhtml
 
     # Push the book's HTML to github-pages
