@@ -23,6 +23,7 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - script: |
       export BSRN_FTP_USERNAME=$(BSRN_FTP_USERNAME)
       export BSRN_FTP_PASSWORD=$(BSRN_FTP_PASSWORD)
 
