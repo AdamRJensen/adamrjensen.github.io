@@ -16,7 +16,7 @@ The first step is to add the credentials to GitHub Secrets in your repository. T
 Here's what that looked like afterwards:
 ![github secrets example](/images/github_secrets.png)
 
-This step is, however, not sufficient as the variables also have to be exported during the environment build:
+This step is, however, not sufficient as the variables also have called in the workflow's `.yaml` file:
 
 ```python
     # Build the book
@@ -30,6 +30,7 @@ This step is, however, not sufficient as the variables also have to be exported 
 Once the enviroment variables have been set up correctly, they can simply be called in any script:
 
 ```python
+import os
 BSRN_USERNAME = os.environ['BSRN_FTP_USERNAME']
 BSRN_PASSWORD = os.environ['BSRN_FTP_PASSWORD']
 ```
