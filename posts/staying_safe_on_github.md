@@ -4,7 +4,7 @@
 :tags: open science, gsoc
 ```
 
-Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on services like GitHub for anyone to peruse. But what is the right thing to do?
+Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on services like GitHub for anyone to peruse. But what can you do?
 
 Storing your credentials as environment variables is one method of hiding your credentials while still being easy to use. Each environment variable has a name and an associated value, much like a dictionary. With GitHub, this can be achieved using GitHub Secrets - shhh, don’t tell anyone!
 
