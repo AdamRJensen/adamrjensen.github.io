@@ -24,7 +24,7 @@ After +200 hours behind the screen and keyboard, I have made 232 commits on GitH
 
 Perhaps the work that I am most proud of are the functions for accessing and reading BSRN data. The [BSRN](https://bsrn.awi.de/) is a global network of high-quality radiation measurement stations, which store their data in a notoriously archaic file format. Accessing BSRN data is now super easy and can be done in just a few lines of code:
 
-```{python}
+```python
 import pvlib
 import pandas as pd
 
@@ -64,4 +64,4 @@ If you are in doubt whether to participate due to time or other commitments, the
 ## Acknowledgements
 The true hero of this project is my mentor [Kevin Anderson](https://github.com/kanderso-nrel), who first encouraged me to apply for the program and devoted countless hours to this project. Kevin's passion was an inspiration throughout the entire project, and am incredible thankful for all the time he spent teaching me basic software concents, helping me debug when I got stuck, and fun discussions on non-related tangent topics (like the eating habbits of antlions).
 
-The pvlib maintainers, Will Holmgreen, Mark Mikofski, and Cliff Hansen, have also been of invaluable help through the project - reviewing my ever-improving code and discussing the future direction of pvlib. I'd also like to thank Google founders, Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.
+The pvlib maintainers, Will Holmgreen, Mark Mikofski, and Cliff Hansen, have also been of invaluable help through the project - reviewing my ever-improving code and discussing the future direction of pvlib. I'd also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.
