@@ -8,7 +8,7 @@ This tutorial will be on the topic of conda environments, though the general wor
 
     conda create -n env_name python=3.7
 
-where "env_name" is the chosen name for the new environment.
+where "env_name" is the chosen name for the new environment and 3.7 is the chosen Python version.
 
 Once, you have a virtual environment you first need to activate the specific environment (note it's possible to have many environments, so this is where you choose which one you want to use). This can be done using the following command:
 
@@ -26,7 +26,13 @@ Often times we create a new virtual environment to work on a specific package or
 
     conda install --file requirements.txt
 
-Of course you can still install a single package like you normally would by:
+When typing in this command, it's important to be in the directory where the file is located.
+
+Alternatively you can also use pip to install packages in your conda environment:
+
+    pip install -r requirements.txt
+
+You can of course still install a single package like you normally would by:
 
     conda install package_name
 
