@@ -6,19 +6,21 @@
 
 This tutorial will be on the topic of conda environments, though the general workflow is similar for other types of virtual environments.
 
+First, creating a virtual conda environment is quite easy. Simply open up an anaconda prompt and run the following command:
+
     conda create -n env_name python=3.7
 
-where "env_name" is the chosen name for the new environment and 3.7 is the chosen Python version.
+where "env_name" is the chosen name for the new environment and 3.7 is the desired Python version.
 
-Once, you have a virtual environment you first need to activate the specific environment (note it's possible to have many environments, so this is where you choose which one you want to use). This can be done using the following command:
+Once, you have created a virtual environment you need to activate the specific environment (note it's possible to have many environments, so this is where you choose which one you want to use). This can be done using the following command:
 
     conda activate env_name
 
-Once you get comfortable with virtual environments, you'll probably end up having a number of different ones for different projects. Here's how you can get a list of all of your virtual environments:
+When you realize how useful virtual environments can be, you’ll probably end up having a number of different ones for different projects. Here's how you can get a list of all of your virtual environments:
 
     conda env list
 
-Once your list of environments has become to long, you'll probably want to remove the environments you no longer use. To remove a virtual environment, simply open an Anaconda promt and type:
+Enventially you'll probably end up with a long list of environments, many of which have become obsolute as projects have ended. At this point you'll probably want to remove the environments you no longer use. To remove a virtual environment, simply open an Anaconda promt and type:
 
     conda env remove -n env_name
 
@@ -26,7 +28,7 @@ Often times we create a new virtual environment to work on a specific package or
 
     conda install --file requirements.txt
 
-When typing in this command, it's important to be in the directory where the file is located.
+It's important to be in the directory where the requirements.txt file is located when you run this command.
 
 Alternatively you can also use pip to install packages in your conda environment:
 
@@ -36,3 +38,6 @@ You can of course still install a single package like you normally would by:
 
     conda install package_name
 
+or
+
+    pip install package_name
