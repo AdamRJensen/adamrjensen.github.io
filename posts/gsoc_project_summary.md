@@ -12,13 +12,13 @@ Spoiler: it's been a huge success and I've learned much more than I imagined - a
 First let's go back and look at the project outline:
 
 > During the project I'll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):
-> - [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/)
-> - [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
-> - [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
-> - [PVGIS hourly data](https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation)
-> - [CAMS McClear](http://www.soda-pro.com/web-services/radiation/cams-mcclear)
-> - [CAMS Radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
-> - [~~Climate One Building~~](http://climate.onebuilding.org/)
+> * [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/)
+> * [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
+> * [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
+> * [PVGIS hourly data](https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation)
+> * [CAMS McClear](http://www.soda-pro.com/web-services/radiation/cams-mcclear)
+> * [CAMS Radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
+> * ~~[Climate One Building](http://climate.onebuilding.org/)~~
 
 After +200 hours behind the screen and keyboard, I had managed to write xx lines of code with yy commits on GitHub, resulting in file reading and data retrieval functions for all of the above data sources, with the expcetion of Climate One Data. After further researching Climate One Data, I concluded that for al almost all solar energy applications, better datasets exists, hence it would be unfavorable making access to the dataset easier as this could increase it's usage (which most likely would be undesirable).
 
