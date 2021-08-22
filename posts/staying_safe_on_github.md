@@ -4,7 +4,7 @@
 :tags: open science, gsoc
 ```
 
-Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on services like GitHub for anyone to peruse. But what can you do?
+Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?
 
 Storing your credentials as environment variables is one method of hiding your credentials while still being easy to use. Each environment variable has a name and an associated value, much like a dictionary. With GitHub, this can be achieved using GitHub Secrets - shhh, don’t tell anyone!
 
@@ -16,7 +16,7 @@ The first step is to add the credentials to GitHub Secrets in your repository. T
 Here's what that looked like afterward:
 ![github secrets example](/images/github_secrets.png)
 
-This step is, however, not sufficient as the variables also have to be called in the workflow's `.yaml` file:
+Once the GitHub Secrets have been set, they need to be exported as environment variables during the build step in the workflow's `.yaml` file:
 
 ```
     # Build the book
@@ -33,6 +33,6 @@ Once the enviroment variables have been set up correctly, they can simply be cal
 ```python
 import os
 BSRN_USERNAME = os.environ['BSRN_FTP_USERNAME']
-BSRN_PASSWORD = os.environ['BSRN_FTP_PASSWORD']
+BSRN_PASSWORD = os.environ.get('BSRN_FTP_PASSWORD')  # using .get returns None if the variable is not available
 ```
 and no one will be the wiser of your passwords!
