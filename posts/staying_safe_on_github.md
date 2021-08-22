@@ -18,7 +18,7 @@ Here's what that looked like afterward:
 
 This step is, however, not sufficient as the variables also have to be called in the workflow's `.yaml` file:
 
-```python
+```
     # Build the book
     - name: Build the site
       run: |
