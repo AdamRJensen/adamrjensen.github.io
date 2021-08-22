@@ -4,7 +4,7 @@
 :tags: open science, gsoc
 ```
 
-This tutorial will be on the topic of conda environments, though the general workflow is similar for other types of virtual environments.
+This cheat sheet will cover the basics of conda environments, though the general workflow is similar for other types of virtual environments.
 
 First, creating a virtual conda environment is quite easy. Simply open up an anaconda prompt and run the following command:
 
