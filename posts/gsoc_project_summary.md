@@ -56,7 +56,7 @@ First, I'd recommend that you check out the documentation of the functions, and 
 * MERRA-2: [pull](https://github.com/pvlib/pvlib-python/pull/1274)
 * Fix of iotools inconsistencies: [pull](https://github.com/pvlib/pvlib-python/pull/1268)
 
-I'm already planning on contributing to pvlib iotools in the future, possibly adding functionality for downloading files locally, as discussed in this PR [#1282](https://github.com/pvlib/pvlib-python/pull/1282).
+I'm already planning on contributing to pvlib iotools in the future, possibly adding functionality for downloading files locally, as discussed in [PR #1282](https://github.com/pvlib/pvlib-python/pull/1282).
 
 ## Recommendations to future GSoC students
 If you are a student and in doubt whether to participate due to time or other commitments, then do it anyway! There is absolutely no better way to learn software development than, well, just doing it. And when do you really have the chance to get a personal mentor? Almost never, so this is your chance to make something useful out of your summer, both for yourself and software users around the world.
@@ -64,4 +64,4 @@ If you are a student and in doubt whether to participate due to time or other co
 ## Acknowledgements
 The true hero of this project is my mentor [Kevin Anderson](https://github.com/kanderso-nrel), who first encouraged me to apply for the program and devoted countless hours to this project. Kevin's passion was an inspiration throughout the entire project, and am incredible thankful for all the time he spent teaching me basic software concents, helping me debug when I got stuck, and fun discussions on non-related tangent topics (like the eating habbits of antlions).
 
-The pvlib maintainers, Will Holmgreen, Mark Mikofski, and Cliff Hansen, have also been of invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I'd also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.
+The pvlib maintainers, Will Holmgren, Mark Mikofski, and Cliff Hansen, have also been of invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I'd also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.
