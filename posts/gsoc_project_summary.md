@@ -58,6 +58,11 @@ First, I'd recommend that you check out the documentation of the functions, and 
 
 I'm already planning on contributing to pvlib iotools in the future, possibly adding functionality for downloading files locally, as discussed in [PR #1282](https://github.com/pvlib/pvlib-python/pull/1282).
 
+## Lessons learned
+In the last two weeks of the program, I've found myself stumbling into tasks that were similar to what I did at the beginning of the program. The difference is that now I find solving the problems effortlessly, and I know how and why it works - truly a great feeling realizing that I’ve learned a ton and it's already useful.
+
+Now I'm first and foremost a scientist, and programming and software development are secondary interests, but I've been blown away by how many things there are for scientists to learn from the concepts of software development. And how open-source libraries can support a community of scientists, reducing each individual’s workload and have fully tested tools available. As I continue finishing my Ph.D. and starting my post-doc in the Spring, I hope to inspire others in my research community to use open-source tools and contribute to them, which I truly believe can result in better science for much less effort.
+
 ## Recommendations to future GSoC students
 If you are a student and in doubt whether to participate due to time or other commitments, then do it anyway! There is absolutely no better way to learn software development than, well, just doing it. And when do you really have the chance to get a personal mentor? Almost never, so this is your chance to make something useful out of your summer, both for yourself and software users around the world.
 
