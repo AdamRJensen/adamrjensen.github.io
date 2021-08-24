@@ -6,7 +6,7 @@
 
 This cheat sheet will cover the basics of conda environments, though the general workflow is similar for other types of virtual environments.
 
-First, creating a virtual conda environment is quite easy. Simply open up an anaconda prompt and run the following command:
+Creating a virtual conda environment is quite easy. Simply open up an anaconda prompt and run the following command:
 
     conda create -n env_name python=3.7
 
