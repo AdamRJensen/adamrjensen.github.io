@@ -24,3 +24,7 @@ Heres is some text
 
 | Starting with
 | a blank line
+
+
+~~strike out~~
+~strike one~
