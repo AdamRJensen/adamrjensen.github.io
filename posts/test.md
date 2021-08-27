@@ -1,4 +1,4 @@
-# Staying safe on GitHub
+# Test of quoting with myst
 ```{post} 1994-06-28
 :author: Adam R. Jensen
 ```
