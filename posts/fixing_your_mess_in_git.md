@@ -6,7 +6,7 @@
 
 On a day to day basis I use GitHub Desktop due to it's nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don't know how to fix it and sometimes I don't even know how I ended up there. At this point, I really just want to go back in time to when my code was working - and this exactly the topic of this blog post.
 
-My favorite way out of trouble is described in this [stackoverflow answer](https://stackoverflow.com/a/21718540/8558146). The method lets you revert everything back to the state of a previous commit in a safe way:
+My favorite way out of trouble is described in this [stackoverflow answer](https://stackoverflow.com/a/21718540/8558146). The method lets you revert everything back to the state of a previous commit (e.g., 0766c053) in a safe way:
 
 ```
 git revert --no-commit 0766c053..HEAD
