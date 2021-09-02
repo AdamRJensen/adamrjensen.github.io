@@ -9,7 +9,6 @@ sphinxcontrib-bibtex
 sphinxext-opengraph
 sphinx-panels
 pydata-sphinx-theme
-sphinx_book_theme
 folium
 xarray
 git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
