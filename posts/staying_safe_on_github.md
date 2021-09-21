@@ -19,11 +19,12 @@ Here's what that looked like afterward:
 Once the GitHub Secrets have been set, they need to be exported as environment variables during the build step in the workflow's `.yaml` file:
 
 ```
-    # Build the book
+    # Build the blog
     - name: Build the site
+      env:  # Set secret environment variables
+        BSRN_FTP_USERNAME: ${{ secrets.BSRN_FTP_USERNAME }}
+        BSRN_FTP_PASSWORD: ${{ secrets.BSRN_FTP_PASSWORD }}
       run: |
-        export BSRN_FTP_USERNAME=$(BSRN_FTP_USERNAME)
-        export BSRN_FTP_PASSWORD=$(BSRN_FTP_PASSWORD)
         make dirhtml
 ```
 
