@@ -41,3 +41,5 @@ You can, of course, still install a single package like you usually would by:
 or
 
     pip install package_name
+
+A good intro guide to virtual environments can be found at [astropy](https://docs.astropy.org/en/latest/development/workflow/virtual_pythons.html).
