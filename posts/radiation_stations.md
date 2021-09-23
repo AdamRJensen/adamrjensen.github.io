@@ -4,7 +4,7 @@
 :tags: solar, open science
 ```
 
-Ground measured solar irradiance is extremely valuable and critical to benchmarking solar radiation products and understanding long-term trends in the radiation budget. However, due to high costs and maintenance requirements, there are only a few hundred high-quality stations globally. Currently, it is difficult to identify the nearest solar radiation station as there is no good overview of the stations worldwide. This blog post addresses this issue by proposing a simple catalog/database of high-quality radiation stations.
+Ground measured solar irradiance is extremely valuable and critical for benchmarking solar radiation products and understanding long-term trends in the radiation budget. However, due to high costs and maintenance requirements, there are only a few hundred high-quality stations globally. Currently, it is difficult to identify the nearest solar radiation station as there is no good overview of the stations worldwide. This blog post addresses this issue by proposing a simple catalog/database of available high-quality radiation stations.
 
 
 ## Scope
@@ -13,10 +13,10 @@ First, it is important to determine the scope, most importantly, which type of s
 ### Tier 1 stations
 Tier 1 stations are defined as meet all of the following requirements:
 * measurement of direct normal irradiance (DNI) with a Class A thermopile pyrheliometer mounted on a solar tracker
-* measurement of diffuse horizontal irradiance (DHI) with a thermopile pyranometer shaded by a shading ball
-* measurement of global horizontal irradiance (GHI) with a Class A thermopile pyranometer
+* measurement of diffuse horizontal irradiance (DHI) with a Spectrally Flat Class A thermopile pyranometer shaded by a shading ball
+* measurement of global horizontal irradiance (GHI) with a Spectrally Flat Class A thermopile pyranometer
 
-Seperate measurement of GHI is required for Tier 1 stations as this allows for thoroughly quality control. The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
+Seperate measurement of GHI is required for Tier 1 stations as most quality control procedures relies on comparing the measured and calculated GHI (closure equation). The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
 
 ### Tier 2 stations
 Tier 2 stations are defined as those that do not meet the Tier 1 requirement but meet one of the following specifications:
@@ -24,9 +24,9 @@ Tier 2 stations are defined as those that do not meet the Tier 1 requirement but
 * Measures GHI and DHI using a rotating shading band pyranometer
 
 ### Non-qualifying stations
-Stations that measure DHI using a shadow band are not considered, as shadow bands have to be manually adjusted every few days and are notoriously unreliable.
+Stations that measure DHI using a shadow band are not considered, as such measurements are notoriously unreliable due to the shadow bands having to be manually adjusted every few days.
 
-## Basic station metadata
+## Station metadata
 The main part of the catalog is the list of stations and their metadata, including:
 * Latitude, longitude, and elevation (according to ISO format)
 * Years of operation
@@ -54,7 +54,7 @@ Also, it should be considered how we can pass on information concerning good and
 
 
 ## Implementation
-The catalog will be placed in a GitHub repository, allowing it to be continuously updated as stations close down or new stations become available. This means it'll be open-source and it's the aim that it will be supported by the solar research community.
+The catalog will be hosted in a GitHub repository, allowing it to be continuously updated as stations close down or new stations become available. This means it'll be open-source and it's the aim that it will be supported by the solar research community.
 
 The central part of this project will be a comma-separated text file (CSV) with a header line followed by lines of metadata for each station. While an Excel file would perhaps be more convenient, version control is not well supported for Excel files. However, an Excel file will be automatically generated from the CSV file every time this is updated; hence users will have the option of downloading either a .csv or .xlsx file.
 
@@ -62,7 +62,8 @@ The central part of this project will be a comma-separated text file (CSV) with 
 Also, an interactive map of all the stations will be made. This will allow users to conveniently find the station nearest to their point of interest and obtain the station name by clicking on the corresponding icon on the map.
 
 ## To do
-* Add license
 * Write acknowledgments of data providers
 * Should stations be organized by station name or country or a third criteria?
 * Should ventilation of pyranometers also be required for Tier 1 stations?
+* Allow class B instruments in Tier 2?
+* Define Tier 3 for completion (just GHI)?
