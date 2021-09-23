@@ -1,4 +1,4 @@
-# Fixing your mess in git
+# Fixing your git mess
 ```{post} 2021-08-27
 :author: Adam R. Jensen
 :tags: open science, gsoc
