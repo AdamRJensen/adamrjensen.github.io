@@ -4,7 +4,7 @@
 :tags: solar, open science
 ```
 
-Ground measured solar irradiance is extremely valuable and critical for benchmarking solar radiation products and understanding long-term trends in the radiation budget. However, due to high costs and maintenance requirements, there are only a few hundred high-quality stations globally. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.
+Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding long-term trends in the radiation budget. However, due to high costs and maintenance requirements, there are only a few hundred high-quality stations globally. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.
 
 ## Scope
 First, it is important to determine the scope, specifically which type of stations and parameters to include. As the focus is on high-quality stations, only stations that measure all three irradiance components are considered. Stations can be classified into two different categories: Tier 1 and Tier 2 stations.
