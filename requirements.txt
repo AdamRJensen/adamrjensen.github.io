@@ -12,4 +12,5 @@ pydata-sphinx-theme
 folium
 xarray
 cartopy
+cython  # cartopy dependency
 git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
