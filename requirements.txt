@@ -1,5 +1,5 @@
 scipy
-numpy>1.1
+numpy
 matplotlib
 pandas
 myst_nb
@@ -11,6 +11,4 @@ sphinx-panels
 pydata-sphinx-theme
 folium
 xarray
-cartopy
-cython>0.15.1  # cartopy dependency
 git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
