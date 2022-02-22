@@ -210,3 +210,7 @@ ogp_image = "https://predictablysunny.com/_static/profile.png"
 # Adds custom css templates, necessary for the custom "hello.html" template
 def setup(app):
     app.add_css_file("custom.css")
+
+#jupyter_execute_notebooks = "off"
+
+execution_excludepatterns = ['irradiance_maps.ipynb']
