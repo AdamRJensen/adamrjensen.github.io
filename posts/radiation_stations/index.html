@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+<meta property="og:title" content="Overview of solar radiation monitoring stations" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://predictablysunny.com/posts/radiation_stations/" />
+  
+<meta property="og:description" content="Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are ..." />
+  
+<meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
+  
+<meta property="og:image:alt" content="Overview of solar radiation monitoring stations" />
+  
+    <title>Overview of solar radiation monitoring stations &#8212; Predictably Sunny</title>
+    
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-192349084-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Predictably Sunny"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">Predictably Sunny</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/adamrjensen/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  23 September 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/adam-r-jensen/">Adam R. Jensen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/solar/">solar</a>   
+  <a href="../../blog/tag/open-science/">open science</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "adamrjensen"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/radiation_stations/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../dmi_data/"
+      >22 February - DMI API Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../irradiance_maps/"
+      >12 February - Satellite derived irradiance maps</a
+    >
+  </li>
+  
+  <li>
+    <a href="../fixing_your_git_mess/"
+      >27 August - Fixing your git mess</a
+    >
+  </li>
+  
+  <li>
+    <a href="../gsoc_project_summary/"
+      >22 August - Summary of Google Summer of Code with pvlib</a
+    >
+  </li>
+  
+  <li>
+    <a href="../staying_safe_on_github/"
+      >02 August - Staying safe on GitHub</a
+    >
+  </li>
+  
+</ul>
+
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tier-1-stations">
+     Tier 1 stations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tier-2-stations">
+     Tier 2 stations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-qualifying-stations">
+     Non-qualifying stations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#station-metadata">
+   Station metadata
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-metadata">
+     Additional metadata
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementation">
+   Implementation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#map-overview">
+     Map overview
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#to-do">
+   To do
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#have-done">
+     Have done
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="overview-of-solar-radiation-monitoring-stations">
+<h1>Overview of solar radiation monitoring stations<a class="headerlink" href="#overview-of-solar-radiation-monitoring-stations" title="Permalink to this headline">¶</a></h1>
+<p>Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are only a few hundred high-quality stations globally due to high costs and maintenance requirements. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog, I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.</p>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">¶</a></h2>
+<p>First, it is important to determine the scope, specifically which types of stations and parameters to include. As the focus is on high-quality stations, only stations that measure all three irradiance components are considered. High-quality stations can be classified into two different categories: Tier 1 and Tier 2 stations.</p>
+<section id="tier-1-stations">
+<h3>Tier 1 stations<a class="headerlink" href="#tier-1-stations" title="Permalink to this headline">¶</a></h3>
+<p>Tier 1 stations are defined as those that meet all of the following requirements:</p>
+<ul class="simple">
+<li><p>measurement of direct normal irradiance (DNI) with a Class A thermopile pyrheliometer mounted on a solar tracker</p></li>
+<li><p>measurement of diffuse horizontal irradiance (DHI) with a Spectrally Flat Class A thermopile pyranometer shaded by a shading ball</p></li>
+<li><p>measurement of global horizontal irradiance (GHI) with a Spectrally Flat Class A thermopile pyranometer</p></li>
+</ul>
+<p>Seperate measurement of GHI is required for Tier 1 stations as most quality control procedures relies on comparing the measured and calculated GHI (closure equation). The stations in the <a class="reference external" href="https://bsrn.awi.de/">BSRN</a> network are examples of Tier 1 stations.</p>
+</section>
+<section id="tier-2-stations">
+<h3>Tier 2 stations<a class="headerlink" href="#tier-2-stations" title="Permalink to this headline">¶</a></h3>
+<p>Tier 2 stations are defined as those that do not meet the Tier 1 requirements but meet one of the following specifications:</p>
+<ul class="simple">
+<li><p>Meets two of the three requirements of Tier 1 stations</p></li>
+<li><p>Measures GHI and DHI using a rotating shading band pyranometer</p></li>
+</ul>
+</section>
+<section id="non-qualifying-stations">
+<h3>Non-qualifying stations<a class="headerlink" href="#non-qualifying-stations" title="Permalink to this headline">¶</a></h3>
+<p>Stations that measure DHI using a shadow band are not considered, as such measurements are notoriously unreliable due to the shadow bands having to be manually adjusted every few days.</p>
+</section>
+</section>
+<section id="station-metadata">
+<h2>Station metadata<a class="headerlink" href="#station-metadata" title="Permalink to this headline">¶</a></h2>
+<p>The central part of the catalog is the list of stations and their metadata, including:</p>
+<ul class="simple">
+<li><p>Latitude, longitude, and elevation (according to ISO format)</p></li>
+<li><p>Years of operation</p></li>
+<li><p>City and Country</p></li>
+<li><p>Station name</p></li>
+<li><p>Station abbreviation</p></li>
+<li><p>Station network (e.g., BSRN, SURFRAD)</p></li>
+<li><p>Link to the station or network website (multiple links?)</p></li>
+</ul>
+<p>The format for the time period should accommodate non-continuous periods and denote whether a station is currently active. The time period for a station from 2013 that is still active but does not have data for 2014 and 2019 could be denoted as (2013, 2015-2018, 2020-).</p>
+<p>As not all stations have data available publicly, it would be convenient for users if a contact email was provided. However, issues relating to spam emailing probably outweigh the pros; hence, for now, this will be left out.</p>
+<section id="additional-metadata">
+<h3>Additional metadata<a class="headerlink" href="#additional-metadata" title="Permalink to this headline">¶</a></h3>
+<p>The above list of metadata is the minimum requirement for each station. It should be considered what additional metadata might also be added, such as:</p>
+<ul class="simple">
+<li><p>annual average GHI/DNI</p></li>
+<li><p>climate zone</p></li>
+<li><p>if spectral, albedo, or aerosol measurements are available</p></li>
+<li><p>which components are measured, e.g., upward fluxes</p></li>
+<li><p>additional meteorological parameters, e.g., temperature</p></li>
+<li><p>instrument types</p></li>
+<li><p>surface type, topography, rural/urban (categories used by the BSRN)</p></li>
+<li><p>Link to publications describing the station</p></li>
+</ul>
+<p>Also, it should be considered how we can pass on information concerning good and bad stations or station years, e.g., some Tier 1 BSRN stations are very poor. It could be a possibility to have a subpage for each station with images and general information, e.g., comments on the overall quality.</p>
+</section>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>The catalog will be hosted in a GitHub repository, allowing it to be continuously updated as stations close down or new stations become available. This means it will be open-source, and it is the aim that it will be supported by the solar research community.</p>
+<p>The central part of this project will be a CSV file with a header line followed by lines of metadata for each station. While an Excel file would perhaps be more convenient for editing, version control is not well supported for Excel files. However, an Excel file will be automatically generated from the CSV file every time this is updated; hence users will have the option of downloading either a .csv or .xlsx file.</p>
+<section id="map-overview">
+<h3>Map overview<a class="headerlink" href="#map-overview" title="Permalink to this headline">¶</a></h3>
+<p>Also, an interactive map of all the stations will be made. This will allow users to conveniently find the station nearest to their point of interest and obtain the station name by clicking on the corresponding icon on the map.</p>
+</section>
+</section>
+<section id="to-do">
+<h2>To do<a class="headerlink" href="#to-do" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Discuss whether stations should be organized by name or country or a third criteria</p></li>
+<li><p>Write acknowledgments of data providers</p></li>
+<li><p>Should ventilation of pyranometers also be required for Tier 1 stations?</p></li>
+<li><p>Allow class B instruments in Tier 2?</p></li>
+<li><p>Define Tier 3 for complete characterization of all radiation stations (e.g., stations with just GHI)?</p></li>
+<li><p>Require 1-minute resolution for both Tier 1 and 2?</p></li>
+<li><p>Give an example of how to download data? (pvlib)</p></li>
+<li><p>Denote if they also measure temperature</p></li>
+</ul>
+<section id="have-done">
+<h3>Have done<a class="headerlink" href="#have-done" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Changed the name to SolarStations instead of RadiationStations</p></li>
+<li><p>Get a custom domain name</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../fixing_your_git_mess/">
+      <i class="fa fa-arrow-circle-left"></i> Fixing your git mess
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../irradiance_maps/">
+      Satellite derived irradiance maps <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "adamrjensen";
+      var disqus_identifier = "/posts/radiation_stations/";
+      var disqus_title = "Overview of solar radiation monitoring stations";
+      var disqus_url = "http://predictablysunny.com/posts/radiation_stations";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Adam R. Jensen.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
