@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+<meta property="og:title" content="Summary of Google Summer of Code with pvlib" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://predictablysunny.com/posts/gsoc_project_summary/" />
+  
+<meta property="og:description" content="The coding period of this year’s Google Summer of Code (GSoC) is officially over, and it’s time to take a step back and evaluate the experience. For those of you who might not know, I’ve been worki..." />
+  
+<meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
+  
+<meta property="og:image:alt" content="Summary of Google Summer of Code with pvlib" />
+  
+    <title>Summary of Google Summer of Code with pvlib &#8212; Predictably Sunny</title>
+    
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-192349084-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Predictably Sunny"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">Predictably Sunny</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/adamrjensen/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  22 August 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/adam-r-jensen/">Adam R. Jensen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/pvlib/">pvlib</a>   
+  <a href="../../blog/tag/solar/">solar</a>   
+  <a href="../../blog/tag/open-science/">open science</a>   
+  <a href="../../blog/tag/gsoc/">gsoc</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "adamrjensen"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/gsoc_project_summary/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../dmi_data/"
+      >22 February - DMI API Tutorial</a
+    >
+  </li>
+  
+  <li>
+    <a href="../irradiance_maps/"
+      >12 February - Satellite derived irradiance maps</a
+    >
+  </li>
+  
+  <li>
+    <a href="../inset_map_cartopy/"
+      >06 January - How to add an inset map with Cartopy in Python</a
+    >
+  </li>
+  
+  <li>
+    <a href="../radiation_stations/"
+      >23 September - Overview of solar radiation monitoring stations</a
+    >
+  </li>
+  
+  <li>
+    <a href="../fixing_your_git_mess/"
+      >27 August - Fixing your git mess</a
+    >
+  </li>
+  
+</ul>
+
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#success-or-not">
+   Success or not?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pull-requests">
+   Pull requests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lessons-learned">
+   Lessons learned
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommendations-to-future-gsoc-students">
+   Recommendations to future GSoC students
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements">
+   Acknowledgements
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="summary-of-google-summer-of-code-with-pvlib">
+<h1>Summary of Google Summer of Code with pvlib<a class="headerlink" href="#summary-of-google-summer-of-code-with-pvlib" title="Permalink to this headline">¶</a></h1>
+<p>The coding period of this year’s Google Summer of Code (GSoC) is officially over, and it’s time to take a step back and evaluate the experience. For those of you who might not know, I’ve been working on extending pvlib’s iotools for the past 10 weeks, which I described in this <a class="reference internal" href="../gsoc_project_intro/"><span class="doc std std-doc">blog post</span></a>.</p>
+<section id="success-or-not">
+<h2>Success or not?<a class="headerlink" href="#success-or-not" title="Permalink to this headline">¶</a></h2>
+<p>There are many ways to determine if a project has been a success; one way is to look if the project goals have been met. So let’s refer back to the project outline:</p>
+<div class="admonition-original-project-outline admonition">
+<p class="admonition-title">Original project outline</p>
+<p>During the project, I’ll be adding functions to the iotools module within pvlib-python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://bsrn.awi.de/">Baseline Surface Radiation Network (BSRN)</a></p></li>
+<li><p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5 from ECMWF</a></p></li>
+<li><p><a class="reference external" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/">MERRA2 from NASA</a></p></li>
+<li><p><a class="reference external" href="https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation">PVGIS hourly data</a></p></li>
+<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-mcclear">CAMS McClear</a></p></li>
+<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info">CAMS Radiation</a></p></li>
+<li><p><a class="reference external" href="http://climate.onebuilding.org/">Climate One Building</a></p></li>
+</ul>
+</div>
+<p>After +200 hours behind the screen and keyboard, I have made 232 commits on GitHub, contributing 2992 lines of new code - you can see a full list of my contributions to pvlib <a class="reference external" href="https://github.com/pvlib/pvlib-python/commits?author=adamrjensen">here</a>. My contributions focused on adding new file reading and data retrieval functions for all of the above data sources, with the exception of Climate One Building. The reason for not including Climate One Building was that I concluded that other data sources would be preferable for almost all solar energy applications. Developing functions for Climate One Building would probably increase its use, which most likely would be undesirable.</p>
+<p>Perhaps the work that I am most proud of are the functions for accessing and reading BSRN data. The <a class="reference external" href="https://bsrn.awi.de/">BSRN</a> is a global network of high-quality radiation measurement stations, which store their data in a notoriously archaic file format. Accessing BSRN data is now super easy and can be done in just a few lines of code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pvlib</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span><span class="p">,</span> <span class="n">meta</span> <span class="o">=</span> <span class="n">pvlib</span><span class="o">.</span><span class="n">iotools</span><span class="o">.</span><span class="n">get_bsrn</span><span class="p">(</span>
+    <span class="n">station</span><span class="o">=</span><span class="s1">&#39;cab&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">31</span><span class="p">),</span>
+    <span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So if the success of the project is judged in terms of whether I achieved the objective of developing functions that “would allow novice and expert users alike to access a wealth of data” then I certainly believe that it has been a great success. I suppose there will first be sufficient user feedback in 6 months to really tell, though already now, I’ve been getting positive feedback from colleagues in the field of solar resource assessment who say that they have found the functions useful in their work!</p>
+<p>The project sponsor, Google, states that the <a class="reference external" href="https://google.github.io/gsocguides/student/#goals-of-the-program">goals of GSoC</a> are:</p>
+<ul class="simple">
+<li><p>Inspire young developers to begin participating in open source development.</p></li>
+<li><p>Help open source projects identify and bring in new developers.</p></li>
+<li><p>Get more open source code written and released for the benefit of all.</p></li>
+<li><p>Provide students the opportunity to do work related to their academic pursuits during the summer: “flip bits, not burgers.”</p></li>
+<li><p>Give students more exposure to real-world software development.</p></li>
+</ul>
+<p>I can confidently say that all of these goals have been fulfilled to a great extent in this project. It’s certainly been a very inspiring process, where I’ve written a lot of code and learned more than I ever could have imagined - and I have no plans of stopping contributing to pvlib and other open-source communities.</p>
+</section>
+<section id="pull-requests">
+<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h2>
+<p>All the work I’ve done during the project has resulted in pull requests, most of which are already merged into pvlib’s master branch. Each pull request contains a description of the added functionality, as well as the entire development history, i.e., discussion along the way, code reviews, and an overview of the new code and tests.</p>
+<p>First, I’d recommend that you check out the documentation of the functions, and if you still are interested in further details of the function development, then check out the pull requests:</p>
+<ul class="simple">
+<li><p>CAMS Radiation and McClear from SoDa-Pro: <a class="reference external" href="https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_cams.html">documentation</a>, <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1175">pull</a></p></li>
+<li><p>PVGIS Hourly radiation: <a class="reference external" href="https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_pvgis_hourly.html">documentation</a>, <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1186">pull</a></p></li>
+<li><p>BSRN data: <a class="reference external" href="https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_bsrn.html">documentation</a>, <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1254">pull</a></p></li>
+<li><p>ERA5: <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1264">pull</a></p></li>
+<li><p>MERRA-2: <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1274">pull</a></p></li>
+<li><p>Fix of iotools inconsistencies: <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1268">pull</a></p></li>
+</ul>
+<p>I’m already planning on contributing to pvlib iotools in the future, possibly adding functionality for downloading files locally, as discussed in <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1282">PR #1282</a>.</p>
+</section>
+<section id="lessons-learned">
+<h2>Lessons learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">¶</a></h2>
+<p>In the last two weeks of the program, I’ve found myself stumbling into tasks that were similar to what I did at the beginning of the program. The difference is that now I can effortlessly solve these problems, and I know how and why it works. It’s truly a great feeling to realize that I’ve learned a ton and it’s already proven useful.</p>
+<p>Now I’m first and foremost a scientist, and programming and software development are secondary interests. But I’ve been blown away by how much there are for scientists to learn from software development. The ability of open-source libraries to support a community of scientists, reducing each individual’s workload and providing access to tested and validated tools, is of incredible value. Why don’t we do more of this!?! As I come to the end of my Ph.D. and being to plan my post-doc in the Spring, I hope to inspire others in my research community to use open-source tools and contribute to them, as I truly believe this can result in better and more efficient and reproducible science.</p>
+</section>
+<section id="recommendations-to-future-gsoc-students">
+<h2>Recommendations to future GSoC students<a class="headerlink" href="#recommendations-to-future-gsoc-students" title="Permalink to this headline">¶</a></h2>
+<p>If you are a student and in doubt whether to participate due to time or other commitments, then do it anyway! There is absolutely no better way to learn software development than, well, just doing it. And when else do you really have the chance to get a personal mentor? Almost never, so this is your chance to make something useful out of your summer, both for yourself and software users around the world.</p>
+<p>Even better, get involved with an open-source community first, which could likely lead you to the opportunity to participate in GSoC. Start with just a small pull request fixing a typo to familiarize yourself with the workflow and how things are done. Then progress by taking up an issue labeled <code class="docutils literal notranslate"><span class="pre">good</span> <span class="pre">first</span> <span class="pre">issue</span></code> and asking for help. GSoC formalizes this process, but there’s no way you shouldn’t get started today!</p>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>The true hero of this project is my mentor <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a>, who first encouraged me to apply for the program and devoted countless hours to this project. Kevin’s passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concents, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).</p>
+<p>The pvlib maintainers, Will Holmgren, Mark Mikofski, and Cliff Hansen, have also offered invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I’d also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../staying_safe_on_github/">
+      <i class="fa fa-arrow-circle-left"></i> Staying safe on GitHub
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="../fixing_your_git_mess/">
+      Fixing your git mess <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "adamrjensen";
+      var disqus_identifier = "/posts/gsoc_project_summary/";
+      var disqus_title = "Summary of Google Summer of Code with pvlib";
+      var disqus_url = "http://predictablysunny.com/posts/gsoc_project_summary";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Adam R. Jensen.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+<meta property="og:title" content="DMI API Tutorial" />
+  
+<meta property="og:type" content="website" />
+  
+<meta property="og:url" content="https://predictablysunny.com/posts/dmi_data/" />
+  
+<meta property="og:description" content="This tutorial gives an introduction on how to use the Danish Meteorological Institute’s (DMI) API to download meterological observation data (v2). The tutorial uses the Python programming language ..." />
+  
+<meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
+  
+<meta property="og:image:alt" content="DMI API Tutorial" />
+  
+    <title>DMI API Tutorial &#8212; Predictably Sunny</title>
+    
+    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about/" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-192349084-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="Predictably Sunny"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../">
+<p class="title">Predictably Sunny</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about/">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog/">
+  Blog
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/adamrjensen/" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search/" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  22 February 2022 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/adam-r-jensen/">Adam R. Jensen</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i
+      class="fa-fw fa fa-tag"
+    ></i
+    ></span
+  >
+   
+  <a href="../../blog/tag/open-science/">open science</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "adamrjensen"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/dmi_data/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog/">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../irradiance_maps/"
+      >12 February - Satellite derived irradiance maps</a
+    >
+  </li>
+  
+  <li>
+    <a href="../inset_map_cartopy/"
+      >06 January - How to add an inset map with Cartopy in Python</a
+    >
+  </li>
+  
+  <li>
+    <a href="../radiation_stations/"
+      >23 September - Overview of solar radiation monitoring stations</a
+    >
+  </li>
+  
+  <li>
+    <a href="../fixing_your_git_mess/"
+      >27 August - Fixing your git mess</a
+    >
+  </li>
+  
+  <li>
+    <a href="../gsoc_project_summary/"
+      >22 August - Summary of Google Summer of Code with pvlib</a
+    >
+  </li>
+  
+</ul>
+
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-retrieving-data">
+   Part 1: Retrieving data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-requesting-specific-data">
+   Part 2: Requesting specific data
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="dmi-api-tutorial">
+<h1>DMI API Tutorial<a class="headerlink" href="#dmi-api-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial gives an introduction on how to use the <a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI">Danish Meteorological Institute’s (DMI) API</a> to download meterological observation data (v2).</p>
+<p>The tutorial uses the Python programming language and is in the format of a Jupyter Notebook. The notebook can be downloaded and run locally, allowing you to quickly get started downloading data.</p>
+<p>If you’re new to the DMI observation data, I recommend that you check out some of the following links:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=41717704">Station numbers</a></p></li>
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476616">Parameters</a></p></li>
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476621">Codes</a></p></li>
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI/FAQ">FAQ</a></p></li>
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI/Terms+of+Use">Terms of use</a></p></li>
+<li><p><a class="reference external" href="https://statuspage.freshping.io/25721-DMIOpenDatas">Operational status</a></p></li>
+<li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476690">User creation</a></p></li>
+</ol>
+<br>
+<section id="part-1-retrieving-data">
+<h2>Part 1: Retrieving data<a class="headerlink" href="#part-1-retrieving-data" title="Permalink to this headline">¶</a></h2>
+<p>Part 1 of this tutorial will show how to request data and convert it to a table format. Part 2 will deal with how to request specific data and more advanced data handling.</p>
+<p>First, the necessary libraries have to be imported:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># library for making HTTP requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># library for data analysis</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span> <span class="c1"># library for handling date and time objects</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>In order to access the API it is necessary to create a user and obtain an api-key. This api-key grants permission to retrieve data and allows DMI to generate usage statistics.</p>
+<p>A guide to creating a user profile and getting an api-key can be found <a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476690">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj&#39;</span> <span class="c1"># insert your own key between the &#39;&#39; signs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>An easy test to see if your api-key works is to paste the following url into your browswer followed by a question mark and your api-key, e.g.: <a class="reference external" href="https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj">https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj</a> (the example API key error).</p>
+<p>If you have obtained an api-key and pasted it correctly, a page with data will be shown.
+<br><br></p>
+<p>In the following code block, data is retrieved using the <code class="docutils literal notranslate"><span class="pre">requests.get</span></code> function. Further information on REST APIs and HTTP request methods can be found <a class="reference external" href="https://restfulapi.net/http-methods/">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DMI_URL</span> <span class="o">=</span> <span class="s1">&#39;https://dmigw.govcloud.dk/v2/metObs/collections/observation/items&#39;</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">DMI_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;api-key&#39;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">})</span> <span class="c1"># Issues a HTTP GET request</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Response [200]&gt; https://dmigw.govcloud.dk/v2/metObs/collections/observation/items?api-key=380d1f5b-3862-49e1-af1f-08ae0b51ed9a
+</pre></div>
+</div>
+</div>
+</div>
+<br/>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes">response status code</a> indicates whether the request was successful or not. A 200 code means that the retrieval was successful.
+<br/><br/></p>
+<p>Next, we extract the JSON file containing the data from the returned request object. <a class="reference external" href="https://restfulapi.net/introduction-to-json/">JSON</a> is a human-readable format for data exchange.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  <span class="c1"># Extract JSON data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>  <span class="c1"># Print the keys of the JSON dictionary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;type&#39;, &#39;features&#39;, &#39;timeStamp&#39;, &#39;numberReturned&#39;, &#39;links&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<br/>
+When inspecting the json object, it can be noticed that the measurement data is contained within the features:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">][:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;geometry&#39;: {&#39;coordinates&#39;: [8.0828, 55.5575], &#39;type&#39;: &#39;Point&#39;},
+  &#39;id&#39;: &#39;00000001-30ad-ae74-5b33-7ef0a1a6ef92&#39;,
+  &#39;type&#39;: &#39;Feature&#39;,
+  &#39;properties&#39;: {&#39;created&#39;: &#39;2021-01-20T01:07:45.306987Z&#39;,
+   &#39;observed&#39;: &#39;2015-09-11T10:10:00Z&#39;,
+   &#39;parameterId&#39;: &#39;temp_dew&#39;,
+   &#39;stationId&#39;: &#39;06081&#39;,
+   &#39;value&#39;: 11.4}},
+ {&#39;geometry&#39;: {&#39;coordinates&#39;: [11.3879, 55.3224], &#39;type&#39;: &#39;Point&#39;},
+  &#39;id&#39;: &#39;00000005-79f9-4ab8-6905-bec39ce37f54&#39;,
+  &#39;type&#39;: &#39;Feature&#39;,
+  &#39;properties&#39;: {&#39;created&#39;: &#39;2021-01-19T19:59:19.893994Z&#39;,
+   &#39;observed&#39;: &#39;2010-08-10T03:30:00Z&#39;,
+   &#39;parameterId&#39;: &#39;humidity&#39;,
+   &#39;stationId&#39;: &#39;06135&#39;,
+   &#39;value&#39;: 100.0}}]
+</pre></div>
+</div>
+</div>
+</div>
+<br/>
+<p>The JSON object can be converted to a convenient table (pandas DataFrame) using <code class="docutils literal notranslate"><span class="pre">pd.json_normalize</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>  <span class="c1"># Convert JSON object to a Pandas DataFrame</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c1"># Print the first five rows of the DataFrame</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>type</th>
+      <th>geometry.coordinates</th>
+      <th>geometry.type</th>
+      <th>properties.created</th>
+      <th>properties.observed</th>
+      <th>properties.parameterId</th>
+      <th>properties.stationId</th>
+      <th>properties.value</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>00000001-30ad-ae74-5b33-7ef0a1a6ef92</td>
+      <td>Feature</td>
+      <td>[8.0828, 55.5575]</td>
+      <td>Point</td>
+      <td>2021-01-20T01:07:45.306987Z</td>
+      <td>2015-09-11T10:10:00Z</td>
+      <td>temp_dew</td>
+      <td>06081</td>
+      <td>11.4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>00000005-79f9-4ab8-6905-bec39ce37f54</td>
+      <td>Feature</td>
+      <td>[11.3879, 55.3224]</td>
+      <td>Point</td>
+      <td>2021-01-19T19:59:19.893994Z</td>
+      <td>2010-08-10T03:30:00Z</td>
+      <td>humidity</td>
+      <td>06135</td>
+      <td>100.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0000000e-638e-5ce8-2dab-0a16387eb3e9</td>
+      <td>Feature</td>
+      <td>[8.6705, 56.383]</td>
+      <td>Point</td>
+      <td>2021-01-20T04:33:51.105632Z</td>
+      <td>2005-08-22T06:00:00Z</td>
+      <td>temp_max_past12h</td>
+      <td>06056</td>
+      <td>16.6</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0000000e-fa0d-c953-0901-0856867a22bb</td>
+      <td>Feature</td>
+      <td>[11.6035, 55.7358]</td>
+      <td>Point</td>
+      <td>2021-01-19T18:58:26.121240Z</td>
+      <td>2014-04-08T17:10:00Z</td>
+      <td>pressure_at_sea</td>
+      <td>06156</td>
+      <td>1006.3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>00000011-f0bb-b0c9-743c-712306e63470</td>
+      <td>Feature</td>
+      <td>[11.3292, 54.8275]</td>
+      <td>Point</td>
+      <td>2021-01-19T14:04:53.308204Z</td>
+      <td>2003-06-13T09:00:00Z</td>
+      <td>wind_speed</td>
+      <td>06141</td>
+      <td>5.0</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<br/>
+<p>The timestamps strings can be converted to a datetime object using the pandas <code class="docutils literal notranslate"><span class="pre">to_datetime</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;properties.observed&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c1"># Print the first five timestamps</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   2015-09-11 10:10:00+00:00
+1   2010-08-10 03:30:00+00:00
+2   2005-08-22 06:00:00+00:00
+3   2014-04-08 17:10:00+00:00
+4   2003-06-13 09:00:00+00:00
+Name: time, dtype: datetime64[ns, UTC]
+</pre></div>
+</div>
+</div>
+</div>
+<br/>
+Last, we will generate a list of all the available parameters:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parameter_ids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;properties.parameterId&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>  <span class="c1"># Generate a list of unique parameter ids</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">parameter_ids</span><span class="p">)</span>  <span class="c1"># Print all unique parameter ids</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;temp_dew&#39; &#39;humidity&#39; &#39;temp_max_past12h&#39; &#39;pressure_at_sea&#39; &#39;wind_speed&#39;
+ &#39;temp_soil_max_past1h&#39; &#39;weather&#39; &#39;wind_dir&#39; &#39;precip_dur_past10min&#39;
+ &#39;leav_hum_dur_past10min&#39; &#39;temp_min_past1h&#39; &#39;precip_past1min&#39; &#39;pressure&#39;
+ &#39;temp_dry&#39; &#39;radia_glob&#39; &#39;wind_speed_past1h&#39; &#39;humidity_past1h&#39;
+ &#39;sun_last10min_glob&#39; &#39;cloud_cover&#39; &#39;precip_past1h&#39; &#39;visib_mean_last10min&#39;
+ &#39;temp_grass&#39; &#39;leav_hum_dur_past1h&#39; &#39;visibility&#39; &#39;temp_soil&#39;
+ &#39;temp_soil_min_past1h&#39; &#39;temp_grass_min_past1h&#39; &#39;precip_past10min&#39;
+ &#39;temp_min_past12h&#39; &#39;wind_max_per10min_past1h&#39; &#39;temp_max_past1h&#39;
+ &#39;temp_soil_mean_past1h&#39; &#39;wind_max&#39; &#39;wind_dir_past1h&#39; &#39;precip_dur_past1h&#39;
+ &#39;cloud_height&#39; &#39;wind_gust_always_past1h&#39; &#39;sun_last1h_glob&#39;
+ &#39;temp_mean_past1h&#39; &#39;temp_grass_max_past1h&#39; &#39;snow_depth_man&#39;
+ &#39;radia_glob_past1h&#39; &#39;wind_min&#39; &#39;temp_grass_mean_past1h&#39; &#39;snow_cover_man&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><br/><br/></p>
+</section>
+<section id="part-2-requesting-specific-data">
+<h2>Part 2: Requesting specific data<a class="headerlink" href="#part-2-requesting-specific-data" title="Permalink to this headline">¶</a></h2>
+<p>The above example was a heavily simplied example to illustrate how the API can be accessed. For most applications you probably want to specify query criterias, such as:</p>
+<ol class="simple">
+<li><p>Meterological stations (e.g. 04320, 06074, etc.)</p></li>
+<li><p>Parameters (e.g. wind_speed, humidity, etc.)</p></li>
+<li><p>Time frame (to and from time)</p></li>
+<li><p>Limit (maximum number of observations)</p></li>
+</ol>
+<p><em>Click the “View to show” button below to see a list of a all stations and parameters.</em></p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_stations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;04203&#39;</span><span class="p">,</span> <span class="s1">&#39;04208&#39;</span><span class="p">,</span> <span class="s1">&#39;04214&#39;</span><span class="p">,</span> <span class="s1">&#39;04220&#39;</span><span class="p">,</span> <span class="s1">&#39;04228&#39;</span><span class="p">,</span> <span class="s1">&#39;04242&#39;</span><span class="p">,</span> <span class="s1">&#39;04250&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;04253&#39;</span><span class="p">,</span> <span class="s1">&#39;04266&#39;</span><span class="p">,</span> <span class="s1">&#39;04271&#39;</span><span class="p">,</span> <span class="s1">&#39;04272&#39;</span><span class="p">,</span> <span class="s1">&#39;04285&#39;</span><span class="p">,</span> <span class="s1">&#39;04301&#39;</span><span class="p">,</span> <span class="s1">&#39;04312&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;04313&#39;</span><span class="p">,</span> <span class="s1">&#39;04320&#39;</span><span class="p">,</span> <span class="s1">&#39;04330&#39;</span><span class="p">,</span> <span class="s1">&#39;04339&#39;</span><span class="p">,</span> <span class="s1">&#39;04351&#39;</span><span class="p">,</span> <span class="s1">&#39;04360&#39;</span><span class="p">,</span> <span class="s1">&#39;04373&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;04382&#39;</span><span class="p">,</span> <span class="s1">&#39;04390&#39;</span><span class="p">,</span> <span class="s1">&#39;05005&#39;</span><span class="p">,</span> <span class="s1">&#39;05009&#39;</span><span class="p">,</span> <span class="s1">&#39;05015&#39;</span><span class="p">,</span> <span class="s1">&#39;05031&#39;</span><span class="p">,</span> <span class="s1">&#39;05035&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05042&#39;</span><span class="p">,</span> <span class="s1">&#39;05065&#39;</span><span class="p">,</span> <span class="s1">&#39;05070&#39;</span><span class="p">,</span> <span class="s1">&#39;05075&#39;</span><span class="p">,</span> <span class="s1">&#39;05081&#39;</span><span class="p">,</span> <span class="s1">&#39;05085&#39;</span><span class="p">,</span> <span class="s1">&#39;05089&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05095&#39;</span><span class="p">,</span> <span class="s1">&#39;05105&#39;</span><span class="p">,</span> <span class="s1">&#39;05109&#39;</span><span class="p">,</span> <span class="s1">&#39;05135&#39;</span><span class="p">,</span> <span class="s1">&#39;05140&#39;</span><span class="p">,</span> <span class="s1">&#39;05150&#39;</span><span class="p">,</span> <span class="s1">&#39;05160&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05165&#39;</span><span class="p">,</span> <span class="s1">&#39;05169&#39;</span><span class="p">,</span> <span class="s1">&#39;05185&#39;</span><span class="p">,</span> <span class="s1">&#39;05199&#39;</span><span class="p">,</span> <span class="s1">&#39;05202&#39;</span><span class="p">,</span> <span class="s1">&#39;05205&#39;</span><span class="p">,</span> <span class="s1">&#39;05220&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05225&#39;</span><span class="p">,</span> <span class="s1">&#39;05269&#39;</span><span class="p">,</span> <span class="s1">&#39;05272&#39;</span><span class="p">,</span> <span class="s1">&#39;05276&#39;</span><span class="p">,</span> <span class="s1">&#39;05277&#39;</span><span class="p">,</span> <span class="s1">&#39;05290&#39;</span><span class="p">,</span> <span class="s1">&#39;05296&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05300&#39;</span><span class="p">,</span> <span class="s1">&#39;05305&#39;</span><span class="p">,</span> <span class="s1">&#39;05320&#39;</span><span class="p">,</span> <span class="s1">&#39;05329&#39;</span><span class="p">,</span> <span class="s1">&#39;05343&#39;</span><span class="p">,</span> <span class="s1">&#39;05345&#39;</span><span class="p">,</span> <span class="s1">&#39;05350&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05355&#39;</span><span class="p">,</span> <span class="s1">&#39;05365&#39;</span><span class="p">,</span> <span class="s1">&#39;05375&#39;</span><span class="p">,</span> <span class="s1">&#39;05381&#39;</span><span class="p">,</span> <span class="s1">&#39;05395&#39;</span><span class="p">,</span> <span class="s1">&#39;05400&#39;</span><span class="p">,</span> <span class="s1">&#39;05406&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05408&#39;</span><span class="p">,</span> <span class="s1">&#39;05435&#39;</span><span class="p">,</span> <span class="s1">&#39;05440&#39;</span><span class="p">,</span> <span class="s1">&#39;05450&#39;</span><span class="p">,</span> <span class="s1">&#39;05455&#39;</span><span class="p">,</span> <span class="s1">&#39;05469&#39;</span><span class="p">,</span> <span class="s1">&#39;05499&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05505&#39;</span><span class="p">,</span> <span class="s1">&#39;05510&#39;</span><span class="p">,</span> <span class="s1">&#39;05529&#39;</span><span class="p">,</span> <span class="s1">&#39;05537&#39;</span><span class="p">,</span> <span class="s1">&#39;05545&#39;</span><span class="p">,</span> <span class="s1">&#39;05575&#39;</span><span class="p">,</span> <span class="s1">&#39;05735&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;05880&#39;</span><span class="p">,</span> <span class="s1">&#39;05889&#39;</span><span class="p">,</span> <span class="s1">&#39;05935&#39;</span><span class="p">,</span> <span class="s1">&#39;05945&#39;</span><span class="p">,</span> <span class="s1">&#39;05970&#39;</span><span class="p">,</span> <span class="s1">&#39;05986&#39;</span><span class="p">,</span> <span class="s1">&#39;05994&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06019&#39;</span><span class="p">,</span> <span class="s1">&#39;06031&#39;</span><span class="p">,</span> <span class="s1">&#39;06032&#39;</span><span class="p">,</span> <span class="s1">&#39;06041&#39;</span><span class="p">,</span> <span class="s1">&#39;06049&#39;</span><span class="p">,</span> <span class="s1">&#39;06051&#39;</span><span class="p">,</span> <span class="s1">&#39;06052&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06056&#39;</span><span class="p">,</span> <span class="s1">&#39;06058&#39;</span><span class="p">,</span> <span class="s1">&#39;06065&#39;</span><span class="p">,</span> <span class="s1">&#39;06068&#39;</span><span class="p">,</span> <span class="s1">&#39;06072&#39;</span><span class="p">,</span> <span class="s1">&#39;06073&#39;</span><span class="p">,</span> <span class="s1">&#39;06074&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06079&#39;</span><span class="p">,</span> <span class="s1">&#39;06081&#39;</span><span class="p">,</span> <span class="s1">&#39;06082&#39;</span><span class="p">,</span> <span class="s1">&#39;06088&#39;</span><span class="p">,</span> <span class="s1">&#39;06093&#39;</span><span class="p">,</span> <span class="s1">&#39;06096&#39;</span><span class="p">,</span> <span class="s1">&#39;06102&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06116&#39;</span><span class="p">,</span> <span class="s1">&#39;06119&#39;</span><span class="p">,</span> <span class="s1">&#39;06123&#39;</span><span class="p">,</span> <span class="s1">&#39;06124&#39;</span><span class="p">,</span> <span class="s1">&#39;06126&#39;</span><span class="p">,</span> <span class="s1">&#39;06132&#39;</span><span class="p">,</span> <span class="s1">&#39;06135&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06136&#39;</span><span class="p">,</span> <span class="s1">&#39;06138&#39;</span><span class="p">,</span> <span class="s1">&#39;06141&#39;</span><span class="p">,</span> <span class="s1">&#39;06147&#39;</span><span class="p">,</span> <span class="s1">&#39;06149&#39;</span><span class="p">,</span> <span class="s1">&#39;06151&#39;</span><span class="p">,</span> <span class="s1">&#39;06154&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06156&#39;</span><span class="p">,</span> <span class="s1">&#39;06159&#39;</span><span class="p">,</span> <span class="s1">&#39;06168&#39;</span><span class="p">,</span> <span class="s1">&#39;06169&#39;</span><span class="p">,</span> <span class="s1">&#39;06174&#39;</span><span class="p">,</span> <span class="s1">&#39;06181&#39;</span><span class="p">,</span> <span class="s1">&#39;06183&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;06184&#39;</span><span class="p">,</span> <span class="s1">&#39;06186&#39;</span><span class="p">,</span> <span class="s1">&#39;06187&#39;</span><span class="p">,</span> <span class="s1">&#39;06188&#39;</span><span class="p">,</span> <span class="s1">&#39;06193&#39;</span><span class="p">,</span> <span class="s1">&#39;06197&#39;</span><span class="p">,</span> <span class="s1">&#39;20000&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;20030&#39;</span><span class="p">,</span> <span class="s1">&#39;20055&#39;</span><span class="p">,</span> <span class="s1">&#39;20085&#39;</span><span class="p">,</span> <span class="s1">&#39;20228&#39;</span><span class="p">,</span> <span class="s1">&#39;20279&#39;</span><span class="p">,</span> <span class="s1">&#39;20315&#39;</span><span class="p">,</span> <span class="s1">&#39;20375&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;20400&#39;</span><span class="p">,</span> <span class="s1">&#39;20552&#39;</span><span class="p">,</span> <span class="s1">&#39;20561&#39;</span><span class="p">,</span> <span class="s1">&#39;20600&#39;</span><span class="p">,</span> <span class="s1">&#39;20670&#39;</span><span class="p">,</span> <span class="s1">&#39;21020&#39;</span><span class="p">,</span> <span class="s1">&#39;21080&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;21100&#39;</span><span class="p">,</span> <span class="s1">&#39;21120&#39;</span><span class="p">,</span> <span class="s1">&#39;21160&#39;</span><span class="p">,</span> <span class="s1">&#39;21208&#39;</span><span class="p">,</span> <span class="s1">&#39;21368&#39;</span><span class="p">,</span> <span class="s1">&#39;21430&#39;</span><span class="p">,</span> <span class="s1">&#39;22020&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;22080&#39;</span><span class="p">,</span> <span class="s1">&#39;22162&#39;</span><span class="p">,</span> <span class="s1">&#39;22189&#39;</span><span class="p">,</span> <span class="s1">&#39;22232&#39;</span><span class="p">,</span> <span class="s1">&#39;22410&#39;</span><span class="p">,</span> <span class="s1">&#39;23100&#39;</span><span class="p">,</span> <span class="s1">&#39;23133&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;23160&#39;</span><span class="p">,</span> <span class="s1">&#39;23327&#39;</span><span class="p">,</span> <span class="s1">&#39;23360&#39;</span><span class="p">,</span> <span class="s1">&#39;24043&#39;</span><span class="p">,</span> <span class="s1">&#39;24102&#39;</span><span class="p">,</span> <span class="s1">&#39;24142&#39;</span><span class="p">,</span> <span class="s1">&#39;24171&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;24380&#39;</span><span class="p">,</span> <span class="s1">&#39;24430&#39;</span><span class="p">,</span> <span class="s1">&#39;24490&#39;</span><span class="p">,</span> <span class="s1">&#39;25045&#39;</span><span class="p">,</span> <span class="s1">&#39;25161&#39;</span><span class="p">,</span> <span class="s1">&#39;25270&#39;</span><span class="p">,</span> <span class="s1">&#39;25339&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;26210&#39;</span><span class="p">,</span> <span class="s1">&#39;26340&#39;</span><span class="p">,</span> <span class="s1">&#39;26358&#39;</span><span class="p">,</span> <span class="s1">&#39;26450&#39;</span><span class="p">,</span> <span class="s1">&#39;27008&#39;</span><span class="p">,</span> <span class="s1">&#39;27082&#39;</span><span class="p">,</span> <span class="s1">&#39;28032&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;28110&#39;</span><span class="p">,</span> <span class="s1">&#39;28240&#39;</span><span class="p">,</span> <span class="s1">&#39;28280&#39;</span><span class="p">,</span> <span class="s1">&#39;28385&#39;</span><span class="p">,</span> <span class="s1">&#39;28552&#39;</span><span class="p">,</span> <span class="s1">&#39;28590&#39;</span><span class="p">,</span> <span class="s1">&#39;29020&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;29194&#39;</span><span class="p">,</span> <span class="s1">&#39;29243&#39;</span><span class="p">,</span> <span class="s1">&#39;29330&#39;</span><span class="p">,</span> <span class="s1">&#39;29440&#39;</span><span class="p">,</span> <span class="s1">&#39;30075&#39;</span><span class="p">,</span> <span class="s1">&#39;30187&#39;</span><span class="p">,</span> <span class="s1">&#39;30215&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;30414&#39;</span><span class="p">,</span> <span class="s1">&#39;31040&#39;</span><span class="p">,</span> <span class="s1">&#39;31185&#39;</span><span class="p">,</span> <span class="s1">&#39;31199&#39;</span><span class="p">,</span> <span class="s1">&#39;31259&#39;</span><span class="p">,</span> <span class="s1">&#39;31350&#39;</span><span class="p">,</span> <span class="s1">&#39;31400&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;31509&#39;</span><span class="p">,</span> <span class="s1">&#39;31570&#39;</span><span class="p">,</span> <span class="s1">&#39;32110&#39;</span><span class="p">,</span> <span class="s1">&#39;32175&#39;</span><span class="p">,</span> <span class="s1">&#39;34270&#39;</span><span class="p">,</span> <span class="s1">&#39;34320&#39;</span><span class="p">,</span> <span class="s1">&#39;34339&#39;</span>
+<span class="p">]</span>
+
+<span class="n">all_parameters</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Cloud cover and height</span>
+    <span class="s1">&#39;cloud_cover&#39;</span><span class="p">,</span> <span class="s1">&#39;cloud_height&#39;</span><span class="p">,</span>
+    <span class="c1"># Humdity</span>
+    <span class="s1">&#39;humidity&#39;</span><span class="p">,</span> <span class="s1">&#39;humidity_past1h&#39;</span><span class="p">,</span>
+    <span class="c1"># Precipitation</span>
+    <span class="s1">&#39;precip_past10min&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_past1h&#39;</span><span class="p">,</span> <span class="s1">&#39;precip_past24h&#39;</span><span class="p">,</span>
+    <span class="c1"># Pressure</span>
+    <span class="s1">&#39;pressure&#39;</span><span class="p">,</span> <span class="s1">&#39;pressure_at_sea&#39;</span><span class="p">,</span>
+    <span class="c1"># Radiation</span>
+    <span class="s1">&#39;radia_glob&#39;</span><span class="p">,</span> <span class="s1">&#39;radia_glob_past1h&#39;</span><span class="p">,</span>
+    <span class="c1"># Temperature</span>
+    <span class="s1">&#39;temp_dew&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_dry&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_max_past12h&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_max_past1h&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;temp_mean_past1h&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_min_past12h&#39;</span><span class="p">,</span> <span class="s1">&#39;temp_min_past1h&#39;</span><span class="p">,</span>
+    <span class="c1"># Visibilty and weather</span>
+    <span class="s1">&#39;visib_mean_last10min&#39;</span><span class="p">,</span> <span class="s1">&#39;visibility&#39;</span><span class="p">,</span> <span class="s1">&#39;weather&#39;</span><span class="p">,</span>
+    <span class="c1"># Wind speed and direction</span>
+    <span class="s1">&#39;wind_dir&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_dir_past1h&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_gust_always_past1h&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_max&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;wind_max_per10min_past1h&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_min&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_min_past1h&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;wind_speed&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_speed_past1h&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+<p>Due to poor design of the API, it is only possible to request one station or all stations, and similarly, it is only possible to request one parameter or all parameters. To be able to select a subset of stations or parameters it is therefore necessary to loop as shown below. This also avoids hitting the rather low maximum amount of data that can be transferred for each request. The implementation below is most suitable for downloading a few stations and a few parameters, and will incur a significant performance penalty if downloading data for all stations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the desired start and end time</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Specify one or more station IDs or all_stations</span>
+<span class="n">stationIds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;04250&#39;</span><span class="p">,</span> <span class="s1">&#39;06188&#39;</span><span class="p">]</span>
+<span class="c1"># Specify one or more parameter IDs or all_parameters</span>
+<span class="n">parameterIds</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;radia_glob&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span>
+
+<span class="c1"># Derive datetime specifier string</span>
+<span class="n">datetime_str</span> <span class="o">=</span> <span class="n">start_time</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">end_time</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="s1">&#39;UTC&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
+
+<span class="n">dfs</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">stationIds</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">parameterIds</span><span class="p">:</span>
+        <span class="c1"># Specify query parameters</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;api-key&#39;</span> <span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>
+            <span class="s1">&#39;datetime&#39;</span> <span class="p">:</span> <span class="n">datetime_str</span><span class="p">,</span>
+            <span class="s1">&#39;stationId&#39;</span> <span class="p">:</span> <span class="n">station</span><span class="p">,</span>
+            <span class="s1">&#39;parameterId&#39;</span> <span class="p">:</span> <span class="n">parameter</span><span class="p">,</span>
+            <span class="s1">&#39;limit&#39;</span> <span class="p">:</span> <span class="s1">&#39;300000&#39;</span><span class="p">,</span>  <span class="c1"># max limit</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Submit GET request with url and parameters</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">DMI_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="c1"># Extract JSON object</span>
+        <span class="n">json</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="c1"># Extract JSON object</span>
+        <span class="c1"># Convert JSON object to a MultiIndex DataFrame and add to list</span>
+        <span class="n">dfi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">dfi</span><span class="o">.</span><span class="n">empty</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">dfi</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dfi</span><span class="p">[</span><span class="s1">&#39;properties.observed&#39;</span><span class="p">])</span>
+            <span class="n">dfi</span><span class="p">[[</span><span class="s1">&#39;station&#39;</span><span class="p">,</span> <span class="s1">&#39;parameter&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">station</span><span class="p">,</span> <span class="n">parameter</span>
+            <span class="n">dfi</span> <span class="o">=</span> <span class="n">dfi</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;parameter&#39;</span><span class="p">,</span> <span class="s1">&#39;station&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">])</span>
+            <span class="n">dfi</span> <span class="o">=</span> <span class="n">dfi</span><span class="p">[</span><span class="s1">&#39;properties.value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unstack</span><span class="p">([</span><span class="s1">&#39;station&#39;</span><span class="p">,</span><span class="s1">&#39;parameter&#39;</span><span class="p">])</span>
+            <span class="n">dfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dfi</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dfs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th>station</th>
+      <th colspan="2" halign="left">04250</th>
+      <th colspan="2" halign="left">06188</th>
+    </tr>
+    <tr>
+      <th>parameter</th>
+      <th>radia_glob</th>
+      <th>wind_speed</th>
+      <th>radia_glob</th>
+      <th>wind_speed</th>
+    </tr>
+    <tr>
+      <th>time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2022-01-01 00:00:00+00:00</th>
+      <td>0.0</td>
+      <td>3.6</td>
+      <td>0.0</td>
+      <td>4.9</td>
+    </tr>
+    <tr>
+      <th>2022-01-01 00:10:00+00:00</th>
+      <td>0.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>5.5</td>
+    </tr>
+    <tr>
+      <th>2022-01-01 00:20:00+00:00</th>
+      <td>0.0</td>
+      <td>3.8</td>
+      <td>0.0</td>
+      <td>4.8</td>
+    </tr>
+    <tr>
+      <th>2022-01-01 00:30:00+00:00</th>
+      <td>0.0</td>
+      <td>3.8</td>
+      <td>0.0</td>
+      <td>5.3</td>
+    </tr>
+    <tr>
+      <th>2022-01-01 00:40:00+00:00</th>
+      <td>0.0</td>
+      <td>3.8</td>
+      <td>0.0</td>
+      <td>5.9</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<br/>
+<p>If the request was succesfull, the dataframe <code class="docutils literal notranslate"><span class="pre">df</span></code> now contains the requested data. The dataframe is a MultiIndex dataframe and has two column levels (station and parameter). The index is the observation time.</p>
+<p>MultiIndex dataframes are extremely convenient and versatile, though they do take some time getting used to. As an example, the below command demonstrates how to get the wind speed from the station 04250 for four days in December:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2022-01-05&#39;</span><span class="p">:,</span> <span class="p">(</span><span class="s1">&#39;04250&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_speed&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time
+2022-01-05 00:00:00+00:00    9.2
+2022-01-05 00:10:00+00:00    7.5
+2022-01-05 00:20:00+00:00    6.1
+2022-01-05 00:30:00+00:00    4.4
+2022-01-05 00:40:00+00:00    4.4
+                            ... 
+2022-01-14 23:20:00+00:00    5.5
+2022-01-14 23:30:00+00:00    4.7
+2022-01-14 23:40:00+00:00    4.8
+2022-01-14 23:50:00+00:00    5.0
+2022-01-15 00:00:00+00:00    4.4
+Freq: 10T, Name: (04250, wind_speed), Length: 1441, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<br/>
+<p>The last step is to visualize the data. As an example, we’ll visualize the wind speed and global horizontal irradiance (GHI) for the station 04250.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">station</span> <span class="o">=</span> <span class="s1">&#39;04250&#39;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">,</span> <span class="s1">&#39;radia_glob&#39;</span><span class="p">]</span>  <span class="c1"># parameters to plot</span>
+
+<span class="c1"># Generate plot of data</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">station</span><span class="p">][</span><span class="n">params</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">rot</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">subplots</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Air temperature [$^\circ$C]&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Global horizontal</span><span class="se">\n</span><span class="s1">irradiance [W/m$^2$]&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/dmi_data_24_1.png" src="../../_images/dmi_data_24_1.png" />
+</div>
+</div>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="../irradiance_maps/">
+      <i class="fa fa-arrow-circle-left"></i> Satellite derived irradiance maps
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "adamrjensen";
+      var disqus_identifier = "/posts/dmi_data/";
+      var disqus_title = "DMI API Tutorial";
+      var disqus_url = "http://predictablysunny.com/posts/dmi_data";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Adam R. Jensen.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
