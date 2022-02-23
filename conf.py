@@ -194,7 +194,6 @@ html_sidebars = {
 # using the given strftime format.
 # html_last_updated_fmt = '%%b %%d, %%Y'
 
-
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 # html_show_sphinx = False
 
