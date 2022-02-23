@@ -212,4 +212,4 @@ def setup(app):
 
 #jupyter_execute_notebooks = "off"
 
-execution_excludepatterns = ['irradiance_maps.ipynb']
+execution_excludepatterns = ['irradiance_maps.ipynb', 'inset_map_cartopy.ipynb']
