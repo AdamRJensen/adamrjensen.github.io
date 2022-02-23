@@ -8,6 +8,6 @@ Oh, I almost forgot to mention that I am also the station manager for the solar 
 
 ## Education
 
-* Ph.D. candidate, Technical University of Denmark, 2019-present
+* Ph.D. candidate, Technical University of Denmark, 2019-2022
 * M.Sc. in Sustainable Energy, Technical University of Denmark, 2016-2018
 * B.A.Sc. in Mechanical Engineering, Aarhus University, 2013-2016
