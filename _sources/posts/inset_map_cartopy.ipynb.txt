@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "fda97ae5-8664-407c-90d4-d2b7d451dbc8",
+   "id": "ce804b47-f7b6-4571-aeef-4c485da24548",
    "metadata": {
     "date": "2022-01-07",
     "tags": [
@@ -19,8 +19,21 @@
     ":author: Adam R. Jensen```\n",
     "\n",
     "You know that small map that shows a zoomed in view of a part of a bigger map? Well, it's called an inset map and according to [Wikipedia](https://en.wikipedia.org/wiki/Map_layout#Inset_map):\n",
-    "> Inset maps are smaller maps that are included on the same page as the main map. They can show additional information related to the main map.\n",
-    "\n",
+    "> Inset maps are smaller maps that are included on the same page as the main map. They can show additional information related to the main map."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a701ad2e-9199-419a-8a23-755d8b0a4dc1",
+   "metadata": {
+    "date": "2022-01-07",
+    "tags": [
+     "solar",
+     "open",
+     "science"
+    ]
+   },
+   "source": [
     "There are four common types on inset maps:\n",
     "* **Locator map:** used to show the position of the map in a larger context\n",
     "* **Detail inset:** (significantly larger scale (aka. zoomed in) to show more details in part of the map)\n",
