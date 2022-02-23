@@ -2,35 +2,35 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2022-02-23T14:01:35.413930+00:00</updated>
+  <updated>2022-02-23T14:23:28.803052+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <entry>
-    <id>http://predictablysunny.com/posts/gsoc_project_intro/</id>
+    <id>http://predictablysunny.com/posts/gsoc_project_intro.html</id>
     <title>pvlib - a one stop source for solar resource data</title>
-    <updated>2021-06-10T00:00:00+00:00</updated>
+    <updated>2021-06-10T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
 &lt;p&gt;This title at least represents the aim of my &lt;a class="reference external" href="https://summerofcode.withgoogle.com/about/"&gt;Google Summer of Code (GSoC)&lt;/a&gt; project that I will be completing during the next 10 weeks. In short, I’ll be extending &lt;a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/"&gt;pvlib python’s&lt;/a&gt; current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
-&lt;img alt="gsoc and pvlib logo" src="../_images/gsoc_at_pvlib.png" /&gt;&lt;/p&gt;
+&lt;img alt="gsoc and pvlib logo" src="_images/gsoc_at_pvlib.png" /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/gsoc_project_intro/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/gsoc_project_intro.html" rel="alternate"/>
     <summary>This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
 gsoc and pvlib logo</summary>
     <category term="pvlib" label="pvlib"/>
     <category term="solar" label="solar"/>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
-    <published>2021-06-10T00:00:00+00:00</published>
+    <published>2021-06-10T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/virtual_environments_cheat_sheet/</id>
+    <id>http://predictablysunny.com/posts/virtual_environments_cheat_sheet.html</id>
     <title>Virtual environments cheat sheet</title>
-    <updated>2021-07-19T00:00:00+00:00</updated>
+    <updated>2021-07-19T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -38,16 +38,16 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;This cheat sheet will cover the basics of conda environments, though the general workflow is similar for other types of virtual environments.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/virtual_environments_cheat_sheet/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/virtual_environments_cheat_sheet.html" rel="alternate"/>
     <summary>This cheat sheet will cover the basics of conda environments, though the general workflow is similar for other types of virtual environments.</summary>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
-    <published>2021-07-19T00:00:00+00:00</published>
+    <published>2021-07-19T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/staying_safe_on_github/</id>
+    <id>http://predictablysunny.com/posts/staying_safe_on_github.html</id>
     <title>Staying safe on GitHub</title>
-    <updated>2021-08-02T00:00:00+00:00</updated>
+    <updated>2021-08-02T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -55,16 +55,16 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/staying_safe_on_github/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/staying_safe_on_github.html" rel="alternate"/>
     <summary>Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?</summary>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
-    <published>2021-08-02T00:00:00+00:00</published>
+    <published>2021-08-02T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/gsoc_project_summary/</id>
+    <id>http://predictablysunny.com/posts/gsoc_project_summary.html</id>
     <title>Summary of Google Summer of Code with pvlib</title>
-    <updated>2021-08-22T00:00:00+00:00</updated>
+    <updated>2021-08-22T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -72,18 +72,18 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;The coding period of this year’s Google Summer of Code (GSoC) is officially over, and it’s time to take a step back and evaluate the experience. For those of you who might not know, I’ve been working on extending pvlib’s iotools for the past 10 weeks, which I described in this &lt;span class="xref myst"&gt;blog post&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/gsoc_project_summary/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/gsoc_project_summary.html" rel="alternate"/>
     <summary>The coding period of this year’s Google Summer of Code (GSoC) is officially over, and it’s time to take a step back and evaluate the experience. For those of you who might not know, I’ve been working on extending pvlib’s iotools for the past 10 weeks, which I described in this blog post.</summary>
     <category term="pvlib" label="pvlib"/>
     <category term="solar" label="solar"/>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
-    <published>2021-08-22T00:00:00+00:00</published>
+    <published>2021-08-22T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/fixing_your_git_mess/</id>
+    <id>http://predictablysunny.com/posts/fixing_your_git_mess.html</id>
     <title>Fixing your git mess</title>
-    <updated>2021-08-27T00:00:00+00:00</updated>
+    <updated>2021-08-27T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -91,16 +91,16 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/fixing_your_git_mess/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/fixing_your_git_mess.html" rel="alternate"/>
     <summary>On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.</summary>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
-    <published>2021-08-27T00:00:00+00:00</published>
+    <published>2021-08-27T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/radiation_stations/</id>
+    <id>http://predictablysunny.com/posts/radiation_stations.html</id>
     <title>Overview of solar radiation monitoring stations</title>
-    <updated>2021-09-23T00:00:00+00:00</updated>
+    <updated>2021-09-23T00:00:00+02:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -108,16 +108,16 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are only a few hundred high-quality stations globally due to high costs and maintenance requirements. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog, I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/radiation_stations/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/radiation_stations.html" rel="alternate"/>
     <summary>Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are only a few hundred high-quality stations globally due to high costs and maintenance requirements. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog, I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.</summary>
     <category term="solar" label="solar"/>
     <category term="openscience" label="open science"/>
-    <published>2021-09-23T00:00:00+00:00</published>
+    <published>2021-09-23T00:00:00+02:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/irradiance_maps/</id>
+    <id>http://predictablysunny.com/posts/irradiance_maps.html</id>
     <title>Satellite derived irradiance maps</title>
-    <updated>2022-02-12T00:00:00+00:00</updated>
+    <updated>2022-02-12T00:00:00+01:00</updated>
     <author>
       <name>Adam R. Jensen```</name>
     </author>
@@ -125,16 +125,16 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geopgraphcial coverage (continents), long-time span (multiple decades), and low cost.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/irradiance_maps/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/irradiance_maps.html" rel="alternate"/>
     <summary>Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geopgraphcial coverage (continents), long-time span (multiple decades), and low cost.</summary>
     <category term="solar" label="solar"/>
     <category term="openscience" label="open science"/>
-    <published>2022-02-12T00:00:00+00:00</published>
+    <published>2022-02-12T00:00:00+01:00</published>
   </entry>
   <entry>
-    <id>http://predictablysunny.com/posts/dmi_data/</id>
+    <id>http://predictablysunny.com/posts/dmi_data.html</id>
     <title>DMI API Tutorial</title>
-    <updated>2022-02-22T00:00:00+00:00</updated>
+    <updated>2022-02-22T00:00:00+01:00</updated>
     <author>
       <name>Adam R. Jensen</name>
     </author>
@@ -142,9 +142,9 @@ gsoc and pvlib logo</summary>
 &lt;p&gt;This tutorial gives an introduction on how to use the &lt;a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI"&gt;Danish Meteorological Institute’s (DMI) API&lt;/a&gt; to download meterological observation data (v2).&lt;/p&gt;
 &lt;/div&gt;
 </content>
-    <link href="http://predictablysunny.com/posts/dmi_data/" rel="alternate"/>
+    <link href="http://predictablysunny.com/posts/dmi_data.html" rel="alternate"/>
     <summary>This tutorial gives an introduction on how to use the Danish Meteorological Institute’s (DMI) API to download meterological observation data (v2).</summary>
     <category term="openscience" label="open science"/>
-    <published>2022-02-22T00:00:00+00:00</published>
+    <published>2022-02-22T00:00:00+01:00</published>
   </entry>
 </feed>
