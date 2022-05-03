@@ -157,7 +157,7 @@ html_title = 'Predictably Sunny'
 # documentation.
 html_theme_options = {
   "github_url": "https://github.com/adamrjensen/",
-  "google_analytics_id": "UA-192349084-1",
+  "google_analytics_id": "G-B5PLZ8N24G",
   "navbar_end": ["navbar-icon-links.html", "search-field.html"],
   "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
 }
