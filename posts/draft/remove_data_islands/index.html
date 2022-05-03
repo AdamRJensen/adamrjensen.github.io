@@ -20,29 +20,26 @@
   
     <title>Using GroupBy to remove ‘data islands’ &#8212; Predictably Sunny</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -261,7 +256,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -292,8 +287,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="using-groupby-to-remove-data-islands">
-<h1>Using GroupBy to remove ‘data islands’<a class="headerlink" href="#using-groupby-to-remove-data-islands" title="Permalink to this headline">¶</a></h1>
+                 <section id="using-groupby-to-remove-data-islands">
+<h1>Using GroupBy to remove ‘data islands’<a class="headerlink" href="#using-groupby-to-remove-data-islands" title="Permalink to this headline">#</a></h1>
 <p>As anyone who has dealt with measurement data knows, missing and errornous data is inevitable. Applying automatic quality control procedures can improve the data quality, however, due to the imperfect nature of such methods, the final dataset often contains many short periods of questionable data called ‘data islands’. In this blog post, I’ll show you how you can remove gappy sections of data and remove data islands using GroupBy.</p>
 <p>First, let’s import the necessary libraries:</p>
 <div class="cell docutils container">
@@ -306,7 +301,7 @@
 </div>
 </div>
 <section id="part-2-removing-data-islands">
-<h2>Part 2 - Removing Data Islands<a class="headerlink" href="#part-2-removing-data-islands" title="Permalink to this headline">¶</a></h2>
+<h2>Part 2 - Removing Data Islands<a class="headerlink" href="#part-2-removing-data-islands" title="Permalink to this headline">#</a></h2>
 <p>Create a dataframe with fictional solar irradiance data with multiple missing entires:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -338,7 +333,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/remove_data_islands_10_1.png" src="../../../_images/remove_data_islands_10_1.png" />
+<img alt="../../../_images/57084522f4102ad8224ac59724b15e7dfd81b42546afbcd4bae289548e02fb63.png" src="../../../_images/57084522f4102ad8224ac59724b15e7dfd81b42546afbcd4bae289548e02fb63.png" />
 </div>
 </div>
 <p>As it’s evident there are a lot of missing data around 11 am, and many short periods of data (data islands).</p>
@@ -360,7 +355,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/remove_data_islands_12_1.png" src="../../../_images/remove_data_islands_12_1.png" />
+<img alt="../../../_images/69ab2a2d52aa31c96a99907f7b137ea9c7a4cc0ae88fac26c9f79a681fe4f6f5.png" src="../../../_images/69ab2a2d52aa31c96a99907f7b137ea9c7a4cc0ae88fac26c9f79a681fe4f6f5.png" />
 </div>
 </div>
 <p>The next step is then to determine whether a period should be removed or not. This is where the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> operation becomes extremely handy! We group/split the data into different periods based on the column <code class="docutils literal notranslate"><span class="pre">gap_start_stop_cumsum</span></code> and then for each period we determine how many entries it contains. For this we use the <code class="docutils literal notranslate"><span class="pre">transform</span></code> operation on the grouped periods, which returns a dataframe with the same indexes as the original dataframe. The new column, <code class="docutils literal notranslate"><span class="pre">group_count</span></code>, contains the period length for the period which each time step belongs to.</p>
@@ -390,7 +385,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/remove_data_islands_16_1.png" src="../../../_images/remove_data_islands_16_1.png" />
+<img alt="../../../_images/9b8d935f5655949bbb49dcbd910c190fb577f191fb08ac80a513070fbf67919f.png" src="../../../_images/9b8d935f5655949bbb49dcbd910c190fb577f191fb08ac80a513070fbf67919f.png" />
 </div>
 </div>
 <p>It is clear now that all the short data periods have been removed and we are more confident in the validity of our dataset.</p>
@@ -416,8 +411,9 @@
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -428,7 +424,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

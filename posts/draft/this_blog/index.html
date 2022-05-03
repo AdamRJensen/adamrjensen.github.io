@@ -20,29 +20,26 @@
   
     <title>A quick guide to making this blog &#8212; Predictably Sunny</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -231,7 +226,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -272,11 +267,11 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="a-quick-guide-to-making-this-blog">
-<h1>A quick guide to making this blog<a class="headerlink" href="#a-quick-guide-to-making-this-blog" title="Permalink to this headline">¶</a></h1>
+                 <section id="a-quick-guide-to-making-this-blog">
+<h1>A quick guide to making this blog<a class="headerlink" href="#a-quick-guide-to-making-this-blog" title="Permalink to this headline">#</a></h1>
 <p>This blog is made using <a class="reference external" href="https://ablog.readthedocs.io">ablog</a> and <a class="reference external" href="https://pydata-sphinx-theme.readthedocs.io/">the Sphinx PyData Theme</a>.</p>
 <section id="myst-nb">
-<h2>MyST-NB<a class="headerlink" href="#myst-nb" title="Permalink to this headline">¶</a></h2>
+<h2>MyST-NB<a class="headerlink" href="#myst-nb" title="Permalink to this headline">#</a></h2>
 <p>This is what allows Jupyter Notebooks to be converted in blog posts. The parser is built ontop of <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">MyST-parser</a> which is a markdown for the Markedly Structured Text documents (a powerful and Sphinx compatible flavor of Markdown).</p>
 <p>:: {Hint}
 In the conf.py file you only need to include <code class="docutils literal notranslate"><span class="pre">myst-nb</span></code> as this automatically actives the <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code>.
@@ -285,11 +280,11 @@ In the conf.py file you only need to include <code class="docutils literal notra
 <p>Note that <code class="docutils literal notranslate"><span class="pre">nbsphinx´</span> <span class="pre">is</span> <span class="pre">older</span> <span class="pre">alternative</span> <span class="pre">package</span> <span class="pre">for</span> <span class="pre">parsing</span> </code>.ipynb<code class="docutils literal notranslate"><span class="pre">files.</span> <span class="pre">The</span> <span class="pre">reason</span> <span class="pre">for</span> <span class="pre">mentioning</span> <span class="pre">this</span> <span class="pre">is</span> <span class="pre">that</span> <span class="pre">this</span> <span class="pre">package</span> <span class="pre">should</span> <span class="pre">not</span> <span class="pre">be</span> <span class="pre">added</span> <span class="pre">as</span> <span class="pre">an</span> <span class="pre">extension</span> <span class="pre">together</span> <span class="pre">with</span></code>myst-nb` as they would be conflicting.</p>
 </section>
 <section id="jupyter-notebooks">
-<h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<h2>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">Link</a></p>
 </section>
 <section id="things-that-don-t-work-with-this-blog-setup">
-<h2>Things that don’t work with this blog setup<a class="headerlink" href="#things-that-don-t-work-with-this-blog-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Things that don’t work with this blog setup<a class="headerlink" href="#things-that-don-t-work-with-this-blog-setup" title="Permalink to this headline">#</a></h2>
 <p>There are a few things that are not possible, which I expected should be:</p>
 <p>For example, the Sphinx PyData theme does not support:</p>
 <ul class="simple">
@@ -317,8 +312,9 @@ In the conf.py file you only need to include <code class="docutils literal notra
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -329,7 +325,7 @@ In the conf.py file you only need to include <code class="docutils literal notra
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

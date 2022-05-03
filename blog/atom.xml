@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2022-02-23T15:31:53.757688+00:00</updated>
+  <updated>2022-05-03T16:52:38.033774+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <entry>
     <id>http://predictablysunny.com/posts/gsoc_project_intro/</id>
     <title>pvlib - a one stop source for solar resource data</title>

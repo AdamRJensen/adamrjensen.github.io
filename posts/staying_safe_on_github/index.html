@@ -20,29 +20,26 @@
   
     <title>Staying safe on GitHub &#8212; Predictably Sunny</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -283,7 +278,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -319,13 +314,13 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="staying-safe-on-github">
-<h1>Staying safe on GitHub<a class="headerlink" href="#staying-safe-on-github" title="Permalink to this headline">¶</a></h1>
+                 <section id="staying-safe-on-github">
+<h1>Staying safe on GitHub<a class="headerlink" href="#staying-safe-on-github" title="Permalink to this headline">#</a></h1>
 <p>Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?</p>
 <p>Storing your credentials as environment variables is one method of hiding your credentials while still being easy to use. Each environment variable has a name and an associated value, much like a dictionary. With GitHub, this can be achieved using GitHub Secrets - shhh, don’t tell anyone!</p>
 <p>In this blog post, I’ll share an example of an issue I recently encountered of having to use a username and password in a Jupyter Notebook on my blog that is being executed by GitHub Actions.</p>
 <section id="github-secrets">
-<h2>Github Secrets<a class="headerlink" href="#github-secrets" title="Permalink to this headline">¶</a></h2>
+<h2>Github Secrets<a class="headerlink" href="#github-secrets" title="Permalink to this headline">#</a></h2>
 <p>The first step is to add the credentials to GitHub Secrets in your repository. This is easily done by navigating to the secrets tab in the repository settings menu. New secrets can be added by clicking the “New repository secret” and entering the desired name and corresponding value. In my case I wanted both the username and password to stay hidden, hence I created two secrets.</p>
 <p>Here’s what that looked like afterward:
 <img alt="github secrets example" src="../../_images/github_secrets.png" /></p>
@@ -341,7 +336,7 @@
 </div>
 </section>
 <section id="using-secrets">
-<h2>Using secrets<a class="headerlink" href="#using-secrets" title="Permalink to this headline">¶</a></h2>
+<h2>Using secrets<a class="headerlink" href="#using-secrets" title="Permalink to this headline">#</a></h2>
 <p>Once the enviroment variables have been set up correctly, they can simply be called in any script like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">BSRN_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;BSRN_FTP_USERNAME&#39;</span><span class="p">]</span>
@@ -422,8 +417,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -434,7 +430,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

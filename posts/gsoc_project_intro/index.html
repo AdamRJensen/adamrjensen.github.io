@@ -20,29 +20,26 @@
   
     <title>pvlib - a one stop source for solar resource data &#8212; Predictably Sunny</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -285,7 +280,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -326,8 +321,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="pvlib-a-one-stop-source-for-solar-resource-data">
-<h1>pvlib - a one stop source for solar resource data<a class="headerlink" href="#pvlib-a-one-stop-source-for-solar-resource-data" title="Permalink to this headline">¶</a></h1>
+                 <section id="pvlib-a-one-stop-source-for-solar-resource-data">
+<h1>pvlib - a one stop source for solar resource data<a class="headerlink" href="#pvlib-a-one-stop-source-for-solar-resource-data" title="Permalink to this headline">#</a></h1>
 <p>This title at least represents the aim of my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> project that I will be completing during the next 10 weeks. In short, I’ll be extending <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/">pvlib python’s</a> current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
 <img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
 <p>And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from a frustration over how unnecessarily difficult it is to obtain good solar resource data.
@@ -335,7 +330,7 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 <p>Given that solar irradiance is the most important input to predicting solar energy yield, using suboptimal data is kinda a big deal. Solar resource data is not only essential to the design stage but is also crucial for benchmarking solar radiation models (decomposition models, forecasting techniques, etc.) and assessing system performance.</p>
 <p>pvlib python already has a module called <code class="docutils literal notranslate"><span class="pre">iotools</span></code> for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.</p>
 <section id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">¶</a></h2>
+<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this headline">#</a></h2>
 <p>During the project I’ll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://bsrn.awi.de/">Baseline Surface Radiation Network (BSRN)</a></p></li>
@@ -354,13 +349,13 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 <p>If you think that I’ve missed any important open-source datasets, please let me know in the comments section!</p>
 </section>
 <section id="google-summer-of-code">
-<h2>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this headline">¶</a></h2>
+<h2>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this headline">#</a></h2>
 <p>You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project, but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students writing code and taking active part in the open-source community.</p>
 <p>During the 10 week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a> comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.</p>
 <p>If you’re interested, you can find my official GSoC project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/projects/#6071460558274560">here</a>.</p>
 </section>
 <section id="whats-next">
-<h2>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">¶</a></h2>
+<h2>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this headline">#</a></h2>
 <p>I just completed adding <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1175">CAMS support to pvlib python</a>. CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.</p>
 <p>Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.</p>
 <p>Stay tuned for more news on how you easily can get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data.</p>
@@ -433,8 +428,9 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -445,7 +441,7 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

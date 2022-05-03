@@ -20,29 +20,26 @@
   
     <title>Summary of Google Summer of Code with pvlib &#8212; Predictably Sunny</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -285,7 +280,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -336,11 +331,11 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="summary-of-google-summer-of-code-with-pvlib">
-<h1>Summary of Google Summer of Code with pvlib<a class="headerlink" href="#summary-of-google-summer-of-code-with-pvlib" title="Permalink to this headline">¶</a></h1>
+                 <section id="summary-of-google-summer-of-code-with-pvlib">
+<h1>Summary of Google Summer of Code with pvlib<a class="headerlink" href="#summary-of-google-summer-of-code-with-pvlib" title="Permalink to this headline">#</a></h1>
 <p>The coding period of this year’s Google Summer of Code (GSoC) is officially over, and it’s time to take a step back and evaluate the experience. For those of you who might not know, I’ve been working on extending pvlib’s iotools for the past 10 weeks, which I described in this <a class="reference internal" href="../gsoc_project_intro/"><span class="doc std std-doc">blog post</span></a>.</p>
 <section id="success-or-not">
-<h2>Success or not?<a class="headerlink" href="#success-or-not" title="Permalink to this headline">¶</a></h2>
+<h2>Success or not?<a class="headerlink" href="#success-or-not" title="Permalink to this headline">#</a></h2>
 <p>There are many ways to determine if a project has been a success; one way is to look if the project goals have been met. So let’s refer back to the project outline:</p>
 <div class="admonition-original-project-outline admonition">
 <p class="admonition-title">Original project outline</p>
@@ -377,7 +372,7 @@
 <p>I can confidently say that all of these goals have been fulfilled to a great extent in this project. It’s certainly been a very inspiring process, where I’ve written a lot of code and learned more than I ever could have imagined - and I have no plans of stopping contributing to pvlib and other open-source communities.</p>
 </section>
 <section id="pull-requests">
-<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h2>
+<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">#</a></h2>
 <p>All the work I’ve done during the project has resulted in pull requests, most of which are already merged into pvlib’s master branch. Each pull request contains a description of the added functionality, as well as the entire development history, i.e., discussion along the way, code reviews, and an overview of the new code and tests.</p>
 <p>First, I’d recommend that you check out the documentation of the functions, and if you still are interested in further details of the function development, then check out the pull requests:</p>
 <ul class="simple">
@@ -391,17 +386,17 @@
 <p>I’m already planning on contributing to pvlib iotools in the future, possibly adding functionality for downloading files locally, as discussed in <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1282">PR #1282</a>.</p>
 </section>
 <section id="lessons-learned">
-<h2>Lessons learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">¶</a></h2>
+<h2>Lessons learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">#</a></h2>
 <p>In the last two weeks of the program, I’ve found myself stumbling into tasks that were similar to what I did at the beginning of the program. The difference is that now I can effortlessly solve these problems, and I know how and why it works. It’s truly a great feeling to realize that I’ve learned a ton and it’s already proven useful.</p>
 <p>Now I’m first and foremost a scientist, and programming and software development are secondary interests. But I’ve been blown away by how much there are for scientists to learn from software development. The ability of open-source libraries to support a community of scientists, reducing each individual’s workload and providing access to tested and validated tools, is of incredible value. Why don’t we do more of this!?! As I come to the end of my Ph.D. and being to plan my post-doc in the Spring, I hope to inspire others in my research community to use open-source tools and contribute to them, as I truly believe this can result in better and more efficient and reproducible science.</p>
 </section>
 <section id="recommendations-to-future-gsoc-students">
-<h2>Recommendations to future GSoC students<a class="headerlink" href="#recommendations-to-future-gsoc-students" title="Permalink to this headline">¶</a></h2>
+<h2>Recommendations to future GSoC students<a class="headerlink" href="#recommendations-to-future-gsoc-students" title="Permalink to this headline">#</a></h2>
 <p>If you are a student and in doubt whether to participate due to time or other commitments, then do it anyway! There is absolutely no better way to learn software development than, well, just doing it. And when else do you really have the chance to get a personal mentor? Almost never, so this is your chance to make something useful out of your summer, both for yourself and software users around the world.</p>
 <p>Even better, get involved with an open-source community first, which could likely lead you to the opportunity to participate in GSoC. Start with just a small pull request fixing a typo to familiarize yourself with the workflow and how things are done. Then progress by taking up an issue labeled <code class="docutils literal notranslate"><span class="pre">good</span> <span class="pre">first</span> <span class="pre">issue</span></code> and asking for help. GSoC formalizes this process, but there’s no way you shouldn’t get started today!</p>
 </section>
 <section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
 <p>The true hero of this project is my mentor <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a>, who first encouraged me to apply for the program and devoted countless hours to this project. Kevin’s passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concents, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).</p>
 <p>The pvlib maintainers, Will Holmgren, Mark Mikofski, and Cliff Hansen, have also offered invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I’d also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.</p>
 </section>
@@ -477,8 +472,9 @@
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -489,7 +485,7 @@
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -20,29 +20,26 @@
   
     <title>DMI API Tutorial &#8212; Predictably Sunny</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -285,7 +280,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -321,12 +316,12 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="dmi-api-tutorial">
-<h1>DMI API Tutorial<a class="headerlink" href="#dmi-api-tutorial" title="Permalink to this headline">¶</a></h1>
+                 <section id="dmi-api-tutorial">
+<h1>DMI API Tutorial<a class="headerlink" href="#dmi-api-tutorial" title="Permalink to this headline">#</a></h1>
 <p>This tutorial gives an introduction on how to use the <a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI">Danish Meteorological Institute’s (DMI) API</a> to download meterological observation data (v2).</p>
 <p>The tutorial uses the Python programming language and is in the format of a Jupyter Notebook. The notebook can be downloaded and run locally, allowing you to quickly get started downloading data.</p>
 <p>If you’re new to the DMI observation data, I recommend that you check out some of the following links:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=41717704">Station numbers</a></p></li>
 <li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476616">Parameters</a></p></li>
 <li><p><a class="reference external" href="https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476621">Codes</a></p></li>
@@ -337,7 +332,7 @@
 </ol>
 <br>
 <section id="part-1-retrieving-data">
-<h2>Part 1: Retrieving data<a class="headerlink" href="#part-1-retrieving-data" title="Permalink to this headline">¶</a></h2>
+<h2>Part 1: Retrieving data<a class="headerlink" href="#part-1-retrieving-data" title="Permalink to this headline">#</a></h2>
 <p>Part 1 of this tutorial will show how to request data and convert it to a table format. Part 2 will deal with how to request specific data and more advanced data handling.</p>
 <p>First, the necessary libraries have to be imported:</p>
 <div class="cell docutils container">
@@ -405,7 +400,7 @@ When inspecting the json object, it can be noticed that the measurement data is 
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;geometry&#39;: {&#39;coordinates&#39;: [8.0828, 55.5575], &#39;type&#39;: &#39;Point&#39;},
   &#39;id&#39;: &#39;00000001-30ad-ae74-5b33-7ef0a1a6ef92&#39;,
   &#39;type&#39;: &#39;Feature&#39;,
-  &#39;properties&#39;: {&#39;created&#39;: &#39;2021-01-20T01:07:45.306987Z&#39;,
+  &#39;properties&#39;: {&#39;created&#39;: &#39;2022-02-23T04:38:59.325752Z&#39;,
    &#39;observed&#39;: &#39;2015-09-11T10:10:00Z&#39;,
    &#39;parameterId&#39;: &#39;temp_dew&#39;,
    &#39;stationId&#39;: &#39;06081&#39;,
@@ -413,7 +408,7 @@ When inspecting the json object, it can be noticed that the measurement data is 
  {&#39;geometry&#39;: {&#39;coordinates&#39;: [11.3879, 55.3224], &#39;type&#39;: &#39;Point&#39;},
   &#39;id&#39;: &#39;00000005-79f9-4ab8-6905-bec39ce37f54&#39;,
   &#39;type&#39;: &#39;Feature&#39;,
-  &#39;properties&#39;: {&#39;created&#39;: &#39;2021-01-19T19:59:19.893994Z&#39;,
+  &#39;properties&#39;: {&#39;created&#39;: &#39;2022-02-22T15:11:02.727027Z&#39;,
    &#39;observed&#39;: &#39;2010-08-10T03:30:00Z&#39;,
    &#39;parameterId&#39;: &#39;humidity&#39;,
    &#39;stationId&#39;: &#39;06135&#39;,
@@ -469,7 +464,7 @@ When inspecting the json object, it can be noticed that the measurement data is 
       <td>Feature</td>
       <td>[8.0828, 55.5575]</td>
       <td>Point</td>
-      <td>2021-01-20T01:07:45.306987Z</td>
+      <td>2022-02-23T04:38:59.325752Z</td>
       <td>2015-09-11T10:10:00Z</td>
       <td>temp_dew</td>
       <td>06081</td>
@@ -482,7 +477,7 @@ When inspecting the json object, it can be noticed that the measurement data is 
       <td>Feature</td>
       <td>[11.3879, 55.3224]</td>
       <td>Point</td>
-      <td>2021-01-19T19:59:19.893994Z</td>
+      <td>2022-02-22T15:11:02.727027Z</td>
       <td>2010-08-10T03:30:00Z</td>
       <td>humidity</td>
       <td>06135</td>
@@ -491,11 +486,24 @@ When inspecting the json object, it can be noticed that the measurement data is 
     </tr>
     <tr>
       <th>2</th>
+      <td>00000006-ffbe-6f2f-fe2a-4ed40a6fa65a</td>
+      <td>Feature</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2022-02-23T09:08:05.267820Z</td>
+      <td>1960-12-16T06:00:00Z</td>
+      <td>cloud_cover</td>
+      <td>06190</td>
+      <td>100.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
       <td>0000000e-638e-5ce8-2dab-0a16387eb3e9</td>
       <td>Feature</td>
       <td>[8.6705, 56.383]</td>
       <td>Point</td>
-      <td>2021-01-20T04:33:51.105632Z</td>
+      <td>2022-02-23T00:55:19.160252Z</td>
       <td>2005-08-22T06:00:00Z</td>
       <td>temp_max_past12h</td>
       <td>06056</td>
@@ -503,29 +511,16 @@ When inspecting the json object, it can be noticed that the measurement data is 
       <td>NaN</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>0000000e-fa0d-c953-0901-0856867a22bb</td>
       <td>Feature</td>
       <td>[11.6035, 55.7358]</td>
       <td>Point</td>
-      <td>2021-01-19T18:58:26.121240Z</td>
+      <td>2022-02-22T16:35:55.472282Z</td>
       <td>2014-04-08T17:10:00Z</td>
       <td>pressure_at_sea</td>
       <td>06156</td>
       <td>1006.3</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>00000011-f0bb-b0c9-743c-712306e63470</td>
-      <td>Feature</td>
-      <td>[11.3292, 54.8275]</td>
-      <td>Point</td>
-      <td>2021-01-19T14:04:53.308204Z</td>
-      <td>2003-06-13T09:00:00Z</td>
-      <td>wind_speed</td>
-      <td>06141</td>
-      <td>5.0</td>
       <td>NaN</td>
     </tr>
   </tbody>
@@ -544,9 +539,9 @@ When inspecting the json object, it can be noticed that the measurement data is 
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0   2015-09-11 10:10:00+00:00
 1   2010-08-10 03:30:00+00:00
-2   2005-08-22 06:00:00+00:00
-3   2014-04-08 17:10:00+00:00
-4   2003-06-13 09:00:00+00:00
+2   1960-12-16 06:00:00+00:00
+3   2005-08-22 06:00:00+00:00
+4   2014-04-08 17:10:00+00:00
 Name: time, dtype: datetime64[ns, UTC]
 </pre></div>
 </div>
@@ -561,18 +556,19 @@ Last, we will generate a list of all the available parameters:<div class="cell d
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;temp_dew&#39; &#39;humidity&#39; &#39;temp_max_past12h&#39; &#39;pressure_at_sea&#39; &#39;wind_speed&#39;
- &#39;temp_soil_max_past1h&#39; &#39;weather&#39; &#39;wind_dir&#39; &#39;precip_dur_past10min&#39;
- &#39;leav_hum_dur_past10min&#39; &#39;temp_min_past1h&#39; &#39;precip_past1min&#39; &#39;pressure&#39;
- &#39;temp_dry&#39; &#39;radia_glob&#39; &#39;wind_speed_past1h&#39; &#39;humidity_past1h&#39;
- &#39;sun_last10min_glob&#39; &#39;cloud_cover&#39; &#39;precip_past1h&#39; &#39;visib_mean_last10min&#39;
- &#39;temp_grass&#39; &#39;leav_hum_dur_past1h&#39; &#39;visibility&#39; &#39;temp_soil&#39;
- &#39;temp_soil_min_past1h&#39; &#39;temp_grass_min_past1h&#39; &#39;precip_past10min&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;temp_dew&#39; &#39;humidity&#39; &#39;cloud_cover&#39; &#39;temp_max_past12h&#39; &#39;pressure_at_sea&#39;
+ &#39;wind_speed&#39; &#39;temp_soil_max_past1h&#39; &#39;weather&#39; &#39;wind_dir&#39; &#39;temp_dry&#39;
+ &#39;precip_dur_past10min&#39; &#39;temp_grass&#39; &#39;leav_hum_dur_past10min&#39;
+ &#39;temp_min_past1h&#39; &#39;precip_past1min&#39; &#39;pressure&#39; &#39;radia_glob&#39;
+ &#39;wind_speed_past1h&#39; &#39;humidity_past1h&#39; &#39;sun_last10min_glob&#39;
+ &#39;precip_past10min&#39; &#39;precip_past1h&#39; &#39;visib_mean_last10min&#39;
+ &#39;leav_hum_dur_past1h&#39; &#39;visibility&#39; &#39;temp_soil&#39; &#39;temp_soil_min_past1h&#39;
+ &#39;wind_min&#39; &#39;temp_grass_min_past1h&#39; &#39;wind_min_past1h&#39; &#39;cloud_height&#39;
  &#39;temp_min_past12h&#39; &#39;wind_max_per10min_past1h&#39; &#39;temp_max_past1h&#39;
  &#39;temp_soil_mean_past1h&#39; &#39;wind_max&#39; &#39;wind_dir_past1h&#39; &#39;precip_dur_past1h&#39;
- &#39;cloud_height&#39; &#39;wind_gust_always_past1h&#39; &#39;sun_last1h_glob&#39;
+ &#39;temp_grass_mean_past1h&#39; &#39;wind_gust_always_past1h&#39; &#39;sun_last1h_glob&#39;
  &#39;temp_mean_past1h&#39; &#39;temp_grass_max_past1h&#39; &#39;snow_depth_man&#39;
- &#39;radia_glob_past1h&#39; &#39;wind_min&#39; &#39;temp_grass_mean_past1h&#39; &#39;snow_cover_man&#39;]
+ &#39;radia_glob_past1h&#39;]
 </pre></div>
 </div>
 </div>
@@ -580,9 +576,9 @@ Last, we will generate a list of all the available parameters:<div class="cell d
 <p><br/><br/></p>
 </section>
 <section id="part-2-requesting-specific-data">
-<h2>Part 2: Requesting specific data<a class="headerlink" href="#part-2-requesting-specific-data" title="Permalink to this headline">¶</a></h2>
+<h2>Part 2: Requesting specific data<a class="headerlink" href="#part-2-requesting-specific-data" title="Permalink to this headline">#</a></h2>
 <p>The above example was a heavily simplied example to illustrate how the API can be accessed. For most applications you probably want to specify query criterias, such as:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Meterological stations (e.g. 04320, 06074, etc.)</p></li>
 <li><p>Parameters (e.g. wind_speed, humidity, etc.)</p></li>
 <li><p>Time frame (to and from time)</p></li>
@@ -823,7 +819,7 @@ Freq: 10T, Name: (04250, wind_speed), Length: 1441, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/dmi_data_24_1.png" src="../../_images/dmi_data_24_1.png" />
+<img alt="../../_images/da6d3aaf2128d28e62ba9d36f3dada6844026dad44a8efc0a5dbc7b53545e3d3.png" src="../../_images/da6d3aaf2128d28e62ba9d36f3dada6844026dad44a8efc0a5dbc7b53545e3d3.png" />
 </div>
 </div>
 </section>
@@ -892,8 +888,9 @@ Freq: 10T, Name: (04250, wind_speed), Length: 1441, dtype: float64
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -904,7 +901,7 @@ Freq: 10T, Name: (04250, wind_speed), Length: 1441, dtype: float64
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -20,29 +20,26 @@
   
     <title>Data formats &#8212; Predictably Sunny</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -261,7 +256,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -343,26 +338,26 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="data-formats">
-<h1>Data formats<a class="headerlink" href="#data-formats" title="Permalink to this headline">¶</a></h1>
+                 <section id="data-formats">
+<h1>Data formats<a class="headerlink" href="#data-formats" title="Permalink to this headline">#</a></h1>
 <p>Two of the most important considerations is what kind of data you want to include and who (what) should be able to read the files. At this day and age it is a requirement that the file is easily parsed by software, though often it is nice to also be human-readable</p>
 <p>Well what does it mean to be human-readable?</p>
 <p>Aka. a file that you can open in a simple text editor and get a rough idea about the data it contains.</p>
 <section id="file-formats">
-<h2>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h2>
+<h2>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">#</a></h2>
 <section id="csv">
-<h3>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h3>
+<h3>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">#</a></h3>
 <p>Do not do split data across multiple lines!!</p>
 <p>Where should we keep the metadata? In the header, in the footer, in both?</p>
 <p>Can be opened with Excel, quickly investigated and plotted by all!</p>
 <p>CSV files typically have the extension .csv, though .txt or .dat may also used.</p>
 </section>
 <section id="json">
-<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">#</a></h3>
 <p>A widely used fileformat, supposed to be ‘human-readable’.</p>
 </section>
 <section id="netcdf">
-<h3>NetCDF<a class="headerlink" href="#netcdf" title="Permalink to this headline">¶</a></h3>
+<h3>NetCDF<a class="headerlink" href="#netcdf" title="Permalink to this headline">#</a></h3>
 <p>The NetCDF file format is a binary format which has become widely used in the climate and marine science communities. Some of the benefits of the NetCDF file format are:</p>
 <ul class="simple">
 <li><p><strong>Self-describing</strong> - includes metadata</p></li>
@@ -375,7 +370,7 @@
 <p>“Since netCDF-4 files are actually HDF-5 files that are structured in a special way, netCDF-4 files can also be read by HDF-5 tools.”</p>
 <p>Heres a <a class="reference external" href="https://www.youtube.com/watch?v=HJGQQjNoNcw&amp;ab_channel=AustralianResearchDataCommons-ARDC">video</a></p>
 <section id="opendap">
-<h4>OpeNDAP<a class="headerlink" href="#opendap" title="Permalink to this headline">¶</a></h4>
+<h4>OpeNDAP<a class="headerlink" href="#opendap" title="Permalink to this headline">#</a></h4>
 <p>OPeNDAP provides sophisticated sub-sampling capabilities</p>
 <p>OpeNDAP URLs support different suffixes, e.g., a “.html” suffix will open an html page with information about the variable and options for subsetting the data and different download options. The data can be downloaded by using adding the suffix corresponding to the desired file format, e.g., .ascii, .nc, .nc4.</p>
 <p>..{Note}
@@ -385,26 +380,26 @@ In addition to its native data representation format, OPeNDAP can get data in th
 </section>
 </section>
 <section id="meatadata">
-<h2>Meatadata<a class="headerlink" href="#meatadata" title="Permalink to this headline">¶</a></h2>
+<h2>Meatadata<a class="headerlink" href="#meatadata" title="Permalink to this headline">#</a></h2>
 <p>First of all what metadata would we like to have?</p>
 <p>Latitude and longitude should follow ISO 19115!</p>
 <p>Timezone of the data.</p>
 </section>
 <section id="timestamps">
-<h2>Timestamps<a class="headerlink" href="#timestamps" title="Permalink to this headline">¶</a></h2>
+<h2>Timestamps<a class="headerlink" href="#timestamps" title="Permalink to this headline">#</a></h2>
 <p>Generally we deal with time-series data, which means that each measurement is associated with a specific measurement time. This time can be either local time (with or without daylight savings) or UTC, which is generally prefered.</p>
 <p>When thing that has been an issue is how to denote midnight. The standard convention is to label it 00:00, thoguth some formats, e.g. the University of Oregon SRML, denote it as 24:00. The latter convention makes it difficult to programmatically parse the data files, and requires effort in translating it to the former.</p>
 </section>
 <section id="other-considerations">
-<h2>Other considerations<a class="headerlink" href="#other-considerations" title="Permalink to this headline">¶</a></h2>
+<h2>Other considerations<a class="headerlink" href="#other-considerations" title="Permalink to this headline">#</a></h2>
 <section id="platform-agnogstic">
-<h3>Platform agnogstic<a class="headerlink" href="#platform-agnogstic" title="Permalink to this headline">¶</a></h3>
+<h3>Platform agnogstic<a class="headerlink" href="#platform-agnogstic" title="Permalink to this headline">#</a></h3>
 <p>Files should not be proprietary (such as MATLAB’s file format .mat) and not only usable for specific libraries (such as the Pickle format for use with Pandas).</p>
 <p>The files can be great to store temporary data or exchange data within a program, but they are not suitable for wider data distrubtion to the public.</p>
 </section>
 </section>
 <section id="to-do">
-<h2>To do<a class="headerlink" href="#to-do" title="Permalink to this headline">¶</a></h2>
+<h2>To do<a class="headerlink" href="#to-do" title="Permalink to this headline">#</a></h2>
 <p>Understand</p>
 <ul class="simple">
 <li><p>THREDDS</p></li>
@@ -431,8 +426,9 @@ In addition to its native data representation format, OPeNDAP can get data in th
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -443,7 +439,7 @@ In addition to its native data representation format, OPeNDAP can get data in th
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

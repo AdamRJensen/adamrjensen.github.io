@@ -20,29 +20,26 @@
   
     <title>Station logbooks with Google Forms &#8212; Predictably Sunny</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -62,15 +59,13 @@
 
     <!-- Google Analytics -->
     
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-B5PLZ8N24G"></script>
 <script>
-                        window.ga = window.ga || function () {
-                            (ga.q = ga.q || []).push(arguments) };
-                        ga.l = +new Date;
-                        ga('create', 'UA-192349084-1', 'auto');
-                        ga('set', 'anonymizeIp', true);
-                        ga('send', 'pageview');
-                    </script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-B5PLZ8N24G');
+                </script>
  
 <link
   rel="alternate"
@@ -105,7 +100,7 @@
 </style>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -259,7 +254,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -327,13 +322,13 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <section class="tex2jax_ignore mathjax_ignore" id="station-logbooks-with-google-forms">
-<h1>Station logbooks with Google Forms<a class="headerlink" href="#station-logbooks-with-google-forms" title="Permalink to this headline">¶</a></h1>
+                 <section id="station-logbooks-with-google-forms">
+<h1>Station logbooks with Google Forms<a class="headerlink" href="#station-logbooks-with-google-forms" title="Permalink to this headline">#</a></h1>
 <p>Logbook keeping is an essential practice when operating a meterological station, or carrying out an experiement or measurement campaign for that matter. During the post data analysis, being able to look back at the notes in the logbook is invaluable and can make it effortless to explain anomalies in the data, e.g., the measurement was unusual low (logbook entry denotes soiling), or a change in measurement accuracy (instrument change noted in logbook).</p>
 <p>The first rule of logbooks is that any logbook is better than no logbook. But there’s no reason we can’t have a great logbook. But first we must understand what makes a great logbook - requireing us to consider both the person filling it out and the end user.</p>
 <p>This blog post will discuss common logbook practices and requirements with a focus on solar radiation measurements, though there are no reason these ideas aren’t transferable to other fields of science.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">#</a></h2>
 <p>It’s important that the information is well structured and available in order to be useful. Keeping in mind that the simplier and easier it is to fill out the logbook, the greater likelihood there is for the logbook being used correctly.</p>
 <p>Maintenance inspections have to be kept as simple as possible to encourage frequent doing! This should not be underestimated. If the inspections are seen as tedious and difficult, there is a very high certainty of it being carried out infrequently and perhaps eventually ceaused to be done.</p>
 <p>The motivitation for the logbook developed in this blog post is therefore three-fold:</p>
@@ -348,7 +343,7 @@ s Climate Station</a>.
 <img alt="example logbook entry" src="../../../_images/example_logbook_entry.png" /></p>
 </section>
 <section id="what-should-be-noted">
-<h2>What should be noted?<a class="headerlink" href="#what-should-be-noted" title="Permalink to this headline">¶</a></h2>
+<h2>What should be noted?<a class="headerlink" href="#what-should-be-noted" title="Permalink to this headline">#</a></h2>
 <p>A loogbook should be able to take a variety of different events, including:</p>
 <ul class="simple">
 <li><p>Regular maintenance practices (cleaning of instruments, spirit level, pyrheliometer alignment, descicant color, etc.)</p></li>
@@ -357,7 +352,7 @@ s Climate Station</a>.
 </ul>
 </section>
 <section id="why-google-forms">
-<h2>Why Google Forms?<a class="headerlink" href="#why-google-forms" title="Permalink to this headline">¶</a></h2>
+<h2>Why Google Forms?<a class="headerlink" href="#why-google-forms" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>It’s easy to use (we’ve all had experience with them)</p></li>
 <li><p>It’s easy to setup and adjust (non-experts can modify a template, no fancy software required)</p></li>
@@ -367,19 +362,19 @@ s Climate Station</a>.
 </ul>
 </section>
 <section id="keep-it-simple">
-<h2>Keep it simple!<a class="headerlink" href="#keep-it-simple" title="Permalink to this headline">¶</a></h2>
+<h2>Keep it simple!<a class="headerlink" href="#keep-it-simple" title="Permalink to this headline">#</a></h2>
 <p>Previous log-books for the BSRN network included the notation of the temperature, however, this is already logged by the system and can be eliminanted. Start and end time is automatically denoted, elimating the possebility of user error.</p>
 <p>Also, cloud type and surface conditions were described in text, but this can be documented unbiased by a simple photo.</p>
 </section>
 <section id="comments">
-<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h2>
+<h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
 <p>Denote existing conditions and what actions were taken - and final state if necessary. Have a section for before and after photos.</p>
 <p>What has me really convinced is the Excel sheet that can be exported. And it contains links to the images, so you can immidiately see if an image was taken that day and take a quick peak! This should not be underestimated, it really makes investigating the data easy, making for better science!</p>
 <p>A form with pre-specified fields, some of which are mandatory and others which are not, can be a strong driver to promote proper maintenance keeping.</p>
 <p>“Care must be taken in the design of such a log so that text can be easily added beyond the normal “check-off” information”</p>
 </section>
 <section id="nice-features">
-<h2>Nice features<a class="headerlink" href="#nice-features" title="Permalink to this headline">¶</a></h2>
+<h2>Nice features<a class="headerlink" href="#nice-features" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Be able to click a button to select current time</p></li>
 <li><p>Enforce that end time is after start time (perhaps even display the time duration)</p></li>
@@ -397,8 +392,8 @@ s Climate Station</a>.
 <p>Google Forms is free for personal use, and available for $6 a month for businesess.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="by-doing-the-log-book-filling-as-you-re-doing-the-maitenance-you-ensure-that-the-log-books-get-s-filled-out-often-times-the-maitenance-is-better-than-what-is-being-reported-because-it-s-easy-to-forget-to-log-it-once-you-ve-done-it">
-<h1>By doing the log book filling as you’re doing the maitenance you ensure that the log books get’s filled out. Often times the maitenance is better than what is being reported, because it’s easy to forget to log it once you’ve done it.<a class="headerlink" href="#by-doing-the-log-book-filling-as-you-re-doing-the-maitenance-you-ensure-that-the-log-books-get-s-filled-out-often-times-the-maitenance-is-better-than-what-is-being-reported-because-it-s-easy-to-forget-to-log-it-once-you-ve-done-it" title="Permalink to this headline">¶</a></h1>
+<section id="by-doing-the-log-book-filling-as-you-re-doing-the-maitenance-you-ensure-that-the-log-books-get-s-filled-out-often-times-the-maitenance-is-better-than-what-is-being-reported-because-it-s-easy-to-forget-to-log-it-once-you-ve-done-it">
+<h1>By doing the log book filling as you’re doing the maitenance you ensure that the log books get’s filled out. Often times the maitenance is better than what is being reported, because it’s easy to forget to log it once you’ve done it.<a class="headerlink" href="#by-doing-the-log-book-filling-as-you-re-doing-the-maitenance-you-ensure-that-the-log-books-get-s-filled-out-often-times-the-maitenance-is-better-than-what-is-being-reported-because-it-s-easy-to-forget-to-log-it-once-you-ve-done-it" title="Permalink to this headline">#</a></h1>
 <p>Collect quantitative information, which easily can be sorted or plotted.</p>
 <p>What to do in case of rain? - probably say not checked</p>
 <p>Drawback</p>
@@ -425,8 +420,9 @@ s Climate Station</a>.
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -437,7 +433,7 @@ s Climate Station</a>.
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     
