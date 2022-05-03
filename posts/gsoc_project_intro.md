@@ -1,4 +1,4 @@
-# pvlib - a one stop source for solar resource data
+# pvlib - a one-stop source for solar resource data
 ```{post} 2021-06-10
 :author: Adam R. Jensen
 :tags: pvlib, solar, open science, gsoc
@@ -15,7 +15,7 @@ Given that solar irradiance is the most important input to predicting solar ener
 pvlib python already has a module called `iotools` for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.
 
 ## Data sources
-During the project I'll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):
+During the project, I'll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):
 - [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/)
 - [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
 - [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
@@ -35,7 +35,7 @@ If you think that I’ve missed any important open-source datasets, please let m
 ## Google Summer of Code
 You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project, but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students writing code and taking active part in the open-source community.
 
-During the 10 week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where [Kevin Anderson](https://github.com/kanderso-nrel) comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.
+During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where [Kevin Anderson](https://github.com/kanderso-nrel) comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.
 
 If you're interested, you can find my official GSoC project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
 
@@ -44,4 +44,4 @@ I just completed adding [CAMS support to pvlib python](https://github.com/pvlib/
 
 Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.
 
-Stay tuned for more news on how you easily can get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data.
+Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data.

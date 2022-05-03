@@ -15,7 +15,7 @@ Tier 1 stations are defined as those that meet all of the following requirements
 * measurement of diffuse horizontal irradiance (DHI) with a Spectrally Flat Class A thermopile pyranometer shaded by a shading ball
 * measurement of global horizontal irradiance (GHI) with a Spectrally Flat Class A thermopile pyranometer
 
-Seperate measurement of GHI is required for Tier 1 stations as most quality control procedures relies on comparing the measured and calculated GHI (closure equation). The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
+Seperate measurement of GHI is required for Tier 1 stations as most quality control procedures rely on comparing the measured and calculated GHI (closure equation). The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
 
 ### Tier 2 stations
 Tier 2 stations are defined as those that do not meet the Tier 1 requirements but meet one of the following specifications:
