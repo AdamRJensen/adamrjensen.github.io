@@ -5,7 +5,7 @@
    "id": "2d048d09-d491-4ead-a301-565288ea95b8",
    "metadata": {},
    "source": [
-    "# Satellite derived irradiance maps"
+    "# Satellite-derived irradiance maps"
    ]
   },
   {
@@ -23,9 +23,9 @@
    "id": "aa9abdc3-00f1-418f-a236-c20a6c1f4321",
    "metadata": {},
    "source": [
-    "Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geopgraphcial coverage (continents), long-time span (multiple decades), and low cost.\n",
+    "Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geographical coverage (continents), long-timespan (multiple decades), and low cost.\n",
     "\n",
-    "For these reasons almost all solar projects utilize satellite-derived irradiance data at some stage of the development, whether it be for pre-feasibility site assessment or for calculating the profitability of a project. Fortunately, there are numerous free satellite-derived irradiance datasets available.\n",
+    "For these reasons, almost all solar projects utilize satellite-derived irradiance data at some stage of the development, whether it be for pre-feasibility site assessment or for calculating the profitability of a project. Fortunately, there are numerous free satellite-derived irradiance datasets available.\n",
     "\n",
     "Now you may rightfully wonder how these different datasets differ and if there is any difference in their outputs. So in this blog post, we'll plot the long-term average irradiance for four different irradiance providers."
    ]
@@ -38,7 +38,7 @@
     "## Map data\n",
     "The data used to generate the maps can be freely downloaded from the links in the table below. Note that the data is based on different time frames, ranging from 10 to 23 years.\n",
     "\n",
-    "| Source of map data                                                     | Time span | Unit           |\n",
+    "| Source of map data                                                     | Timespan  | Unit           |\n",
     "|------------------------------------------------------------------------|:---------:|:--------------:|\n",
     "| [SARAH (PVGIS)](https://ec.europa.eu/jrc/en/PVGIS/downloads/SARA)      | 2005-2016 | W/m$^2$/year   |\n",
     "| [CM SAF (PVGIS)](https://ec.europa.eu/jrc/en/PVGIS/downloads/CMSAF)    | 2007-2016 | W/m$^2$/year   |\n",
@@ -174,9 +174,9 @@
    "id": "b4018819-3e50-42fb-8e18-87eaf716773b",
    "metadata": {},
    "source": [
-    "The different maps clearly illustrate the difference in geographical coverage of the four different data providers. Note the full coverage of CAMS is not shown, as it also covers the Atlantics Ocean and parts of South America. The actual coverage of CM SAF is also larger, extending all the way to South Africa.\n",
+    "The different maps clearly illustrate the difference in geographical coverage of the four different data providers. Note that the full coverage of CAMS is not shown, as it also covers the Atlantics Ocean and parts of South America. The actual coverage of CM SAF is also larger, extending all the way to South Africa.\n",
     "\n",
-    "Nevertheless, the irradiance maps are interesting and can be futher used to compare in which areas the estimated irradiance differs the most."
+    "Nevertheless, the irradiance maps are interesting and can be further used to compare in which areas the estimated irradiance differs the most."
    ]
   },
   {

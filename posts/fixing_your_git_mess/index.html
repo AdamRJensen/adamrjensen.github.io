@@ -12,7 +12,7 @@
   
 <meta property="og:url" content="https://predictablysunny.com/posts/fixing_your_git_mess/" />
   
-<meta property="og:description" content="On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to ..." />
+<meta property="og:description" content="On a day-to-day basis I use GitHub Desktop due to its nice graphical interface and that my git skills are close to zero. Every now and then, I screw things sufficiently up that I don’t know how to ..." />
   
 <meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
   
@@ -241,7 +241,7 @@
   
   <li>
     <a href="../irradiance_maps/"
-      >12 February - Satellite derived irradiance maps</a
+      >12 February - Satellite-derived irradiance maps</a
     >
   </li>
   
@@ -301,7 +301,7 @@
               <div>
                  <section id="fixing-your-git-mess">
 <h1>Fixing your git mess<a class="headerlink" href="#fixing-your-git-mess" title="Permalink to this headline">#</a></h1>
-<p>On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.</p>
+<p>On a day-to-day basis I use GitHub Desktop due to its nice graphical interface and that my git skills are close to zero. Every now and then, I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.</p>
 <p>Unfortunately, GitHub Desktop cannot help you here and you need to open up a Git Bash terminal and run a few commands. Without further ado, this <a class="reference external" href="https://stackoverflow.com/a/21718540/8558146">stackoverflow answer</a> describes very well my preferred way out of trouble. The method lets you revert your repository back to the state of a previous commit (e.g., 0766c053) in a safe way:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">commit</span> <span class="mi">0766</span><span class="n">c053</span><span class="o">..</span><span class="n">HEAD</span>
 <span class="n">git</span> <span class="n">commit</span>

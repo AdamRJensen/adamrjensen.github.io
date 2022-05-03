@@ -243,7 +243,7 @@
   
   <li>
     <a href="../irradiance_maps/"
-      >12 February - Satellite derived irradiance maps</a
+      >12 February - Satellite-derived irradiance maps</a
     >
   </li>
   
@@ -307,8 +307,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acknowledgements">
-   Acknowledgements
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
   </a>
  </li>
 </ul>
@@ -351,7 +351,7 @@
 </ul>
 </div>
 <p>After +200 hours behind the screen and keyboard, I have made 232 commits on GitHub, contributing 2992 lines of new code - you can see a full list of my contributions to pvlib <a class="reference external" href="https://github.com/pvlib/pvlib-python/commits?author=adamrjensen">here</a>. My contributions focused on adding new file reading and data retrieval functions for all of the above data sources, with the exception of Climate One Building. The reason for not including Climate One Building was that I concluded that other data sources would be preferable for almost all solar energy applications. Developing functions for Climate One Building would probably increase its use, which most likely would be undesirable.</p>
-<p>Perhaps the work that I am most proud of are the functions for accessing and reading BSRN data. The <a class="reference external" href="https://bsrn.awi.de/">BSRN</a> is a global network of high-quality radiation measurement stations, which store their data in a notoriously archaic file format. Accessing BSRN data is now super easy and can be done in just a few lines of code:</p>
+<p>Perhaps the work that I am most proud of is the functions for accessing and reading BSRN data. The <a class="reference external" href="https://bsrn.awi.de/">BSRN</a> is a global network of high-quality radiation measurement stations, which store their data in a notoriously archaic file format. Accessing BSRN data is now super easy and can be done in just a few lines of code:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pvlib</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -387,17 +387,17 @@
 </section>
 <section id="lessons-learned">
 <h2>Lessons learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">#</a></h2>
-<p>In the last two weeks of the program, I’ve found myself stumbling into tasks that were similar to what I did at the beginning of the program. The difference is that now I can effortlessly solve these problems, and I know how and why it works. It’s truly a great feeling to realize that I’ve learned a ton and it’s already proven useful.</p>
-<p>Now I’m first and foremost a scientist, and programming and software development are secondary interests. But I’ve been blown away by how much there are for scientists to learn from software development. The ability of open-source libraries to support a community of scientists, reducing each individual’s workload and providing access to tested and validated tools, is of incredible value. Why don’t we do more of this!?! As I come to the end of my Ph.D. and being to plan my post-doc in the Spring, I hope to inspire others in my research community to use open-source tools and contribute to them, as I truly believe this can result in better and more efficient and reproducible science.</p>
+<p>In the last two weeks of the program, I’ve found myself stumbling into tasks that were similar to what I did at the beginning of the program. The difference is that now I can effortlessly solve these problems, and I know how and why it works. It’s truly a great feeling to realize that I’ve learned a ton, and it’s already proven useful.</p>
+<p>Now I’m first and foremost a scientist, and programming and software development are secondary interests. But I’ve been blown away by how much there is for scientists to learn from software development. The ability of open-source libraries to support a community of scientists, reducing each individual’s workload and providing access to tested and validated tools, is of incredible value. Why don’t we do more of this!?! As I come to the end of my Ph.D. and begin to plan my post-doc in the Spring, I hope to inspire others in my research community to use open-source tools and contribute to them, as I truly believe this can result in better and more efficient and reproducible science.</p>
 </section>
 <section id="recommendations-to-future-gsoc-students">
 <h2>Recommendations to future GSoC students<a class="headerlink" href="#recommendations-to-future-gsoc-students" title="Permalink to this headline">#</a></h2>
 <p>If you are a student and in doubt whether to participate due to time or other commitments, then do it anyway! There is absolutely no better way to learn software development than, well, just doing it. And when else do you really have the chance to get a personal mentor? Almost never, so this is your chance to make something useful out of your summer, both for yourself and software users around the world.</p>
 <p>Even better, get involved with an open-source community first, which could likely lead you to the opportunity to participate in GSoC. Start with just a small pull request fixing a typo to familiarize yourself with the workflow and how things are done. Then progress by taking up an issue labeled <code class="docutils literal notranslate"><span class="pre">good</span> <span class="pre">first</span> <span class="pre">issue</span></code> and asking for help. GSoC formalizes this process, but there’s no way you shouldn’t get started today!</p>
 </section>
-<section id="acknowledgements">
-<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h2>
-<p>The true hero of this project is my mentor <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a>, who first encouraged me to apply for the program and devoted countless hours to this project. Kevin’s passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concents, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).</p>
+<section id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">#</a></h2>
+<p>The true hero of this project is my mentor <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a>, who first encouraged me to apply for the program and devoted countless hours to this project. Kevin’s passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concepts, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).</p>
 <p>The pvlib maintainers, Will Holmgren, Mark Mikofski, and Cliff Hansen, have also offered invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I’d also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.</p>
 </section>
 </section>

@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2022-05-03T16:52:38.033774+00:00</updated>
+  <updated>2022-05-03T16:54:51.338479+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.25">ABlog</generator>
   <entry>
     <id>http://predictablysunny.com/posts/gsoc_project_intro/</id>
-    <title>pvlib - a one stop source for solar resource data</title>
+    <title>pvlib - a one-stop source for solar resource data</title>
     <updated>2021-06-10T00:00:00+00:00</updated>
     <author>
       <name>Adam R. Jensen</name>
@@ -52,11 +52,11 @@ gsoc and pvlib logo</summary>
       <name>Adam R. Jensen</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?&lt;/p&gt;
+&lt;p&gt;Hardcoding credentials such as passwords are often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="http://predictablysunny.com/posts/staying_safe_on_github/" rel="alternate"/>
-    <summary>Hardcoding credentials such as passwords is often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?</summary>
+    <summary>Hardcoding credentials such as passwords are often tempting but almost always a bad idea. This is especially true if you are hosting your code on public platforms like GitHub for anyone to peruse. But what can you do?</summary>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
     <published>2021-08-02T00:00:00+00:00</published>
@@ -88,11 +88,11 @@ gsoc and pvlib logo</summary>
       <name>Adam R. Jensen</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.&lt;/p&gt;
+&lt;p&gt;On a day-to-day basis I use GitHub Desktop due to its nice graphical interface and that my git skills are close to zero. Every now and then, I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="http://predictablysunny.com/posts/fixing_your_git_mess/" rel="alternate"/>
-    <summary>On a day to day basis I use GitHub Desktop due to it’s nice graphical interface and that my git skills are close to zero. Every now and then I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.</summary>
+    <summary>On a day-to-day basis I use GitHub Desktop due to its nice graphical interface and that my git skills are close to zero. Every now and then, I screw things sufficiently up that I don’t know how to fix it and sometimes I don’t even know how I ended up there. At this point, I really just want to go back in time to when my code was working - which is the topic of this blog post.</summary>
     <category term="openscience" label="open science"/>
     <category term="gsoc" label="gsoc"/>
     <published>2021-08-27T00:00:00+00:00</published>
@@ -122,31 +122,31 @@ gsoc and pvlib logo</summary>
       <name>Adam R. Jensen```</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;You know that small map that shows a zoomed in view of a part of a bigger map? Well, it’s called an inset map and according to &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Map_layout#Inset_map"&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;You know that small map that shows a zoomed-in view of a part of a bigger map? Well, it’s called an inset map, and according to &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Map_layout#Inset_map"&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Inset maps are smaller maps that are included on the same page as the main map. They can show additional information related to the main map.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;/div&gt;
 </content>
     <link href="http://predictablysunny.com/posts/inset_map_cartopy/" rel="alternate"/>
-    <summary>You know that small map that shows a zoomed in view of a part of a bigger map? Well, it’s called an inset map and according to Wikipedia:Inset maps are smaller maps that are included on the same page as the main map. They can show additional information related to the main map.</summary>
+    <summary>You know that small map that shows a zoomed-in view of a part of a bigger map? Well, it’s called an inset map, and according to Wikipedia:Inset maps are smaller maps that are included on the same page as the main map. They can show additional information related to the main map.</summary>
     <category term="openscience" label="open science"/>
     <category term="python" label="python"/>
     <published>2022-01-06T00:00:00+00:00</published>
   </entry>
   <entry>
     <id>http://predictablysunny.com/posts/irradiance_maps/</id>
-    <title>Satellite derived irradiance maps</title>
+    <title>Satellite-derived irradiance maps</title>
     <updated>2022-02-12T00:00:00+00:00</updated>
     <author>
       <name>Adam R. Jensen```</name>
     </author>
     <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geopgraphcial coverage (continents), long-time span (multiple decades), and low cost.&lt;/p&gt;
+&lt;p&gt;Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geographical coverage (continents), long-timespan (multiple decades), and low cost.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="http://predictablysunny.com/posts/irradiance_maps/" rel="alternate"/>
-    <summary>Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geopgraphcial coverage (continents), long-time span (multiple decades), and low cost.</summary>
+    <summary>Satellite-derived irradiance data has several benefits over ground-measured irradiance despite its lower accuracy. The main advantages include a large geographical coverage (continents), long-timespan (multiple decades), and low cost.</summary>
     <category term="solar" label="solar"/>
     <category term="openscience" label="open science"/>
     <published>2022-02-12T00:00:00+00:00</published>
