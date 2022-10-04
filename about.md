@@ -1,10 +1,10 @@
 # About me
 
-I’m a Ph.D. candidate at the Technical University of Denmark, working on modeling and assessing solar energy systems and the solar resource.
+I’m a postdoctoral researcher at the Technical University of Denmark (DTU), working on modeling and assessment of solar energy systems and the solar resource.
 
-I work on a broad spectrum of projects, including characterizing concentrated solar collectors, optimizing solar hybrid power plants, and quality control of solar resource data.
+I work on a broad spectrum of projects, including characterization of concentrated solar collectors, optimization of solar hybrid power plants, and quality control of solar resource data.
 
-Oh, I almost forgot to mention that I am also the station manager for the solar radiation measurement station in Copenhagen. The station is one of two places in Denmark where all three irradiance components are measured and the data is freely accessible on our [website](http://climatestationdata.byg.dtu.dk/).
+Additionally, I am also the station manager for the solar radiation measurement station in Copenhagen. The station is one of two places in Denmark where all three irradiance components are measured and the data is freely accessible on our [website](http://climatestationdata.byg.dtu.dk/).
 
 ## Education
 
