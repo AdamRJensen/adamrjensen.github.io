@@ -115,12 +115,6 @@ fontawesome_included = True
 # be linked to in HTML output by ABlog.
 # fontawesome_css_file = None
 
-# -- Disqus Integration -------------------------------------------------------
-
-# You can enable Disqus_ by setting ``disqus_shortname`` variable.
-# Disqus_ short name for the blog.
-disqus_shortname = 'adamrjensen'
-
 # -- Sphinx Options -----------------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
