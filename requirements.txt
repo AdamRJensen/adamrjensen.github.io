@@ -1,15 +1,20 @@
-scipy
-numpy
-matplotlib
-pandas
-myst_nb
-sphinx
-ablog
-sphinxcontrib-bibtex
-sphinxext-opengraph
-sphinx-panels
-pydata-sphinx-theme
-folium
-xarray
-cartopy
-git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
+channels:
+    - defaults
+    - conda-forge
+dependencies:
+    - scipy
+    - numpy
+    - matplotlib
+    - pandas
+    - myst_nb
+    - sphinx
+    - ablog
+    - sphinxcontrib-bibtex
+    - sphinxext-opengraph
+    - sphinx-panels
+    - pydata-sphinx-theme
+    - folium
+    - xarray
+    - cartopy
+    - pip
+        - git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
