@@ -11,4 +11,5 @@ sphinx-panels
 pydata-sphinx-theme
 folium
 xarray
+cartopy
 git+https://git@github.com/pvlib/pvlib-python@master#egg=pvlib
