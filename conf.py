@@ -206,4 +206,4 @@ def setup(app):
 
 #jupyter_execute_notebooks = "off"
 
-nb_execution_excludepatterns = ['irradiance_maps.ipynb', 'inset_map_cartopy.ipynb', 'draft/*']
+nb_execution_excludepatterns = ['irradiance_maps.ipynb', 'inset_map_cartopy.ipynb', 'twoaxistracking_animation.ipynb', 'draft/*']
