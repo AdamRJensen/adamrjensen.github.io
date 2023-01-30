@@ -124,6 +124,7 @@ extensions = [
     'myst_nb',
     'ablog',
     'sphinxext.opengraph',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
