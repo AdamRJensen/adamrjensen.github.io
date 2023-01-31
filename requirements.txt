@@ -2,7 +2,7 @@ scipy
 numpy
 matplotlib
 pandas
-myst_nb
+myst_nb==0.17.1
 sphinx
 ablog
 sphinxcontrib-bibtex

@@ -1,3 +1,13 @@
 # Publications
 
-Under construction
+This page lists some of the publications I have been involved with.
+
+- ORCID page: [`orcid.org/0000-0002-5554-9856`](https://orcid.org/0000-0002-5554-9856)
+- [Research Gate page](https://www.researchgate.net/profile/Adam-Jensen-4)
+- [Google Scholar page](https://scholar.google.com/citations?user=y7tqTUoAAAAJ&hl=en)
+
+The list is automatically generated via the ORCID API.
+See Chris Holdgraf's [blog post] on how to do this(https://chrisholdgraf.com/blog/2022/orcid-auto-update/).
+
+```{include} _static/publications.txt
+```

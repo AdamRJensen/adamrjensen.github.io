@@ -21,5 +21,6 @@ See the [blog archives](blog) for all blog posts.
 :hidden:
 about
 blog
+publications
 ```
 
