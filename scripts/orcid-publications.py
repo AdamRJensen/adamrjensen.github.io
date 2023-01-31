@@ -141,7 +141,14 @@ for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"]
             autht.append(name)
     autht = ", ".join(autht)
 
-    journal = meta["publisher"]
+    journal = meta['container-title']
+    # if meta['type'] == 'journal-article':
+    #     journal = meta['container-title-short']
+    # else:
+    #     journal = meta["publisher"]
+
+    # if 'assessing' in title.lower():
+    #     raise ValueError
 
     url_doi = url.split("//", 1)[-1]
     reference = f"{autht} ({year}). **{title}**. {journal}. [{url_doi}]({url})"
