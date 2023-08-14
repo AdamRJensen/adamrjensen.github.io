@@ -42,4 +42,8 @@ or
 
     pip install package_name
 
+Now, you'll probably also find yourself wanting to delete an environment at some point. That can be achieved by the following command:
+
+    conda remove --name env_name --all
+
 A good intro guide to virtual environments can be found at [astropy](https://docs.astropy.org/en/latest/development/workflow/virtual_pythons.html).
