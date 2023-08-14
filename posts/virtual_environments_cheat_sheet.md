@@ -22,7 +22,7 @@ When you realize how helpful virtual environments can be, you’ll probably end 
 
 Eventually, you'll probably end up with a long list of environments, many of which have become obsolete as projects have ended. At this point, you'll probably want to remove the environments you no longer use. To remove a virtual environment, simply open an Anaconda prompt and type:
 
-    conda env remove -n env_name
+    conda remove --name env_name --all
 
 Often times we create a new virtual environment to work on a specific package or repository. Now to work with that package, we need to install the packages on which it depends on. Often times a list of the necessary packages are specified in a text file called 'requirements.txt'. Conveniently enough, we can install all these dependencies to our new virtual environments with the following command:
 
@@ -41,9 +41,5 @@ You can, of course, still install a single package like you usually would by:
 or
 
     pip install package_name
-
-Now, you'll probably also find yourself wanting to delete an environment at some point. That can be achieved by the following command:
-
-    conda remove --name env_name --all
 
 A good intro guide to virtual environments can be found at [astropy](https://docs.astropy.org/en/latest/development/workflow/virtual_pythons.html).
