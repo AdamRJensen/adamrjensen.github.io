@@ -42,4 +42,8 @@ or
 
     pip install package_name
 
+And last, you can also install an environment using a conda environment.yml file:
+
+    conda env create -f environment.yml
+
 A good intro guide to virtual environments can be found at [astropy](https://docs.astropy.org/en/latest/development/workflow/virtual_pythons.html).
