@@ -1,3 +1,17 @@
+## 2024
+Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. [dx.doi.org/10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
+
+
+## 2023
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [Holmgren, W. F.](http://orcid.org/0000-0001-6218-9767), [Mikofski, M. A.](http://orcid.org/0000-0001-8001-8582), [Hansen, C. W.](http://orcid.org/0000-0002-8620-5378), [Boeman, L. J.](http://orcid.org/0000-0002-3528-247X), [Loonen, R.](http://orcid.org/0000-0001-6101-1449) (2023). **pvlib iotools—Open-source Python functions for seamless access to solar irradiance data**. Solar Energy. [dx.doi.org/10.1016/j.solener.2023.112092](http://dx.doi.org/10.1016/j.solener.2023.112092)
+
+[Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2023). **Heat losses in water pit thermal energy storage systems in the presence of groundwater**. Applied Thermal Engineering. [dx.doi.org/10.1016/j.applthermaleng.2023.121382](http://dx.doi.org/10.1016/j.applthermaleng.2023.121382)
+
+[Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [Sneum, D. M.](http://orcid.org/0000-0003-2789-2910), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Fan, J., [Bramstoft, R.](http://orcid.org/0000-0002-8875-8718) (2023). **The impact of large-scale thermal energy storage in the energy system**. Applied Energy. [dx.doi.org/10.1016/j.apenergy.2023.121663](http://dx.doi.org/10.1016/j.apenergy.2023.121663)
+
+Sifnaios, I., Gauthier, G., Trier, D., Fan, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2023). **Dronninglund water pit thermal energy storage dataset**. Solar Energy. [dx.doi.org/10.1016/j.solener.2022.12.046](http://dx.doi.org/10.1016/j.solener.2022.12.046)
+
+
 ## 2022
 Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Performance comparison of two water pit thermal energy storage (PTES) systems using energy, exergy, and stratification indicators**. Journal of Energy Storage. [dx.doi.org/10.1016/j.est.2022.104947](http://dx.doi.org/10.1016/j.est.2022.104947)
 

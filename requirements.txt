@@ -12,3 +12,4 @@ pydata-sphinx-theme
 folium
 xarray
 pvlib
+rich
