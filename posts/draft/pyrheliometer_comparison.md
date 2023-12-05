@@ -11,7 +11,7 @@ The Internatioal Pyrheliometer Comparison (IPC) takes palace every 5 years at th
 
 > The last significant change in the historical record was done with the introduction of the WRR on 1 January 1980 as the measurement reference for solar exposure and irradiance data records.
 
-- [IPC-VIII (25. Sep. - 13. Oct. 1995)]()
+- [IPC-VIII (25. Sep. - 13. Oct. 1995)](https://www.meteoswiss.admin.ch/services-and-publications/publications/reports-and-bulletins/en/1996/internationaler-pyrheliometer-comparison-davos-ipc-viii-25-september-13-october-1995.html)
 - [IPC-IX (25. Sep. - 13. Oct. 2000)](https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/146542/eth-25504-01.pdf?sequence=1&isAllowed=y)
 - [IPC-X (26. Sep. - 14. Oct. 2005)](https://library.wmo.int/doc_num.php?explnum_id=9324)
 - [IPC-XI (27. Sep. - 15. Oct. 2010)](https://library.wmo.int/doc_num.php?explnum_id=3089)
