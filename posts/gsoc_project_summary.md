@@ -4,7 +4,7 @@
 :tags: pvlib, solar, open science, gsoc
 ```
 
-The coding period of this year's Google Summer of Code (GSoC) is officially over, and it's time to take a step back and evaluate the experience. For those of you who might not know, I've been working on extending pvlib's iotools for the past 10 weeks, which I described in this [blog post](gsoc_project_intro/).
+The coding period of this year's Google Summer of Code (GSoC) is officially over, and it's time to take a step back and evaluate the experience. For those of you who might not know, I've been working on extending pvlib's iotools for the past 10 weeks, which I described in this [blog post](/posts/gsoc_project_intro).
 
 ## Success or not?
 There are many ways to determine if a project has been a success; one way is to look if the project goals have been met. So let's refer back to the project outline:

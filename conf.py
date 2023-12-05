@@ -152,7 +152,7 @@ html_title = 'Predictably Sunny'
 # documentation.
 html_theme_options = {
   "github_url": "https://github.com/adamrjensen/",
-  "google_analytics_id": "G-B5PLZ8N24G",
+  "analytics": {"google_analytics_id": "G-B5PLZ8N24G"},
   "navbar_end": ["navbar-icon-links.html", "search-field.html"],
   "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
 }
@@ -175,9 +175,9 @@ html_sidebars = {
     "about": ["hello.html"],
     "publications": ["hello.html"],
     "projects": ["hello.html"],
-    "posts/**": ['postcard.html', 'recentposts.html'],
-    "blog": ['archives.html'],  # 'tagcloud.html'
-    "blog/**": ['postcard.html', 'recentposts.html', 'archives.html']
+    "posts/**": ['ablog/postcard.html', 'ablog/recentposts.html'],
+    "blog": ['ablog/archives.html'],  # 'ablog/tagcloud.html'
+    "blog/**": ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html']
 }
 
 # Add any extra paths that contain custom files (such as robots.txt or
@@ -206,5 +206,6 @@ def setup(app):
     app.add_css_file("custom.css")
 
 #jupyter_execute_notebooks = "off"
+#nb_execution_allow_errors = True
 
 nb_execution_excludepatterns = ['irradiance_maps.ipynb', 'inset_map_cartopy.ipynb', 'twoaxistracking_animation.ipynb', 'blue_marble_map.ipynb', 'earth_as_rubiks_cube.ipynb', 'danish_district_heating_areas.ipynb', 'draft/*']
