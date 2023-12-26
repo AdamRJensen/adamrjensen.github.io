@@ -3,6 +3,8 @@ Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856)
 
 
 ## 2023
+[Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [Hansen, C. W.](http://orcid.org/0000-0002-8620-5378), [Holmgren, W. F.](http://orcid.org/0000-0001-6218-9767), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Mikofski, M. A.](http://orcid.org/0000-0001-8001-8582), [Driesse, A.](http://orcid.org/0000-0003-3023-2155) (2023). **pvlib python: 2023 project update**. Journal of Open Source Software. [dx.doi.org/10.21105/joss.05994](http://dx.doi.org/10.21105/joss.05994)
+
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [Holmgren, W. F.](http://orcid.org/0000-0001-6218-9767), [Mikofski, M. A.](http://orcid.org/0000-0001-8001-8582), [Hansen, C. W.](http://orcid.org/0000-0002-8620-5378), [Boeman, L. J.](http://orcid.org/0000-0002-3528-247X), [Loonen, R.](http://orcid.org/0000-0001-6101-1449) (2023). **pvlib iotools—Open-source Python functions for seamless access to solar irradiance data**. Solar Energy. [dx.doi.org/10.1016/j.solener.2023.112092](http://dx.doi.org/10.1016/j.solener.2023.112092)
 
 [Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2023). **Heat losses in water pit thermal energy storage systems in the presence of groundwater**. Applied Thermal Engineering. [dx.doi.org/10.1016/j.applthermaleng.2023.121382](http://dx.doi.org/10.1016/j.applthermaleng.2023.121382)
