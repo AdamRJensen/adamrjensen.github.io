@@ -1,10 +1,9 @@
-name: blog
 channels:
-  - conda-forge
   - defaults
+  - conda-forge
 dependencies:
   - pip
-  - python=3.11
+  - python=3.12
   - pip:
     - pvlib==0.10.2
     - numpy==1.26.2
