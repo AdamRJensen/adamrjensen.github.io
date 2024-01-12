@@ -1,6 +1,7 @@
+name: blog
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - pip
   - python=3.12
