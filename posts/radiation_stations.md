@@ -4,7 +4,11 @@
 :tags: solar, open science
 ```
 
-Ground measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are only a few hundred high-quality stations globally due to high costs and maintenance requirements. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog, I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.
+Ground-measured solar irradiance data is extremely valuable and critical for benchmarking solar radiation products and understanding the long-term trend in the radiation budget. However, there are only a few hundred high-quality stations globally due to high costs and maintenance requirements. Currently, it is difficult to identify where the nearest solar radiation station is located, as there is no overview of stations worldwide. In this blog, I suggest solving this issue by creating a simple catalog/database of available high-quality radiation stations.
+
+```{note}
+This blog post describe the original ideas that led to the [SolarStations.org](https://solarstations.org) website.
+```
 
 ## Scope
 First, it is important to determine the scope, specifically which types of stations and parameters to include. As the focus is on high-quality stations, only stations that measure all three irradiance components are considered. High-quality stations can be classified into two different categories: Tier 1 and Tier 2 stations.
@@ -15,7 +19,7 @@ Tier 1 stations are defined as those that meet all of the following requirements
 * measurement of diffuse horizontal irradiance (DHI) with a Spectrally Flat Class A thermopile pyranometer shaded by a shading ball
 * measurement of global horizontal irradiance (GHI) with a Spectrally Flat Class A thermopile pyranometer
 
-Seperate measurement of GHI is required for Tier 1 stations as most quality control procedures rely on comparing the measured and calculated GHI (closure equation). The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
+Separate measurement of GHI is required for Tier 1 stations as most quality control procedures rely on comparing the measured and calculated GHI (closure equation). The stations in the [BSRN](https://bsrn.awi.de/) network are examples of Tier 1 stations.
 
 ### Tier 2 stations
 Tier 2 stations are defined as those that do not meet the Tier 1 requirements but meet one of the following specifications:

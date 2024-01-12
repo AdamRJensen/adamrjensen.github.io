@@ -20,7 +20,7 @@ During the project, I'll be adding functions to the iotools module within pvlib-
 * [Climate One Building](http://climate.onebuilding.org/)
 ```
 
-After +200 hours behind the screen and keyboard, I have made 232 commits on GitHub, contributing 2992 lines of new code - you can see a full list of my contributions to pvlib [here](https://github.com/pvlib/pvlib-python/commits?author=adamrjensen). My contributions focused on adding new file reading and data retrieval functions for all of the above data sources, with the exception of Climate One Building. The reason for not including Climate One Building was that I concluded that other data sources would be preferable for almost all solar energy applications. Developing functions for Climate One Building would probably increase its use, which most likely would be undesirable.
+After +200 hours behind the screen and keyboard, I have made 232 commits on GitHub, contributing 2992 lines of new code - you can see a full list of my contributions to pvlib during GSoC [here](https://github.com/pvlib/pvlib-python/commits?author=adamrjensen&since=2021-06-01&until=2021-08-22). My contributions focused on adding new file reading and data retrieval functions for all of the above data sources, with the exception of Climate One Building. The reason for not including Climate One Building was that I concluded that other data sources would be preferable for almost all solar energy applications. Developing functions for Climate One Building would probably increase its use, which most likely would be undesirable.
 
 Perhaps the work that I am most proud of is the functions for accessing and reading BSRN data. The [BSRN](https://bsrn.awi.de/) is a global network of high-quality radiation measurement stations, which store their data in a notoriously archaic file format. Accessing BSRN data is now super easy and can be done in just a few lines of code:
 
@@ -49,9 +49,9 @@ All the work I've done during the project has resulted in pull requests, most of
 
 First, I'd recommend that you check out the documentation of the functions, and if you still are interested in further details of the function development, then check out the pull requests:
 
-* CAMS Radiation and McClear from SoDa-Pro: [documentation](https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_cams.html), [pull](https://github.com/pvlib/pvlib-python/pull/1175)
-* PVGIS Hourly radiation: [documentation](https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_pvgis_hourly.html), [pull](https://github.com/pvlib/pvlib-python/pull/1186)
-* BSRN data: [documentation](https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_bsrn.html), [pull](https://github.com/pvlib/pvlib-python/pull/1254)
+* CAMS Radiation and McClear from SoDa-Pro: [documentation](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_cams.html), [pull](https://github.com/pvlib/pvlib-python/pull/1175)
+* PVGIS Hourly radiation: [documentation](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_pvgis_hourly.html), [pull](https://github.com/pvlib/pvlib-python/pull/1186)
+* BSRN data: [documentation](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_bsrn.html), [pull](https://github.com/pvlib/pvlib-python/pull/1254)
 * ERA5: [pull](https://github.com/pvlib/pvlib-python/pull/1264)
 * MERRA-2: [pull](https://github.com/pvlib/pvlib-python/pull/1274)
 * Fix of iotools inconsistencies: [pull](https://github.com/pvlib/pvlib-python/pull/1268)
@@ -69,6 +69,6 @@ If you are a student and in doubt whether to participate due to time or other co
 Even better, get involved with an open-source community first, which could likely lead you to the opportunity to participate in GSoC. Start with just a small pull request fixing a typo to familiarize yourself with the workflow and how things are done. Then progress by taking up an issue labeled `good first issue` and asking for help. GSoC formalizes this process, but there's no way you shouldn't get started today!
 
 ## Acknowledgments
-The true hero of this project is my mentor [Kevin Anderson](https://github.com/kanderso-nrel), who first encouraged me to apply for the program and devoted countless hours to this project. Kevin's passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concepts, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).
+The true hero of this project is my mentor [Kevin Anderson](https://github.com/kandersolar), who first encouraged me to apply for the program and devoted countless hours to this project. Kevin's passion was an inspiration throughout the entire project, and I am incredibly thankful for all the time he spent teaching me basic software concepts, helping me debug when I got stuck, and fun off-topic discussions (like the eating habits of antlions).
 
 The pvlib maintainers, Will Holmgren, Mark Mikofski, and Cliff Hansen, have also offered invaluable help throughout the project - reviewing my ever-improving code and discussing the future direction of pvlib. I'd also like to thank Google founders Sergey Brin and Larry Page, for coming up with the concepts for Google Summer of Code and funding future generations of open-source software developers.
