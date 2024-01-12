@@ -151,7 +151,7 @@ for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"]
     #     raise ValueError
 
     url_doi = url.split("//", 1)[-1]
-    reference = f"{autht} ({year}). **{title}**. {journal}. [{url_doi}]({url})"
+    reference = f"{autht} ({year}). **{title}**. {journal}. doi:&nbsp;[{doi}]({url})" % non-breaking space between doi text and number
     df.append({"year": year, "reference": reference})
 df = pd.DataFrame(df)
 
