@@ -42,7 +42,7 @@
     "\n",
     "| Source of map data                                                     | Timespan  | Unit           |\n",
     "|------------------------------------------------------------------------|:---------:|:--------------:|\n",
-    "| [SARAH (PVGIS)](https://ec.europa.eu/jrc/en/PVGIS/downloads/SARA)      | 2005-2016 | W/m$^2$/year   |\n",
+    "| [SARAH (PVGIS)](https://ec.europa.eu/jrc/en/PVGIS/downloads/SARAH)     | 2005-2016 | W/m$^2$/year   |\n",
     "| [CM SAF (PVGIS)](https://ec.europa.eu/jrc/en/PVGIS/downloads/CMSAF)    | 2007-2016 | W/m$^2$/year   |\n",
     "| [NSRDB PSM3 (NREL)](https://www.nrel.gov/gis/solar-resource-maps.html) | 1998-2016 | kWh/m$^2$/day  |\n",
     "| [CAMS (SoDa)](http://www.soda-pro.com/maps/maps-for-free)              | 2005-2017 | kWh/m$^2$/year |\n",

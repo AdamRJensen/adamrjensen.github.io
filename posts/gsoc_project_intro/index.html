@@ -409,7 +409,7 @@
   
   
   
-  <a href="../../blog/tag/open-science/">open science</a>
+  <a href="../../blog/tag/pvlib/">pvlib</a>
   
   
   
@@ -421,7 +421,7 @@
   
   
   
-  <a href="../../blog/tag/pvlib/">pvlib</a>
+  <a href="../../blog/tag/open-science/">open science</a>
   
   
   
@@ -529,8 +529,8 @@
 <h1>pvlib - a one-stop source for solar resource data<a class="headerlink" href="#pvlib-a-one-stop-source-for-solar-resource-data" title="Permalink to this heading">#</a></h1>
 <p>This title at least represents the aim of my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> project that I will be completing during the next 10 weeks. In short, I’ll be extending <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/">pvlib python’s</a> current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
 <img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
-<p>And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from a frustration over how unnecessarily difficult it is to obtain good solar resource data.
-Fortunately, there is a lot of high-quality data out there, free for anyone to use! However, it currently requires a great deal of time and technical expertise to obtain the data is, limiting its wider use.</p>
+<p>And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from frustration over how unnecessarily difficult it is to obtain good solar resource data.
+Fortunately, there is a lot of high-quality data out there, free for anyone to use! However, it currently requires a great deal of time and technical expertise to obtain the data, limiting its wider use.</p>
 <p>Given that solar irradiance is the most important input to predicting solar energy yield, using suboptimal data is kinda a big deal. Solar resource data is not only essential to the design stage but is also crucial for benchmarking solar radiation models (decomposition models, forecasting techniques, etc.) and assessing system performance.</p>
 <p>pvlib python already has a module called <code class="docutils literal notranslate"><span class="pre">iotools</span></code> for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.</p>
 <section id="data-sources">
@@ -548,21 +548,21 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 <p>Each of the above datasets have their own strengths and differs by geographical coverage, time resolution, and accuracy. If this sounds a bit overwhelming, fret not; this will be the topic of a later blog post.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can already check out some of the existing pvlib functions for retrieving data. For example, satellite-derived solar irradiance and clear-sky data from <a class="reference external" href="https://pvlib-python.readthedocs.io/en/latest/generated/pvlib.iotools.get_cams.html">CAMS</a> and ground measurements from the <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/generated/pvlib.iotools.read_srml_month_from_solardat.html#pvlib.iotools.read_srml_month_from_solardat">Solar Radiation Monitoring Laboratory (SRML) monitoring stations</a>.</p>
+<p>You can already check out some of the existing pvlib functions for retrieving data. For example, satellite-derived solar irradiance and clear-sky data from <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_cams.html">CAMS</a> and ground measurements from the <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_srml.html">Solar Radiation Monitoring Laboratory (SRML) monitoring stations</a>.</p>
 </div>
 <p>If you think that I’ve missed any important open-source datasets, please let me know in the comments section!</p>
 </section>
 <section id="google-summer-of-code">
 <h2>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this heading">#</a></h2>
-<p>You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project, but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students writing code and taking active part in the open-source community.</p>
-<p>During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where <a class="reference external" href="https://github.com/kanderso-nrel">Kevin Anderson</a> comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.</p>
+<p>You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students to write code and take an active part in the open-source community.</p>
+<p>During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a> comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.</p>
 <p>If you’re interested, you can find my official GSoC project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/projects/#6071460558274560">here</a>.</p>
 </section>
 <section id="whats-next">
 <h2>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this heading">#</a></h2>
 <p>I just completed adding <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1175">CAMS support to pvlib python</a>. CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.</p>
 <p>Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.</p>
-<p>Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions in getting started with retrieving CAMS data.</p>
+<p>Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions about getting started with retrieving CAMS data.</p>
 </section>
 </section>
 
