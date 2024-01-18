@@ -8,16 +8,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="pvlib - a one-stop source for solar resource data" />
+<meta property="og:title" content="Solar Energy Systems in Denmark" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://predictablysunny.com/posts/gsoc_project_intro/" />
+<meta property="og:url" content="https://predictablysunny.com/posts/solar_systems_denmark/" />
 <meta property="og:site_name" content="Predictably Sunny" />
-<meta property="og:description" content="This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools func..." />
+<meta property="og:description" content="The Danish Agency for Data Supply and Infrastructure (Styrelsen for Dataforsyning og Infrastruktur - SDFI) recently released a dataset of all the solar energy plants in Denmark. The dataset consist..." />
 <meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
 <meta property="og:image:alt" content="Predictably Sunny" />
-<meta name="description" content="This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools func..." />
+<meta name="description" content="The Danish Agency for Data Supply and Infrastructure (Styrelsen for Dataforsyning og Infrastruktur - SDFI) recently released a dataset of all the solar energy plants in Denmark. The dataset consist..." />
 
-    <title>pvlib - a one-stop source for solar resource data &#8212; Predictably Sunny</title>
+    <title>Solar Energy Systems in Denmark &#8212; Predictably Sunny</title>
   
   
   
@@ -59,7 +59,7 @@
                 gtag('js', new Date());
                 gtag('config', 'G-B5PLZ8N24G');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/gsoc_project_intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/solar_systems_denmark';</script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../about/" />
     <link rel="index" title="Index" href="../../genindex/" />
@@ -368,7 +368,7 @@
   
   <i class="fa fa-calendar"></i>
   
-  10 June 2021
+  18 January 2024
   
 </h2>
 <ul>
@@ -397,31 +397,12 @@
   <span>
     
     
-    <i class="fa-fw fa fa-tags"></i>
-    
+    <i class="fa-fw fa fa-tag"></i>
     
     </span>
   
   
   <a href="../../blog/tag/open-science/">open science</a>
-  
-  
-  
-  
-  
-  <a href="../../blog/tag/pvlib/">pvlib</a>
-  
-  
-  
-  
-  
-  <a href="../../blog/tag/solar/">solar</a>
-  
-  
-  
-  
-  
-  <a href="../../blog/tag/gsoc/">gsoc</a>
   
   
   
@@ -439,12 +420,6 @@
 </h3>
 <ul>
   
-  
-  <li>
-    <a href="../solar_systems_denmark/">
-      18 January - Solar Energy Systems in Denmark
-    </a>
-  </li>
   
   <li>
     <a href="../danish_district_heating_areas/">
@@ -467,6 +442,12 @@
   <li>
     <a href="../twoaxistracking_animation/">
       09 November - Animation of two-axis tracker shading
+    </a>
+  </li>
+  
+  <li>
+    <a href="../dmi_data/">
+      22 February - DMI API Tutorial
     </a>
   </li>
   
@@ -507,7 +488,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">pvlib - a...</li>
+    <li class="breadcrumb-item active" aria-current="page">Solar...</li>
   </ul>
 </nav>
 </div>
@@ -525,45 +506,176 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="pvlib-a-one-stop-source-for-solar-resource-data">
-<h1>pvlib - a one-stop source for solar resource data<a class="headerlink" href="#pvlib-a-one-stop-source-for-solar-resource-data" title="Permalink to this heading">#</a></h1>
-<p>This title at least represents the aim of my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> project that I will be completing during the next 10 weeks. In short, I’ll be extending <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/">pvlib python’s</a> current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
-<img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
-<p>And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from frustration over how unnecessarily difficult it is to obtain good solar resource data.
-Fortunately, there is a lot of high-quality data out there, free for anyone to use! However, it currently requires a great deal of time and technical expertise to obtain the data, limiting its wider use.</p>
-<p>Given that solar irradiance is the most important input to predicting solar energy yield, using suboptimal data is kinda a big deal. Solar resource data is not only essential to the design stage but is also crucial for benchmarking solar radiation models (decomposition models, forecasting techniques, etc.) and assessing system performance.</p>
-<p>pvlib python already has a module called <code class="docutils literal notranslate"><span class="pre">iotools</span></code> for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.</p>
-<section id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>During the project, I’ll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://bsrn.awi.de/">Baseline Surface Radiation Network (BSRN)</a></p></li>
-<li><p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5 from ECMWF</a></p></li>
-<li><p><a class="reference external" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/">MERRA2 from NASA</a></p></li>
-<li><p><a class="reference external" href="https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation">PVGIS hourly data</a></p></li>
-<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-mcclear">CAMS McClear</a></p></li>
-<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info">CAMS Radiation</a></p></li>
-<li><p><a class="reference external" href="http://climate.onebuilding.org/">Climate One Building</a></p></li>
-</ul>
-<p>Each of the above datasets have their own strengths and differs by geographical coverage, time resolution, and accuracy. If this sounds a bit overwhelming, fret not; this will be the topic of a later blog post.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can already check out some of the existing pvlib functions for retrieving data. For example, satellite-derived solar irradiance and clear-sky data from <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_cams.html">CAMS</a> and ground measurements from the <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_srml.html">Solar Radiation Monitoring Laboratory (SRML) monitoring stations</a>.</p>
+<section id="solar-energy-systems-in-denmark">
+<h1>Solar Energy Systems in Denmark<a class="headerlink" href="#solar-energy-systems-in-denmark" title="Permalink to this heading">#</a></h1>
+<p>The Danish Agency for Data Supply and Infrastructure (Styrelsen for Dataforsyning og Infrastruktur - SDFI) recently released a dataset of all the solar energy plants in Denmark. The dataset consists of polygons of all the PV plants and solar thermal district heating plants. The initiative is described in more detail <a class="reference external" href="https://dataforsyningen.dk/labs/4905">here</a></p>
+<p>This blog post is a simple demonstration of how to interactively visualize this dataset, which can be used to explore the locations of solar energy plants in Denmark.</p>
+<p>The necessary token can be obtained by creating a user at <a class="reference external" href="https://dataforsyningen.dk">https://dataforsyningen.dk</a>.</p>
+<p>For the demonstration of the WMS tile service, I will take the Vandel PV plant as an example which is shown in the photo below. Notice how the plant is located at a decommissioned air strip.</p>
+<a class="reference external image-reference" href="https://www.sphinx-doc.org/en/master/"><img alt="../../_images/vandel_pv_plant.png" class="bg-dark" src="../../_images/vandel_pv_plant.png" style="height: 350px;" /></a>
+<br>
+<p>The interactive map below was made using <a class="reference external" href="https://python-visualization.github.io/folium/latest/">Folium</a> and has the WMS tile overlays of the solar energy plants.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+
+<span class="nb">map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span>
+    <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">55.70</span><span class="p">,</span> <span class="mf">9.20</span><span class="p">],</span>
+    <span class="n">zoom_start</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;openstreetmap&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">names_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;solceller&#39;</span><span class="p">:</span> <span class="s1">&#39;PV plants&#39;</span><span class="p">,</span> <span class="s1">&#39;solfanger&#39;</span><span class="p">:</span> <span class="s1">&#39;Solar district heating plants&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">names_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">raster_layers</span><span class="o">.</span><span class="n">WmsTileLayer</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=</span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">layers</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span>
+        <span class="n">styles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;image/png&quot;</span><span class="p">,</span>
+        <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;Styrelsen for Dataforsyning og Infrastruktur&#39;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">names_dict</span><span class="p">[</span><span class="nb">type</span><span class="p">],</span>
+        <span class="n">overlay</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+
+<span class="n">EsriImagery</span> <span class="o">=</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/</span><span class="si">{z}</span><span class="s2">/</span><span class="si">{y}</span><span class="s2">/</span><span class="si">{x}</span><span class="s2">&quot;</span>
+<span class="n">EsriAttribution</span> <span class="o">=</span> <span class="s2">&quot;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&quot;</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">raster_layers</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">EsriImagery</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;World imagery&#39;</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="n">EsriAttribution</span><span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+
+<span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+
+<span class="nb">map</span>
+</pre></div>
 </div>
-<p>If you think that I’ve missed any important open-source datasets, please let me know in the comments section!</p>
-</section>
-<section id="google-summer-of-code">
-<h2>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this heading">#</a></h2>
-<p>You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students to write code and take an active part in the open-source community.</p>
-<p>During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a> comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.</p>
-<p>If you’re interested, you can find my official GSoC project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/projects/#6071460558274560">here</a>.</p>
-</section>
-<section id="whats-next">
-<h2>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this heading">#</a></h2>
-<p>I just completed adding <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1175">CAMS support to pvlib python</a>. CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.</p>
-<p>Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.</p>
-<p>Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions about getting started with retrieving CAMS data.</p>
-</section>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_7105c528ec2ff015fae31e7e548469c1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_7105c528ec2ff015fae31e7e548469c1&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_7105c528ec2ff015fae31e7e548469c1 = L.map(
+                &quot;map_7105c528ec2ff015fae31e7e548469c1&quot;,
+                {
+                    center: [55.7, 9.2],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e80a6f3153759faffdc09725f10c090c = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_e80a6f3153759faffdc09725f10c090c.addTo(map_7105c528ec2ff015fae31e7e548469c1);
+        
+    
+            var macro_element_62df9bcf6ef7fcf627fa9e07264e8e86 = L.tileLayer.wms(
+                &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
+                {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solceller&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
+            );
+        
+    
+            macro_element_62df9bcf6ef7fcf627fa9e07264e8e86.addTo(map_7105c528ec2ff015fae31e7e548469c1);
+        
+    
+            var macro_element_09e0ec04cb7f8a3ca7185e375a2d0a27 = L.tileLayer.wms(
+                &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
+                {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solfanger&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
+            );
+        
+    
+            macro_element_09e0ec04cb7f8a3ca7185e375a2d0a27.addTo(map_7105c528ec2ff015fae31e7e548469c1);
+        
+    
+            var tile_layer_50e38077771a75f571a4876ee279aad4 = L.tileLayer(
+                &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
+                {&quot;attribution&quot;: &quot;Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_50e38077771a75f571a4876ee279aad4.addTo(map_7105c528ec2ff015fae31e7e548469c1);
+        
+    
+            var layer_control_ec107cc4e162faf8859fef7d0ca53e47_layers = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_e80a6f3153759faffdc09725f10c090c,
+                    &quot;World imagery&quot; : tile_layer_50e38077771a75f571a4876ee279aad4,
+                },
+                overlays :  {
+                    &quot;PV plants&quot; : macro_element_62df9bcf6ef7fcf627fa9e07264e8e86,
+                    &quot;Solar district heating plants&quot; : macro_element_09e0ec04cb7f8a3ca7185e375a2d0a27,
+                },
+            };
+            let layer_control_ec107cc4e162faf8859fef7d0ca53e47 = L.control.layers(
+                layer_control_ec107cc4e162faf8859fef7d0ca53e47_layers.base_layers,
+                layer_control_ec107cc4e162faf8859fef7d0ca53e47_layers.overlays,
+                {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
+            ).addTo(map_7105c528ec2ff015fae31e7e548469c1);
+
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
+</div>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -574,17 +686,17 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
     
+    
+    <a href="../danish_district_heating_areas/">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>District heating areas in Denmark</span>
+    </a>
+    
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-    
-    
-    <a href="../virtual_environments_cheat_sheet/">
-      <span>Virtual environments cheat sheet</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
     
   </span>
 </div>
@@ -630,23 +742,9 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-summer-of-code">Google Summer of Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s next?</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/posts/gsoc_project_intro.md.txt">
+    <a href="../../_sources/posts/solar_systems_denmark.ipynb.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

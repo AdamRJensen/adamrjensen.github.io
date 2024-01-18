@@ -2,10 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2024-01-15T13:32:49.221667+00:00</updated>
+  <updated>2024-01-18T21:09:23.250132+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
+  <entry>
+    <id>http://predictablysunny.com/posts/solar_systems_denmark/</id>
+    <title>Solar Energy Systems in Denmark</title>
+    <updated>2024-01-18T00:00:00+00:00</updated>
+    <author>
+      <name>Adam R. Jensen</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The Danish Agency for Data Supply and Infrastructure (Styrelsen for Dataforsyning og Infrastruktur - SDFI) recently released a dataset of all the solar energy plants in Denmark. The dataset consists of polygons of all the PV plants and solar thermal district heating plants. The initiative is described in more detail &lt;a class="reference external" href="https://dataforsyningen.dk/labs/4905"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;img alt="http://predictablysunny.com/_images/vandel_pv_plant.png" class="bg-dark" src="http://predictablysunny.com/_images/vandel_pv_plant.png" style="height: 350px;" /&gt;&lt;/p&gt;
+</content>
+    <link href="http://predictablysunny.com/posts/solar_systems_denmark/"/>
+    <summary>The Danish Agency for Data Supply and Infrastructure (Styrelsen for Dataforsyning og Infrastruktur - SDFI) recently released a dataset of all the solar energy plants in Denmark. The dataset consists of polygons of all the PV plants and solar thermal district heating plants. The initiative is described in more detail here</summary>
+    <category term="openscience" label="open science"/>
+    <published>2024-01-18T00:00:00+00:00</published>
+  </entry>
   <entry>
     <id>http://predictablysunny.com/posts/danish_district_heating_areas/</id>
     <title>District heating areas in Denmark</title>
