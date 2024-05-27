@@ -1,10 +1,8 @@
-# Adam R. Jensen - About Me
+# Rajiv Daxini - About Me
 
-Great to see that you have stumbled upon my blog!
+Welcome to my blog!
 
-I'm a research scientist at the Technical University of Denmark (DTU), working on modeling and assessment of solar energy systems and the solar resource.
-
-On this blog, I'll share some of the many interesting things I work on, including tips and tricks to working with solar resource data in Python.
+I am a recent PhD grad currenty working on a Google Summer of Code Project to implement some new functions in pvlib python. On this blog, I'll share updates on the project and reflect on my experience with open-source software development.
 
 ## Recent posts
 
