@@ -145,14 +145,13 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'pydata_sphinx_theme'
-html_title = 'Predictably Sunny'
+html_title = 'Dax's Blog'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-  "github_url": "https://github.com/adamrjensen/",
-  "analytics": {"google_analytics_id": "G-B5PLZ8N24G"},
+  "github_url": "https://github.com/rdaxini/",
   "navbar_end": ["navbar-icon-links.html", "search-field.html"],
   "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
 }
@@ -197,10 +196,6 @@ html_sidebars = {
 
 blog_post_pattern = "posts/*"
 
-# OpenGraph config
-ogp_site_url = "https://predictablysunny.com"
-ogp_image = "https://predictablysunny.com/_static/profile.png"
-
 # Adds custom css templates, necessary for the custom "hello.html" template
 def setup(app):
     app.add_css_file("custom.css")
@@ -208,4 +203,4 @@ def setup(app):
 #jupyter_execute_notebooks = "off"
 #nb_execution_allow_errors = True
 
-nb_execution_excludepatterns = ['irradiance_maps.ipynb', 'inset_map_cartopy.ipynb', 'twoaxistracking_animation.ipynb', 'blue_marble_map.ipynb', 'earth_as_rubiks_cube.ipynb', 'danish_district_heating_areas.ipynb', 'draft/*']
+nb_execution_excludepatterns = ['draft/*']
