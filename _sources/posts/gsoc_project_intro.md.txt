@@ -1,47 +1,46 @@
-# pvlib - a one-stop source for solar resource data
-```{post} 2021-06-10
-:author: Adam R. Jensen
-:tags: pvlib, solar, open science, gsoc
+# Enhancing solar energy modelling: implementing new spectral corrections in pvlib python
+# A first blog post
+```{post} 2024-05-27
+:author: Rajiv Daxini
+:tags: pvlib, solar, open science, gsoc, introduction
 ```
 
-This title at least represents the aim of my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project that I will be completing during the next 10 weeks. In short, I’ll be extending [pvlib python’s](https://pvlib-python.readthedocs.io/en/stable/) current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
+This first blog post introduces the motivation and plan for my [Google Summer of Code (GSoC)](https://summerofcode.withgoogle.com/about/) project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract [can be found here](https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqTv) and is reinstated below.
+
+## Project abstract
+
+Accounting for spectral effects in photovoltaic (PV) performance models is critical for accurate and reliable performance forecasts. Variation in the solar spectral distribution changes the useful fraction of irradiance incident on a PV device, and thus can increase or decrease its performance. The relationship between the performance of a PV module and the solar spectrum is captured by a “spectral correction function” (SCF), a plethora of which have been published in the literature over the last quarter of a century. However, only a fraction of these published models are available in pvlib. The aim of this project is to implement new SCFs in pvlib and develop examples to guide users in applying these models. The implementation of these new models will strengthen pvlib through enhancing its flexibility, accuracy, and reliability for different modelling scenarios. Furthermore, the additions to the example gallery will increase the accessibility and usability of these models and pvlib as a whole, in particular for new users.
+
+## What motivates me?
+As for my personal motivation, I am driven by a desire to contribute to pvlib and help improve the open-source resources available to scientists, engineers, and whoever else wants to know how a particular PV system is going to perform under any particular set of conditions. So, for one there is the goal to contribute, but on top of that is the fact that I need to and want to learn _how_ to contribute. As a proponent of open science and open source, it's a natural and necessary step for me to learn how to code collaboratively and the best way to learn is to do... so, here we are! As a newbie to open-source software development, I am also keen to share my learning experience with you, hence the existence of these blog posts. I hope not only to share technical updates on the project itself, but also reflect on the overall learning experience of open-source software development. I hope that in doing so I will be able to help and inspire others to engage and contribute to open-source projects, especially those with little or no prior experience of doing so.
+
+Besides my internal motivation, I have to say that I am also motivated by my mentors for this project -- [Adam Jensen](https://github.com/AdamRJensen) and [Kevin Anderson](https://github.com/kandersolar). These guys' are integral members of the pvlib community and their commitment to the ongoing growth and development of pvlib is inspiring. After introducing me to the GSoC program, they both supported my application and I am fortunate to have them as my guides for this work.
+
 ![gsoc and pvlib logo](/images/gsoc_at_pvlib.png)
 
-And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from frustration over how unnecessarily difficult it is to obtain good solar resource data. 
-Fortunately, there is a lot of high-quality data out there, free for anyone to use! However, it currently requires a great deal of time and technical expertise to obtain the data, limiting its wider use.
+# Why care about spectral irradiance?
+# Not all light is created equal
+Aside from what motivates me to work on this project, what motivates the project itself? Sunny days => more solar power, right? What does the colour of light (spectral irradiance) have to do with anything? Well, not exactly. Not all light is created equal --- sometimes you have more infrared, sometimes more ultraviolet. Much like your skin when you go out on a sunny day, sometimes you get warm and sometimes you get sun burnt, solar panels also respond differently to different types of light (different spectra) because they have what is known as a "spectral response". Accounting for this effect when modelling PV performance is critical and failing to do so can lead to [errors of up to 15%](https://doi.org/10.1016/j.solener.2019.12.042) for annualised performance predictions.
+# pvlib: current capabilities
+Pvlib currently contains three spectral correction functions (SCFs) to model PV performance variations due to changes in the spectrum. However, the scope of models is limited in terms of the diversity of dependent variables and the documentation lacks examples to guide users on the implementation of these functions in the overall modelling pipeline. In terms of the diversity of dependent variables, there are two primary limitations. First, none of the existing models explicitly consider the effects of cloud cover. Second, all models are based on proxy variables. Proxy variables are indirect characterisation indices of the solar spectrum, suchas air mass, precipitable water content, and so on. These are atmospheric factors that influence the spectrum and whose influence is considered sufficiently dominant such that their value may be used as an indicator for the prevailing spectral irradiance conditions. As a simple analogy, when it is hot outside, one would expect ice cream sales to increase. Therefore, temperature could be used as a proxy for ice cream sales. The advantage of these varaibles is of course that they can easily be calcualted using easily acquirable parameters such as time of day, location, ambient air temperature, humidity, and so on. The limitation is that they limit the amount of information on the spectrum contained with the correction function. More information on different models and characterisation indices can be found [in this review paper](https://doi.org/10.1016/j.energy.2023.129461).
+# pvlib: what's next?
+Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. [An issue](https://github.com/pvlib/pvlib-python/issues/1950) has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.
 
-Given that solar irradiance is the most important input to predicting solar energy yield, using suboptimal data is kinda a big deal. Solar resource data is not only essential to the design stage but is also crucial for benchmarking solar radiation models (decomposition models, forecasting techniques, etc.) and assessing system performance.
+| Model                                                | Reference                                                                      |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Air mass                                             | [King et al. 2002](https://doi.org/10.1109/PVSC.1997.654283)                   |
+| Air mass, aerosol optical depth, precipitable water  | [Caballero et al. 2018](https://doi.org/10.1109/JPHOTOV.2017.2787019)          |
+| Air mass, precipitable water                         | [Lee and Panchula 2016](https://doi.org/10.1109/PVSC.2016.7749836)             |
+| -------------Proposed models below------------------ | --------------------------Proposed models below------------------------------- |
+| Air mass, clearness index                            | [Pelland et al. 2020 ](https://doi.org/10.1109/PVSC45281.2020.9300932)         |
+| Air mass, clearness index                            | [Huld et al. 2009](http://dx.doi.org/10.4229/24thEUPVSEC2009-4AV.3.27)         |
+| Average photon energy + spectral band depth          | [Daxini et al. 2023](https://doi.org/10.1016/j.energy.2023.129046)             |
 
-pvlib python already has a module called `iotools` for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.
+The implementation of these models in pvlib will be supported by a new example demonstrating their application and use in the overall PV performance modelling pipeline. This will be the first example in pvlib python for a spectral correction function.
 
-## Data sources
-During the project, I'll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):
-- [Baseline Surface Radiation Network (BSRN)](https://bsrn.awi.de/)
-- [ERA5 from ECMWF](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5)
-- [MERRA2 from NASA](https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/)
-- [PVGIS hourly data](https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation)
-- [CAMS McClear](http://www.soda-pro.com/web-services/radiation/cams-mcclear)
-- [CAMS Radiation](http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info)
-- [Climate One Building](http://climate.onebuilding.org/)
+## Closing remark
+Stay tuned into this blog for more updates. You can also follow [this github issue](https://github.com/pvlib/pvlib-python/issues/2065) and [my LinkedIn page](https://www.linkedin.com/in/rajiv-daxini-ba354a237/) for updates on the project. Please feel free to share your comments and thoughts on the open issues and public posts so that we may develop this project together. All and any feedback is always more than welcome!
 
-Each of the above datasets have their own strengths and differs by geographical coverage, time resolution, and accuracy. If this sounds a bit overwhelming, fret not; this will be the topic of a later blog post.
+-Dax 
 
-```{note}
-You can already check out some of the existing pvlib functions for retrieving data. For example, satellite-derived solar irradiance and clear-sky data from [CAMS](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_cams.html) and ground measurements from the [Solar Radiation Monitoring Laboratory (SRML) monitoring stations](https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_srml.html).
-```
-
-If you think that I’ve missed any important open-source datasets, please let me know in the comments section!
-
-## Google Summer of Code
-You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students to write code and take an active part in the open-source community.
-
-During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where [Kevin Anderson](https://github.com/kandersolar) comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.
-
-If you're interested, you can find my official GSoC project abstract [here](https://summerofcode.withgoogle.com/projects/#6071460558274560).
-
-## What’s next?
-I just completed adding [CAMS support to pvlib python](https://github.com/pvlib/pvlib-python/pull/1175). CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.
-
-Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.
-
-Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions about getting started with retrieving CAMS data.
+27 May 2024

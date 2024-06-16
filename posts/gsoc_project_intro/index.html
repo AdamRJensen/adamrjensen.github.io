@@ -8,16 +8,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="pvlib - a one-stop source for solar resource data" />
+<meta property="og:title" content="Enhancing solar energy modelling: implementing new spectral corrections in pvlib python" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://predictablysunny.com/posts/gsoc_project_intro/" />
-<meta property="og:site_name" content="Predictably Sunny" />
-<meta property="og:description" content="This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools func..." />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:description" content="A first blog post: This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC) project. The overall aim of the project is to implement new spectral correction models..." />
 <meta property="og:image" content="https://predictablysunny.com/_static/profile.png" />
-<meta property="og:image:alt" content="Predictably Sunny" />
-<meta name="description" content="This title at least represents the aim of my Google Summer of Code (GSoC) project that I will be completing during the next 10 weeks. In short, I’ll be extending pvlib python’s current iotools func..." />
+<meta property="og:image:alt" content="Blog" />
+<meta name="description" content="A first blog post: This first blog post introduces the motivation and plan for my Google Summer of Code (GSoC) project. The overall aim of the project is to implement new spectral correction models..." />
 
-    <title>pvlib - a one-stop source for solar resource data &#8212; Predictably Sunny</title>
+    <title>Enhancing solar energy modelling: implementing new spectral corrections in pvlib python &#8212; Predictably Sunny</title>
   
   
   
@@ -72,7 +72,7 @@
   rel="alternate"
   type="application/atom+xml"
   href="../../blog/atom.xml"
-  title="Predictably Sunny"
+  title="Blog"
 />
 
 
@@ -368,7 +368,7 @@
   
   <i class="fa fa-calendar"></i>
   
-  <span>10 June 2021</span>
+  <span>27 May 2024</span>
   
 </h2>
 <ul>
@@ -383,7 +383,7 @@
     </span>
   
   
-  <a href="../../blog/author/adam-r-jensen/">Adam R. Jensen</a>
+  <a href="../../blog/author/rajiv-daxini/">Rajiv Daxini</a>
   
   
   
@@ -425,6 +425,12 @@
   
   
   
+  
+  
+  <a href="../../blog/tag/introduction/">introduction</a>
+  
+  
+  
 </li>
 
 
@@ -439,36 +445,6 @@
 </h3>
 <ul>
   
-  
-  <li>
-    <a href="../solar_systems_denmark/">
-      18 January - Solar Energy Systems in Denmark
-    </a>
-  </li>
-  
-  <li>
-    <a href="../danish_district_heating_areas/">
-      14 April - District heating areas in Denmark
-    </a>
-  </li>
-  
-  <li>
-    <a href="../earth_as_rubiks_cube/">
-      31 January - Earth as a Rubik’s cube
-    </a>
-  </li>
-  
-  <li>
-    <a href="../blue_marble_map/">
-      30 January - Blue Marble Map Background
-    </a>
-  </li>
-  
-  <li>
-    <a href="../twoaxistracking_animation/">
-      09 November - Animation of two-axis tracker shading
-    </a>
-  </li>
   
 </ul>
 </div>
@@ -507,7 +483,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">pvlib - a...</li>
+    <li class="breadcrumb-item active" aria-current="page">Enhancing...</li>
   </ul>
 </nav>
 </div>
@@ -525,44 +501,74 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section id="pvlib-a-one-stop-source-for-solar-resource-data">
-<h1>pvlib - a one-stop source for solar resource data<a class="headerlink" href="#pvlib-a-one-stop-source-for-solar-resource-data" title="Permalink to this heading">#</a></h1>
-<p>This title at least represents the aim of my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> project that I will be completing during the next 10 weeks. In short, I’ll be extending <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/">pvlib python’s</a> current iotools functionalities to provide users with easy and standardized access to all major open-source solar resource databases.
-<img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
-<p>And why would I do that, you ask? Well, first of all, I am a bit of a solar geek, but my primary motivation comes from frustration over how unnecessarily difficult it is to obtain good solar resource data.
-Fortunately, there is a lot of high-quality data out there, free for anyone to use! However, it currently requires a great deal of time and technical expertise to obtain the data, limiting its wider use.</p>
-<p>Given that solar irradiance is the most important input to predicting solar energy yield, using suboptimal data is kinda a big deal. Solar resource data is not only essential to the design stage but is also crucial for benchmarking solar radiation models (decomposition models, forecasting techniques, etc.) and assessing system performance.</p>
-<p>pvlib python already has a module called <code class="docutils literal notranslate"><span class="pre">iotools</span></code> for retrieving/reading solar data, but it currently only supports access to a few of the many available sources and covers a limited part of the world.</p>
-<section id="data-sources">
-<h2>Data sources<a class="headerlink" href="#data-sources" title="Permalink to this heading">#</a></h2>
-<p>During the project, I’ll be adding functions to the iotools module within pvlib python, that will allow users to retrieve data from the following datasets (in addition to the existing ones):</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://bsrn.awi.de/">Baseline Surface Radiation Network (BSRN)</a></p></li>
-<li><p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5 from ECMWF</a></p></li>
-<li><p><a class="reference external" href="https://gmao.gsfc.nasa.gov/reanalysis/MERRA-2/">MERRA2 from NASA</a></p></li>
-<li><p><a class="reference external" href="https://ec.europa.eu/jrc/en/PVGIS/tools/hourly-radiation">PVGIS hourly data</a></p></li>
-<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-mcclear">CAMS McClear</a></p></li>
-<li><p><a class="reference external" href="http://www.soda-pro.com/web-services/radiation/cams-radiation-service/info">CAMS Radiation</a></p></li>
-<li><p><a class="reference external" href="http://climate.onebuilding.org/">Climate One Building</a></p></li>
-</ul>
-<p>Each of the above datasets have their own strengths and differs by geographical coverage, time resolution, and accuracy. If this sounds a bit overwhelming, fret not; this will be the topic of a later blog post.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can already check out some of the existing pvlib functions for retrieving data. For example, satellite-derived solar irradiance and clear-sky data from <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_cams.html">CAMS</a> and ground measurements from the <a class="reference external" href="https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.iotools.get_srml.html">Solar Radiation Monitoring Laboratory (SRML) monitoring stations</a>.</p>
+<section id="enhancing-solar-energy-modelling-implementing-new-spectral-corrections-in-pvlib-python">
+<h1>Enhancing solar energy modelling: implementing new spectral corrections in pvlib python<a class="headerlink" href="#enhancing-solar-energy-modelling-implementing-new-spectral-corrections-in-pvlib-python" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="a-first-blog-post">
+<h1>A first blog post<a class="headerlink" href="#a-first-blog-post" title="Permalink to this heading">#</a></h1>
+<p>This first blog post introduces the motivation and plan for my <a class="reference external" href="https://summerofcode.withgoogle.com/about/">Google Summer of Code (GSoC)</a> project. The overall aim of the project is to implement new spectral correction models in pvlib, as well as examples of their application and use. The official project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/programs/2024/projects/TT5QrYqTv">can be found here</a> and is reinstated below.</p>
+<section id="project-abstract">
+<h2>Project abstract<a class="headerlink" href="#project-abstract" title="Permalink to this heading">#</a></h2>
+<p>Accounting for spectral effects in photovoltaic (PV) performance models is critical for accurate and reliable performance forecasts. Variation in the solar spectral distribution changes the useful fraction of irradiance incident on a PV device, and thus can increase or decrease its performance. The relationship between the performance of a PV module and the solar spectrum is captured by a “spectral correction function” (SCF), a plethora of which have been published in the literature over the last quarter of a century. However, only a fraction of these published models are available in pvlib. The aim of this project is to implement new SCFs in pvlib and develop examples to guide users in applying these models. The implementation of these new models will strengthen pvlib through enhancing its flexibility, accuracy, and reliability for different modelling scenarios. Furthermore, the additions to the example gallery will increase the accessibility and usability of these models and pvlib as a whole, in particular for new users.</p>
+</section>
+<section id="what-motivates-me">
+<h2>What motivates me?<a class="headerlink" href="#what-motivates-me" title="Permalink to this heading">#</a></h2>
+<p>As for my personal motivation, I am driven by a desire to contribute to pvlib and help improve the open-source resources available to scientists, engineers, and whoever else wants to know how a particular PV system is going to perform under any particular set of conditions. So, for one there is the goal to contribute, but on top of that is the fact that I need to and want to learn <em>how</em> to contribute. As a proponent of open science and open source, it’s a natural and necessary step for me to learn how to code collaboratively and the best way to learn is to do… so, here we are! As a newbie to open-source software development, I am also keen to share my learning experience with you, hence the existence of these blog posts. I hope not only to share technical updates on the project itself, but also reflect on the overall learning experience of open-source software development. I hope that in doing so I will be able to help and inspire others to engage and contribute to open-source projects, especially those with little or no prior experience of doing so.</p>
+<p>Besides my internal motivation, I have to say that I am also motivated by my mentors for this project – <a class="reference external" href="https://github.com/AdamRJensen">Adam Jensen</a> and <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a>. These guys’ are integral members of the pvlib community and their commitment to the ongoing growth and development of pvlib is inspiring. After introducing me to the GSoC program, they both supported my application and I am fortunate to have them as my guides for this work.</p>
+<p><img alt="gsoc and pvlib logo" src="../../_images/gsoc_at_pvlib.png" /></p>
+</section>
+</section>
+<section id="why-care-about-spectral-irradiance">
+<h1>Why care about spectral irradiance?<a class="headerlink" href="#why-care-about-spectral-irradiance" title="Permalink to this heading">#</a></h1>
+</section>
+<section id="not-all-light-is-created-equal">
+<h1>Not all light is created equal<a class="headerlink" href="#not-all-light-is-created-equal" title="Permalink to this heading">#</a></h1>
+<p>Aside from what motivates me to work on this project, what motivates the project itself? Sunny days =&gt; more solar power, right? What does the colour of light (spectral irradiance) have to do with anything? Well, not exactly. Not all light is created equal — sometimes you have more infrared, sometimes more ultraviolet. Much like your skin when you go out on a sunny day, sometimes you get warm and sometimes you get sun burnt, solar panels also respond differently to different types of light (different spectra) because they have what is known as a “spectral response”. Accounting for this effect when modelling PV performance is critical and failing to do so can lead to <a class="reference external" href="https://doi.org/10.1016/j.solener.2019.12.042">errors of up to 15%</a> for annualised performance predictions.</p>
+</section>
+<section id="pvlib-current-capabilities">
+<h1>pvlib: current capabilities<a class="headerlink" href="#pvlib-current-capabilities" title="Permalink to this heading">#</a></h1>
+<p>Pvlib currently contains three spectral correction functions (SCFs) to model PV performance variations due to changes in the spectrum. However, the scope of models is limited in terms of the diversity of dependent variables and the documentation lacks examples to guide users on the implementation of these functions in the overall modelling pipeline. In terms of the diversity of dependent variables, there are two primary limitations. First, none of the existing models explicitly consider the effects of cloud cover. Second, all models are based on proxy variables. Proxy variables are indirect characterisation indices of the solar spectrum, suchas air mass, precipitable water content, and so on. These are atmospheric factors that influence the spectrum and whose influence is considered sufficiently dominant such that their value may be used as an indicator for the prevailing spectral irradiance conditions. As a simple analogy, when it is hot outside, one would expect ice cream sales to increase. Therefore, temperature could be used as a proxy for ice cream sales. The advantage of these varaibles is of course that they can easily be calcualted using easily acquirable parameters such as time of day, location, ambient air temperature, humidity, and so on. The limitation is that they limit the amount of information on the spectrum contained with the correction function. More information on different models and characterisation indices can be found <a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129461">in this review paper</a>.</p>
+</section>
+<section id="pvlib-what-s-next">
+<h1>pvlib: what’s next?<a class="headerlink" href="#pvlib-what-s-next" title="Permalink to this heading">#</a></h1>
+<p>Three new models will be implemented in pvlib. The first two models will be based on the air mass and clearness index parameters. These would be the first spectral corrections in pvlib to include the clearness index variable, which accounts for the effects of cloud cover on the solar spectrum. A stretch goal will be to include a third model that is not based on proxy variables, but rather variables derived directly from spectral irradiance data. <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/1950">An issue</a> has been raised on GitHub, the response to which has provided guidance on which models from the literature are a priority for some users. The table below summarises the models existing in pvlib and those to be implemented through this project. The first three rows summarise the former while the last three rows summarise the altter.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Air mass</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.1997.654283">King et al. 2002</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Air mass, aerosol optical depth, precipitable water</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1109/JPHOTOV.2017.2787019">Caballero et al. 2018</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Air mass, precipitable water</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC.2016.7749836">Lee and Panchula 2016</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>————-Proposed models below——————</p></td>
+<td><p>————————–Proposed models below——————————-</p></td>
+</tr>
+<tr class="row-even"><td><p>Air mass, clearness index</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1109/PVSC45281.2020.9300932">Pelland et al. 2020 </a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Air mass, clearness index</p></td>
+<td><p><a class="reference external" href="http://dx.doi.org/10.4229/24thEUPVSEC2009-4AV.3.27">Huld et al. 2009</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Average photon energy + spectral band depth</p></td>
+<td><p><a class="reference external" href="https://doi.org/10.1016/j.energy.2023.129046">Daxini et al. 2023</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<p>If you think that I’ve missed any important open-source datasets, please let me know in the comments section!</p>
-</section>
-<section id="google-summer-of-code">
-<h2>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Permalink to this heading">#</a></h2>
-<p>You might be wondering at this point what Google has to do with all this and you’d be right to do so. Google is not directly involved with the project but rather is the facilitator and sponsor of Google Summer of Code (GSoC) - a global program that aims at getting students to write code and take an active part in the open-source community.</p>
-<p>During the 10-week program, students are paired with a mentor from a pre-qualified open-source organization, who guides the student through a specific project. This is where <a class="reference external" href="https://github.com/kandersolar">Kevin Anderson</a> comes into the picture. Kevin is one of the core pvlib developers, and each week volunteers a few hours of his time where I get to pick his brain. He is truly a phenomenal guy, and he’s really the reason why this project exists.</p>
-<p>If you’re interested, you can find my official GSoC project abstract <a class="reference external" href="https://summerofcode.withgoogle.com/projects/#6071460558274560">here</a>.</p>
-</section>
-<section id="whats-next">
-<h2>What’s next?<a class="headerlink" href="#whats-next" title="Permalink to this heading">#</a></h2>
-<p>I just completed adding <a class="reference external" href="https://github.com/pvlib/pvlib-python/pull/1175">CAMS support to pvlib python</a>. CAMS provides satellite-derived solar radiation for Europe and Africa. But not only that, CAMS also lets you retrieve McClear clear-sky data for anywhere in the world. Hint: McClear is based on actual aerosol data and probably provides the best clear-sky data you will ever use.</p>
-<p>Now that this has been completed, I have moved on to writing tests for the functions I’ve written for retrieving hourly data from PVGIS.</p>
-<p>Stay tuned for more news on how you can easily get your hands on solar radiation data, and leave a comment below if you have any questions about getting started with retrieving CAMS data.</p>
+<p>The implementation of these models in pvlib will be supported by a new example demonstrating their application and use in the overall PV performance modelling pipeline. This will be the first example in pvlib python for a spectral correction function.</p>
+<section id="closing-remark">
+<h2>Closing remark<a class="headerlink" href="#closing-remark" title="Permalink to this heading">#</a></h2>
+<p>Stay tuned into this blog for more updates. You can also follow <a class="reference external" href="https://github.com/pvlib/pvlib-python/issues/2065">this github issue</a> and <a class="reference external" href="https://www.linkedin.com/in/rajiv-daxini-ba354a237/">my LinkedIn page</a> for updates on the project. Please feel free to share your comments and thoughts on the open issues and public posts so that we may develop this project together. All and any feedback is always more than welcome!</p>
+<p>-Dax</p>
+<p>27 May 2024</p>
 </section>
 </section>
 
@@ -578,14 +584,6 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
     
-    
-    <a href="../virtual_environments_cheat_sheet/">
-      <span>Virtual environments cheat sheet</span>
-      
-      <i class="fa fa-arrow-circle-right" ></i>
-      
-    </a>
-    
   </span>
 </div>
 
@@ -597,7 +595,7 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
               
 <!-- Add a comment box underneath the page's content -->
 <script src="https://giscus.app/client.js"
-        data-repo="adamrjensen/adamrjensen.github.io"
+        data-repo="rdaxini/rdaxini.github.io"
         data-repo-id="MDEwOlJlcG9zaXRvcnkzNzQ1MDc4Nzc="
         data-category="Blog comments"
         data-category-id="DIC_kwDOFlKJZc4CRySF"
@@ -637,10 +635,21 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-sources">Data sources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-summer-of-code">Google Summer of Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s next?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Enhancing solar energy modelling: implementing new spectral corrections in pvlib python</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-first-blog-post">A first blog post</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-abstract">Project abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-motivates-me">What motivates me?</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#why-care-about-spectral-irradiance">Why care about spectral irradiance?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#not-all-light-is-created-equal">Not all light is created equal</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-current-capabilities">pvlib: current capabilities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#pvlib-what-s-next">pvlib: what’s next?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-remark">Closing remark</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">
@@ -677,7 +686,7 @@ Fortunately, there is a lot of high-quality data out there, free for anyone to u
 
   <p class="copyright">
     
-      © Copyright 2021, Adam R. Jensen.
+      © Copyright 2024, Rajiv Daxini.
       <br/>
     
   </p>
