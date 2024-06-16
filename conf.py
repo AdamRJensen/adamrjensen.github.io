@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Blog"
-copyright = "2024, Rajiv Daxini"
-author = "Rajiv Daxini"
+project = "Predictably Sunny"
+copyright = "2021, Adam R. Jensen"
+author = "Adam R. Jensen"
 
 
 # -- General ABlog Options ----------------------------------------------------
@@ -28,10 +28,10 @@ author = "Rajiv Daxini"
 blog_path = 'blog'
 
 # The "title" for the blog, used in active pages.  Default is ``'Blog'``.
-blog_title = "Blog"
+blog_title = "Predictably Sunny"
 
 # Base URL for the website, required for generating feeds.
-blog_baseurl = "http://rdaxini.github.io/.com/"
+blog_baseurl = "http://predictablysunny.com/"
 
 # -- Blog Post Related --------------------------------------------------------
 
