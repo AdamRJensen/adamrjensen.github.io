@@ -153,8 +153,11 @@ html_title = 'Predictably Sunny'
 html_theme_options = {
   "github_url": "https://github.com/adamrjensen/",
   "analytics": {"google_analytics_id": "G-B5PLZ8N24G"},
-  "navbar_end": ["navbar-icon-links.html", "search-field.html"],
-  "search_bar_text": "Search this site...",  # defaults to "Search the docs..."
+  "navbar_end": ["navbar-icon-links.html"],
+  "search_bar_text": "Search this site...",  # defaults to "Search the docs...",
+  "secondary_sidebar_items": ["page-toc"],  # remove show source
+  "footer_start": ["copyright"],  # remove "sphinx-version"
+  "footer_end": [],  # remove "theme-version"
 }
 
 # The name of an image file (relative to this directory) to place at the top
