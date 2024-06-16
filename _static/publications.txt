@@ -1,6 +1,4 @@
 ## 2024
-[Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
-
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
 
 
@@ -33,13 +31,13 @@ Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856
 
 
 ## 2021
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Lopez Lorente, J., Blanc, P., Saint-Drenan, Y. (2021). **Assessingsolar: An Interactive Guide to Solar Resource Assessment in Python**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.37.03](http://dx.doi.org/10.18086/swc.2021.37.03)
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Lopez Lorente, J., Blanc, P., Saint-Drenan, Y. (2021). **Assessingsolar: An Interactive Guide to Solar Resource Assessment in Python**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.37.03](http://dx.doi.org/10.18086/swc.2021.37.03)
 
-Dragsted, J., Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dannemand, M. (2021). **Demonstration of a Domestic Photovoltaic-Thermal (pvt)-Heat Pump System, Performance Simulation, and Economic Analysis for Different Climates**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.26.03](http://dx.doi.org/10.18086/swc.2021.26.03)
+Dragsted, J., Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dannemand, M., Dragsted, J. (2021). **Demonstration of a Domestic Photovoltaic-Thermal (pvt)-Heat Pump System, Performance Simulation, and Economic Analysis for Different Climates**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.26.03](http://dx.doi.org/10.18086/swc.2021.26.03)
 
 Forstinger, A., Wilbert, S., Kraas, B., Fernández Peruchena, C., Gueymard, C. A., Collino, E., Ruiz-Arias, J. A., Polo Martinez, J., Saint-Drenan, Y., Ronzio, D., Hanrieder, N., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Yang, D. (2021). **Expert Quality Control of Solar Radiation Ground Data Sets**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.38.02](http://dx.doi.org/10.18086/swc.2021.38.02)
 
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Dragsted, J. (2021). **Thermal Inspection of Water Pit Heat Storages Using Drones**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.35.02](http://dx.doi.org/10.18086/swc.2021.35.02)
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Dragsted, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2021). **Thermal Inspection of Water Pit Heat Storages Using Drones**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.35.02](http://dx.doi.org/10.18086/swc.2021.35.02)
 
 
 ## 2019

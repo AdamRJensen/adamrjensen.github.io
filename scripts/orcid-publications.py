@@ -109,8 +109,6 @@ def fetchmeta(doi, fmt='reference', **kwargs):
 
 # %%
 # Extract metadata for each entry
-dois = []
-
 df = []
 for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"], "Fetching reference data..."):
     isummary = iwork["work-summary"][0]
@@ -121,41 +119,40 @@ for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"]
             doi = ii["external-id-value"]
             break
 
-    if doi not in dois:
-        dois.append(doi)    
+    meta = fetchmeta(doi, fmt="dict")
+    doi_url = meta["URL"]
+    title = meta["title"]
+    references_count = meta["references-count"]
+    year = meta["issued"]["date-parts"][0][0]
+    url = meta["URL"]
 
-        meta = fetchmeta(doi, fmt="dict")
-        if meta['type'] not in ['thesis']:
-            doi_url = meta["URL"]
-            title = meta["title"]
-            references_count = meta["references-count"]
-            year = meta["issued"]["date-parts"][0][0]
-            url = meta["URL"]
-    
-            # Create authors list with links to their ORCIDs
-            authors = meta["author"]
-            autht = []
-            authors_parsed = []
-            for author in authors:
-                author_str = author['given'] + ' ' + author['family']
-                if author_str not in authors_parsed:
-                    authors_parsed.append(author_str)
-                    # Modified to also show middle name initials correctly
-                    name = f"{author['family']}, {' '.join([s[0]+'.' for s in author['given'].split()])[:-1]}."
-                    # Bold name of author of interst and always link to orcid
-                    if orcid_id_last_name in author["family"].lower():
-                        autht.append(f"[**{name}**]({ORCID_RECORD_API + orcid_id})")
-                    elif "ORCID" in author:
-                        autht.append(f"[{name}]({author['ORCID']})")
-                    else:
-                        autht.append(name)
-            autht = ", ".join(autht)
-    
-            journal = meta['container-title']
-    
-            url_doi = url.split("//", 1)[-1]
-            reference = f"{autht} ({year}). **{title}**. {journal}. doi:&nbsp;[{doi}]({url})" # non-breaking space between doi text and numbertext and number
-            df.append({"year": year, "reference": reference})
+    # Create authors list with links to their ORCIDs
+    authors = meta["author"]
+    autht = []
+    for author in authors:
+        # Modified to also show middle name initials correctly
+        name = f"{author['family']}, {' '.join([s[0]+'.' for s in author['given'].split()])[:-1]}."
+        # Bold name of author of interst and always link to orcid
+        if orcid_id_last_name in author["family"].lower():
+            autht.append(f"[**{name}**]({ORCID_RECORD_API + orcid_id})")
+        elif "ORCID" in author:
+            autht.append(f"[{name}]({author['ORCID']})")
+        else:
+            autht.append(name)
+    autht = ", ".join(autht)
+
+    journal = meta['container-title']
+    # if meta['type'] == 'journal-article':
+    #     journal = meta['container-title-short']
+    # else:
+    #     journal = meta["publisher"]
+
+    # if 'assessing' in title.lower():
+    #     raise ValueError
+
+    url_doi = url.split("//", 1)[-1]
+    reference = f"{autht} ({year}). **{title}**. {journal}. doi:&nbsp;[{doi}]({url})" # non-breaking space between doi text and number
+    df.append({"year": year, "reference": reference})
 df = pd.DataFrame(df)
 
 # Convert into a markdown string
