@@ -1,4 +1,14 @@
+## 2025
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Furbo, S., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Monitoring data of the Høje Taastrup water pit thermal energy storage**. Data in Brief. doi:&nbsp;[10.1016/j.dib.2025.111305](http://dx.doi.org/10.1016/j.dib.2025.111305)
+
+
 ## 2024
+[Xu, Y.](https://orcid.org/0009-0005-7608-8998), [Zhan, C.](https://orcid.org/0009-0006-5520-0415), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Gao, M.](https://orcid.org/0000-0003-0706-2362), [Kong, W.](https://orcid.org/0000-0003-3443-3421), [Fan, J.](https://orcid.org/0000-0003-0936-6677) (2024). **Thermo-economic analysis of a solar district heating plant with an air-to-water heat pump**. Renewable Energy. doi:&nbsp;[10.1016/j.renene.2024.121490](http://dx.doi.org/10.1016/j.renene.2024.121490)
+
+[Sengupta, M.](http://orcid.org/0000-0001-5622-4503), Habte, A., Wilbert, S., Gueymard, C., Remund, J., Lorenz, E., van Sark, W., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Fourth Edition**. []. doi:&nbsp;[10.2172/2448063](http://dx.doi.org/10.2172/2448063)
+
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10748762](http://dx.doi.org/10.1109/pvsc57443.2024.10748762)
+
 [Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
 
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
@@ -15,17 +25,23 @@ Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856)
 
 Sifnaios, I., Gauthier, G., Trier, D., Fan, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2023). **Dronninglund water pit thermal energy storage dataset**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.12.046](http://dx.doi.org/10.1016/j.solener.2022.12.046)
 
+Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2023). **Experiences From the First Short-Term Pit Thermal Energy Storage**. Proceedings of Solar World Congress 2023. doi:&nbsp;[10.18086/swc.2023.04.12](http://dx.doi.org/10.18086/swc.2023.04.12)
+
 
 ## 2022
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Perers, B., Holst Rothmann, J., Mørch, S. D., [**Jensen, P. V.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Furbo, S. (2022). **Demonstration of a concentrated solar power and biomass plant for combined heat and power**. Energy Conversion and Management. doi:&nbsp;[10.1016/j.enconman.2022.116207](http://dx.doi.org/10.1016/j.enconman.2022.116207)
+
 Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Performance comparison of two water pit thermal energy storage (PTES) systems using energy, exergy, and stratification indicators**. Journal of Energy Storage. doi:&nbsp;[10.1016/j.est.2022.104947](http://dx.doi.org/10.1016/j.est.2022.104947)
 
-[**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](http://orcid.org/0000-0003-0933-2952) (2022). **Modeling, Validation, and Analysis of a Concentrating Solar Collector Field Integrated with a District Heating Network**. Solar. doi:&nbsp;[10.3390/solar2020013](http://dx.doi.org/10.3390/solar2020013)
+[**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952) (2022). **Modeling, Validation, and Analysis of a Concentrating Solar Collector Field Integrated with a District Heating Network**. Solar. doi:&nbsp;[10.3390/solar2020013](http://dx.doi.org/10.3390/solar2020013)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Caringal, G. P., Furbo, S., Dragsted, J. (2022). **Thermal performance assessment of the world’s first solar thermal Fresnel lens collector field**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.01.067](http://dx.doi.org/10.1016/j.solener.2022.01.067)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Furbo, S., Dragsted, J. (2022). **Self-shading of two-axis tracking solar collectors: Impact of field layout, latitude, and aperture shape**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.02.023](http://dx.doi.org/10.1016/j.solener.2022.02.023)
 
 [Tschopp, D.](http://orcid.org/0000-0002-6285-981X), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Ohnewein, P., Furbo, S. (2022). **Measurement and modeling of diffuse irradiance masking on tilted planes for solar engineering applications**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2021.10.083](http://dx.doi.org/10.1016/j.solener.2021.10.083)
+
+Sifnaios, I., Sifnaios, I., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Effect of Design Characteristics on Pit Thermal Energy Storage (PTES) Performance**. Proceedings of EuroSun 2022 - ISES and IEA SHC International Conference on Solar Energy for Buildings and Industry. doi:&nbsp;[10.18086/eurosun.2022.13.21](http://dx.doi.org/10.18086/eurosun.2022.13.21)
 
 [Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Furbo, S.](http://orcid.org/0000-0003-2578-4780), [Fan, J.](http://orcid.org/0000-0003-0936-6677) (2022). **Evaluation of Stratification in Thermal Energy Storages**. Lecture Notes in Electrical Engineering. doi:&nbsp;[10.1007/978-981-19-4360-7_6](http://dx.doi.org/10.1007/978-981-19-4360-7_6)
 
