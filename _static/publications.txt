@@ -1,4 +1,6 @@
 ## 2025
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Anderson, K. S., Gueymard, C. A. (2025). **SolarStations.org—A global catalog of solar irradiance monitoring stations**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2025.113457](http://dx.doi.org/10.1016/j.solener.2025.113457)
+
 [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Furbo, S., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Monitoring data of the Høje Taastrup water pit thermal energy storage**. Data in Brief. doi:&nbsp;[10.1016/j.dib.2025.111305](http://dx.doi.org/10.1016/j.dib.2025.111305)
 
 
@@ -9,7 +11,7 @@
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10748762](http://dx.doi.org/10.1109/pvsc57443.2024.10748762)
 
-[Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
+[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
 
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
 
@@ -39,11 +41,11 @@ Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Furbo, S., Dragsted, J. (2022). **Self-shading of two-axis tracking solar collectors: Impact of field layout, latitude, and aperture shape**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.02.023](http://dx.doi.org/10.1016/j.solener.2022.02.023)
 
-[Tschopp, D.](http://orcid.org/0000-0002-6285-981X), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Ohnewein, P., Furbo, S. (2022). **Measurement and modeling of diffuse irradiance masking on tilted planes for solar engineering applications**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2021.10.083](http://dx.doi.org/10.1016/j.solener.2021.10.083)
+[Tschopp, D.](https://orcid.org/0000-0002-6285-981X), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Ohnewein, P., Furbo, S. (2022). **Measurement and modeling of diffuse irradiance masking on tilted planes for solar engineering applications**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2021.10.083](http://dx.doi.org/10.1016/j.solener.2021.10.083)
 
 Sifnaios, I., Sifnaios, I., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Effect of Design Characteristics on Pit Thermal Energy Storage (PTES) Performance**. Proceedings of EuroSun 2022 - ISES and IEA SHC International Conference on Solar Energy for Buildings and Industry. doi:&nbsp;[10.18086/eurosun.2022.13.21](http://dx.doi.org/10.18086/eurosun.2022.13.21)
 
-[Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Furbo, S.](http://orcid.org/0000-0003-2578-4780), [Fan, J.](http://orcid.org/0000-0003-0936-6677) (2022). **Evaluation of Stratification in Thermal Energy Storages**. Lecture Notes in Electrical Engineering. doi:&nbsp;[10.1007/978-981-19-4360-7_6](http://dx.doi.org/10.1007/978-981-19-4360-7_6)
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Furbo, S.](https://orcid.org/0000-0003-2578-4780), [Fan, J.](https://orcid.org/0000-0003-0936-6677) (2022). **Evaluation of Stratification in Thermal Energy Storages**. Lecture Notes in Electrical Engineering. doi:&nbsp;[10.1007/978-981-19-4360-7_6](http://dx.doi.org/10.1007/978-981-19-4360-7_6)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Anderson, K. (2022). **twoaxistracking – a python package for simulating self-shading of two-axis tracking solar collectors**. MethodsX. doi:&nbsp;[10.1016/j.mex.2022.101876](http://dx.doi.org/10.1016/j.mex.2022.101876)
 
