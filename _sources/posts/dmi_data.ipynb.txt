@@ -48,7 +48,7 @@
     "\n",
     "First, in order to retrieve data it is necessary to create a user and obtain an api-key. This api-key grants permission to retrieve data and allows DMI to generate usage statistics.\n",
     "\n",
-    "A guide to creating a user profile and getting an api-key can be found [here](https://confluence.govcloud.dk/pages/viewpage.action?pageId=26476690)."
+    "A guide to creating a user profile and getting an api-key can be found [here](https://opendatadocs.dmi.govcloud.dk/en/Authentication)."
    ]
   },
   {
