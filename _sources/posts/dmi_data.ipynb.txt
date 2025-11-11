@@ -24,8 +24,8 @@
     "\n",
     "\n",
     "If you're new to the DMI observation data, I recommend that you check out some of the following links:\n",
-    "1. [Meterological observations data](https://opendatadocs.dmi.govcloud.dk/en/Data/Meteorological_Observation_Data)\n",
-    "2. [Meterological observations API](https://opendatadocs.dmi.govcloud.dk/en/APIs/Meteorological_Observation_API)\n",
+    "1. [Meteorological observations data](https://opendatadocs.dmi.govcloud.dk/en/Data/Meteorological_Observation_Data)\n",
+    "2. [Meteorological observations API](https://opendatadocs.dmi.govcloud.dk/en/APIs/Meteorological_Observation_API)\n",
     "3. [Station list](https://opendatadocs.dmi.govcloud.dk/Data/Meteorological_Observation_Data_Stations)\n",
     "4. [Station list explained](https://opendatadocs.dmi.govcloud.dk/Guides/Station_Lists_Explained)\n",
     "5. [FAQ](https://opendatadocs.dmi.govcloud.dk/en/FAQ)\n",
@@ -46,9 +46,9 @@
    "source": [
     "<br>\n",
     "\n",
-    "First, in order to retrieve data it is necessary to create a user and obtain an api-key. This api-key grants permission to retrieve data and allows DMI to generate usage statistics.\n",
+    "First, in order to retrieve data, it is necessary to create a user and obtain an API key. This API key grants permission to retrieve data and allows DMI to generate usage statistics.\n",
     "\n",
-    "A guide to creating a user profile and getting an api-key can be found [here](https://opendatadocs.dmi.govcloud.dk/en/Authentication)."
+    "A guide to creating a user profile and getting an API key can be found [here](https://opendatadocs.dmi.govcloud.dk/en/Authentication)."
    ]
   },
   {
@@ -97,13 +97,13 @@
     ]
    },
    "source": [
-    "An easy test to see if your api-key works is to paste the following url into your browswer followed by a question mark and your api-key, e.g.: [https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj](https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj) (the example API key error).\n",
+    "An easy test to see if your API key works is to paste the following url into your browser, followed by a question mark and your api-key, e.g.: [https://dmigw.govcloud.dk/v2/metObs/collections?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj](https://dmigw.govcloud.dk/v2/metObs/collections?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj) (the example API key error).\n",
     "\n",
-    "If you have obtained an api-key and pasted it correctly, a page with data will be shown.\n",
+    "If you have obtained an API key and pasted it correctly, a page with text will be shown. If the API key does not work, the page will say \"API key invalid\".\n",
     "\n",
     "<br><be>\n",
     "\n",
-    "The following code blocks retrieves a list of all the DMI stations (both in Denmark and in Greenland) and plots them on a map using the Python package Folium."
+    "The following code blocks retrieve a list of all the DMI stations (both in Denmark and in Greenland) and plots them on a map using the Python package Folium."
    ]
   },
   {

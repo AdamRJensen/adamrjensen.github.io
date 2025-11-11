@@ -478,8 +478,8 @@
 <p>The tutorial uses the Python programming language and is in the format of a Jupyter Notebook. The notebook can be downloaded and run locally, allowing you to quickly get started downloading data. Part 1 of the tutorial provides some background basic information on how to work with the API, whereas a complete example is provided in Part 2.</p>
 <p>If you’re new to the DMI observation data, I recommend that you check out some of the following links:</p>
 <ol class="arabic simple">
-<li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/Data/Meteorological_Observation_Data">Meterological observations data</a></p></li>
-<li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/APIs/Meteorological_Observation_API">Meterological observations API</a></p></li>
+<li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/Data/Meteorological_Observation_Data">Meteorological observations data</a></p></li>
+<li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/APIs/Meteorological_Observation_API">Meteorological observations API</a></p></li>
 <li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/Data/Meteorological_Observation_Data_Stations">Station list</a></p></li>
 <li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/Guides/Station_Lists_Explained">Station list explained</a></p></li>
 <li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/FAQ">FAQ</a></p></li>
@@ -488,8 +488,8 @@
 <li><p><a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/Authentication">User creation</a></p></li>
 </ol>
 <br>
-<p>First, in order to retrieve data it is necessary to create a user and obtain an api-key. This api-key grants permission to retrieve data and allows DMI to generate usage statistics.</p>
-<p>A guide to creating a user profile and getting an api-key can be found <a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/Authentication">here</a>.</p>
+<p>First, in order to retrieve data, it is necessary to create a user and obtain an API key. This API key grants permission to retrieve data and allows DMI to generate usage statistics.</p>
+<p>A guide to creating a user profile and getting an API key can be found <a class="reference external" href="https://opendatadocs.dmi.govcloud.dk/en/Authentication">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj&#39;</span> <span class="c1"># insert your own key between the &#39;&#39; signs</span>
@@ -512,10 +512,10 @@
 </div>
 </details>
 </div>
-<p>An easy test to see if your api-key works is to paste the following url into your browswer followed by a question mark and your api-key, e.g.: <a class="reference external" href="https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj">https://dmigw.govcloud.dk/metObs/v1/observation?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj</a> (the example API key error).</p>
-<p>If you have obtained an api-key and pasted it correctly, a page with data will be shown.</p>
+<p>An easy test to see if your API key works is to paste the following url into your browser, followed by a question mark and your api-key, e.g.: <a class="reference external" href="https://dmigw.govcloud.dk/v2/metObs/collections?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj">https://dmigw.govcloud.dk/v2/metObs/collections?api-key=xxxxxxxx-yyyy-zzzz-iiii-jjjjjjjjjjjj</a> (the example API key error).</p>
+<p>If you have obtained an API key and pasted it correctly, a page with text will be shown. If the API key does not work, the page will say “API key invalid”.</p>
 <p><br><be></p>
-<p>The following code blocks retrieves a list of all the DMI stations (both in Denmark and in Greenland) and plots them on a map using the Python package Folium.</p>
+<p>The following code blocks retrieve a list of all the DMI stations (both in Denmark and in Greenland) and plots them on a map using the Python package Folium.</p>
 <div class="cell tag_hide-cell docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">

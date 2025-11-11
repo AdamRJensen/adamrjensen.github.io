@@ -542,7 +542,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_e6c8a13f6dd89d91c5d505c82377df08 {
+                #map_97204a818418917a39056fb629f0e691 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -581,14 +581,14 @@
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_e6c8a13f6dd89d91c5d505c82377df08&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_97204a818418917a39056fb629f0e691&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_e6c8a13f6dd89d91c5d505c82377df08 = L.map(
-                &quot;map_e6c8a13f6dd89d91c5d505c82377df08&quot;,
+            var map_97204a818418917a39056fb629f0e691 = L.map(
+                &quot;map_97204a818418917a39056fb629f0e691&quot;,
                 {
                     center: [55.7, 9.2],
                     crs: L.CRS.EPSG3857,
@@ -605,7 +605,7 @@
 
         
     
-            var tile_layer_21c49f8d3f30aa9a9af923b7f96b1e79 = L.tileLayer(
+            var tile_layer_4eba53e83a057e65c94c0264ec663694 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -622,28 +622,28 @@
             );
         
     
-            tile_layer_21c49f8d3f30aa9a9af923b7f96b1e79.addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            tile_layer_4eba53e83a057e65c94c0264ec663694.addTo(map_97204a818418917a39056fb629f0e691);
         
     
-            var macro_element_12b6a043fa497cf42a3c35ff5d477233 = L.tileLayer.wms(
+            var macro_element_5cbe2bce29a8564a4ef6dcac25f23984 = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solceller&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_12b6a043fa497cf42a3c35ff5d477233.addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            macro_element_5cbe2bce29a8564a4ef6dcac25f23984.addTo(map_97204a818418917a39056fb629f0e691);
         
     
-            var macro_element_869a9168d66e16e8a403c472bb19e7d7 = L.tileLayer.wms(
+            var macro_element_aa98b0d30060a16eae6efccb9d0cbfaf = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solfanger&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_869a9168d66e16e8a403c472bb19e7d7.addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            macro_element_aa98b0d30060a16eae6efccb9d0cbfaf.addTo(map_97204a818418917a39056fb629f0e691);
         
     
-            var tile_layer_5bd262d0d43704d6bfc56743065a0107 = L.tileLayer(
+            var tile_layer_674870da850ebf259ac4aeead7dab18d = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -660,28 +660,28 @@
             );
         
     
-            tile_layer_5bd262d0d43704d6bfc56743065a0107.addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            tile_layer_674870da850ebf259ac4aeead7dab18d.addTo(map_97204a818418917a39056fb629f0e691);
         
     
-            var layer_control_2366890b96f752b0e08c529b6216ca10_layers = {
+            var layer_control_90da826d28b4fe079838c980f2863a3a_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_21c49f8d3f30aa9a9af923b7f96b1e79,
-                    &quot;World imagery&quot; : tile_layer_5bd262d0d43704d6bfc56743065a0107,
+                    &quot;openstreetmap&quot; : tile_layer_4eba53e83a057e65c94c0264ec663694,
+                    &quot;World imagery&quot; : tile_layer_674870da850ebf259ac4aeead7dab18d,
                 },
                 overlays :  {
-                    &quot;PV plants&quot; : macro_element_12b6a043fa497cf42a3c35ff5d477233,
-                    &quot;Solar district heating plants&quot; : macro_element_869a9168d66e16e8a403c472bb19e7d7,
+                    &quot;PV plants&quot; : macro_element_5cbe2bce29a8564a4ef6dcac25f23984,
+                    &quot;Solar district heating plants&quot; : macro_element_aa98b0d30060a16eae6efccb9d0cbfaf,
                 },
             };
-            let layer_control_2366890b96f752b0e08c529b6216ca10 = L.control.layers(
-                layer_control_2366890b96f752b0e08c529b6216ca10_layers.base_layers,
-                layer_control_2366890b96f752b0e08c529b6216ca10_layers.overlays,
+            let layer_control_90da826d28b4fe079838c980f2863a3a = L.control.layers(
+                layer_control_90da826d28b4fe079838c980f2863a3a_layers.base_layers,
+                layer_control_90da826d28b4fe079838c980f2863a3a_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: true,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            ).addTo(map_97204a818418917a39056fb629f0e691);
 
         
     
@@ -692,18 +692,18 @@
   &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
   &quot;forceSeparateButton&quot;: false,
 }
-            ).addTo(map_e6c8a13f6dd89d91c5d505c82377df08);
+            ).addTo(map_97204a818418917a39056fb629f0e691);
         
     
-                var lat_lng_popup_27a05cac5d8afbec8732f9b95cf0b25d = L.popup();
+                var lat_lng_popup_6f8c2df1dbfecb75afb04aeeff2e16c7 = L.popup();
                 function latLngPop(e) {
-                    lat_lng_popup_27a05cac5d8afbec8732f9b95cf0b25d
+                    lat_lng_popup_6f8c2df1dbfecb75afb04aeeff2e16c7
                         .setLatLng(e.latlng)
                         .setContent(&quot;Latitude: &quot; + e.latlng.lat.toFixed(4) +
                                     &quot;&lt;br&gt;Longitude: &quot; + e.latlng.lng.toFixed(4))
-                        .openOn(map_e6c8a13f6dd89d91c5d505c82377df08);
+                        .openOn(map_97204a818418917a39056fb629f0e691);
                     }
-                map_e6c8a13f6dd89d91c5d505c82377df08.on(&#x27;click&#x27;, latLngPop);
+                map_97204a818418917a39056fb629f0e691.on(&#x27;click&#x27;, latLngPop);
             
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
