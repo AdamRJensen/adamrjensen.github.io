@@ -1,25 +1,8 @@
-# ---
-# jupyter:
-#   jupytext:
-#     formats: py:light
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.14.1
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
 # Author: Chris Holdgraf
 # https://chrisholdgraf.com/blog/2022/orcid-auto-update/
 
-# +
 import pandas as pd
 import requests
-# from IPython.display import Markdown, JSON
 from pathlib import Path
 from rich import progress
 
@@ -35,12 +18,6 @@ response.raise_for_status()
 orcid_record = response.json()
 # Retrieve authors last name from orcid record (avoids hard-coding later)
 orcid_id_last_name = orcid_record['person']['name']['family-name']['value'].lower()
-
-# +
-# Just to visualize in a notebook if need be
-# JSON(orcid_record)
-
-# +
 
 ###
 # Resolve my DOIs from ORCID as references
@@ -102,9 +79,6 @@ def fetchmeta(doi, fmt='reference', **kwargs):
         else:
             out = r.text
     return out
-
-
-# -
 
 
 # %%
@@ -173,11 +147,6 @@ for year, items in df.groupby("year", sort=False):
         md.append("")
     md.append("")
 mds = "\n".join(md)
-
-# +
-# Uncomment to preview in a notebook
-# Markdown(mds)
-# -
 
 # This will only work if this is run as a script
 path_out = Path(__file__).parent.parent / "_static/publications.txt"

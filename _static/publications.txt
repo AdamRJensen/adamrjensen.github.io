@@ -9,8 +9,6 @@
 
 [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Furbo, S., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Monitoring data of the Høje Taastrup water pit thermal energy storage**. Data in Brief. doi:&nbsp;[10.1016/j.dib.2025.111305](http://dx.doi.org/10.1016/j.dib.2025.111305)
 
-Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S. (2025). **Høje Taastrup Pit Thermal Energy Storage**. None. doi:&nbsp;[10.11581/5725831c-a697-4211-a049-34bc71025a50](https://orbit.dtu.dk/en/publications/5725831c-a697-4211-a049-34bc71025a50)
-
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Riedel-Lyngskær, N. C. (2025). **Solar Radiometer Comparison**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132736](http://dx.doi.org/10.1109/PVSC59419.2025.11132736)
 
 Thorning, J. K., Spataru, S. V., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Poulsen, P. B. (2025). **Validation of Shadow Motion Sensor**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132543](http://dx.doi.org/10.1109/PVSC59419.2025.11132543)
@@ -22,8 +20,6 @@ Thorning, J. K., Spataru, S. V., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/
 Anderson, K. S., Hansen, C. W., Holmgren, W. F., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Mikofski, M. A., Driesse, A. (2024). **Pvlib Python: Recent Updates and Community Growth**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10749197](http://dx.doi.org/10.1109/pvsc57443.2024.10749197)
 
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
-
-Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S. (2024). **Høje Taastrup Pit Thermal Energy Storage: 2023 Measurement Report**. None. doi:&nbsp;[10.11581/DTU.00000350](https://orbit.dtu.dk/en/publications/h%C3%B8je-taastrup-pit-thermal-energy-storage-2023-measurement-report)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/PVSC57443.2024.10748762](http://dx.doi.org/10.1109/PVSC57443.2024.10748762)
 
@@ -72,8 +68,6 @@ Sifnaios, I., Sifnaios, I., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-000
 Dragsted, J., Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dannemand, M., Dragsted, J. (2021). **Demonstration of a Domestic Photovoltaic-Thermal (pvt)-Heat Pump System, Performance Simulation, and Economic Analysis for Different Climates**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.26.03](http://dx.doi.org/10.18086/swc.2021.26.03)
 
 Forstinger, A., Wilbert, S., Kraas, B., Fernández Peruchena, C., Gueymard, C. A., Collino, E., Ruiz-Arias, J. A., Polo Martinez, J., Saint-Drenan, Y., Ronzio, D., Hanrieder, N., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Yang, D. (2021). **Expert Quality Control of Solar Radiation Ground Data Sets**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.38.02](http://dx.doi.org/10.18086/swc.2021.38.02)
-
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2021). **Investigations of a Fresnel-lens solar collector**. None. doi:&nbsp;[10.11581/dtu.00000220](https://orbit.dtu.dk/en/publications/investigations-of-a-fresnel-lens-solar-collector)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Dragsted, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2021). **Thermal Inspection of Water Pit Heat Storages Using Drones**. Proceedings of the ISES Solar World Congress 2021. doi:&nbsp;[10.18086/swc.2021.35.02](http://dx.doi.org/10.18086/swc.2021.35.02)
 
