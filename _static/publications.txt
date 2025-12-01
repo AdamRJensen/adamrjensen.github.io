@@ -1,53 +1,65 @@
 ## 2025
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [Luis, E.](https://orcid.org/0009-0009-0253-267X) (2025). **solposx: A Python package for determining solar position and atmospheric refraction**. Journal of Open Source Software. doi:&nbsp;[10.21105/joss.09239](http://dx.doi.org/10.21105/joss.09239)
+
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Fan, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Integration of pit thermal energy storages into district heating networks – a techno-economic case study**. Applied Thermal Engineering. doi:&nbsp;[10.1016/j.applthermaleng.2025.127770](http://dx.doi.org/10.1016/j.applthermaleng.2025.127770)
+
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Performance analysis of the Høje Taastrup water pit thermal energy storage**. Journal of Energy Storage. doi:&nbsp;[10.1016/j.est.2025.117504](http://dx.doi.org/10.1016/j.est.2025.117504)
+
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Anderson, K. S., Gueymard, C. A. (2025). **SolarStations.org—A global catalog of solar irradiance monitoring stations**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2025.113457](http://dx.doi.org/10.1016/j.solener.2025.113457)
 
 [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Furbo, S., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Monitoring data of the Høje Taastrup water pit thermal energy storage**. Data in Brief. doi:&nbsp;[10.1016/j.dib.2025.111305](http://dx.doi.org/10.1016/j.dib.2025.111305)
 
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Riedel-Lyngskær, N. C. (2025). **Solar Radiometer Comparison**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132736](http://dx.doi.org/10.1109/PVSC59419.2025.11132736)
+
+Thorning, J. K., Spataru, S. V., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Poulsen, P. B. (2025). **Validation of Shadow Motion Sensor**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132543](http://dx.doi.org/10.1109/PVSC59419.2025.11132543)
+
 
 ## 2024
-[Xu, Y.](https://orcid.org/0009-0005-7608-8998), [Zhan, C.](https://orcid.org/0009-0006-5520-0415), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Gao, M.](https://orcid.org/0000-0003-0706-2362), [Kong, W.](https://orcid.org/0000-0003-3443-3421), [Fan, J.](https://orcid.org/0000-0003-0936-6677) (2024). **Thermo-economic analysis of a solar district heating plant with an air-to-water heat pump**. Renewable Energy. doi:&nbsp;[10.1016/j.renene.2024.121490](http://dx.doi.org/10.1016/j.renene.2024.121490)
+[Sengupta, M.](https://orcid.org/0000-0001-5622-4503), Habte, A., Wilbert, S., Gueymard, C., Remund, J., Lorenz, E., van Sark, W., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Fourth Edition**. []. doi:&nbsp;[10.2172/2448063](http://dx.doi.org/10.2172/2448063)
 
-[Sengupta, M.](http://orcid.org/0000-0001-5622-4503), Habte, A., Wilbert, S., Gueymard, C., Remund, J., Lorenz, E., van Sark, W., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Fourth Edition**. []. doi:&nbsp;[10.2172/2448063](http://dx.doi.org/10.2172/2448063)
-
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10748762](http://dx.doi.org/10.1109/pvsc57443.2024.10748762)
-
-[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
+Anderson, K. S., Hansen, C. W., Holmgren, W. F., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Mikofski, M. A., Driesse, A. (2024). **Pvlib Python: Recent Updates and Community Growth**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10749197](http://dx.doi.org/10.1109/pvsc57443.2024.10749197)
 
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
 
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/PVSC57443.2024.10748762](http://dx.doi.org/10.1109/PVSC57443.2024.10748762)
+
+[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Shaded fraction and backtracking in single-axis trackers on rolling terrain**. Journal of Renewable and Sustainable Energy. doi:&nbsp;[10.1063/5.0202220](http://dx.doi.org/10.1063/5.0202220)
+
+[Xu, Y.](https://orcid.org/0009-0005-7608-8998), [Zhan, C.](https://orcid.org/0009-0006-5520-0415), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Gao, M.](https://orcid.org/0000-0003-0706-2362), [Kong, W.](https://orcid.org/0000-0003-3443-3421), [Fan, J.](https://orcid.org/0000-0003-0936-6677) (2024). **Thermo-economic analysis of a solar district heating plant with an air-to-water heat pump**. Renewable Energy. doi:&nbsp;[10.1016/j.renene.2024.121490](http://dx.doi.org/10.1016/j.renene.2024.121490)
+
 
 ## 2023
-[Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [Hansen, C. W.](http://orcid.org/0000-0002-8620-5378), [Holmgren, W. F.](http://orcid.org/0000-0001-6218-9767), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Mikofski, M. A.](http://orcid.org/0000-0001-8001-8582), [Driesse, A.](http://orcid.org/0000-0003-3023-2155) (2023). **pvlib python: 2023 project update**. Journal of Open Source Software. doi:&nbsp;[10.21105/joss.05994](http://dx.doi.org/10.21105/joss.05994)
-
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Anderson, K. S.](http://orcid.org/0000-0002-1166-7957), [Holmgren, W. F.](http://orcid.org/0000-0001-6218-9767), [Mikofski, M. A.](http://orcid.org/0000-0001-8001-8582), [Hansen, C. W.](http://orcid.org/0000-0002-8620-5378), [Boeman, L. J.](http://orcid.org/0000-0002-3528-247X), [Loonen, R.](http://orcid.org/0000-0001-6101-1449) (2023). **pvlib iotools—Open-source Python functions for seamless access to solar irradiance data**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112092](http://dx.doi.org/10.1016/j.solener.2023.112092)
-
-[Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2023). **Heat losses in water pit thermal energy storage systems in the presence of groundwater**. Applied Thermal Engineering. doi:&nbsp;[10.1016/j.applthermaleng.2023.121382](http://dx.doi.org/10.1016/j.applthermaleng.2023.121382)
-
-[Sifnaios, I.](http://orcid.org/0000-0003-0933-2952), [Sneum, D. M.](http://orcid.org/0000-0003-2789-2910), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Fan, J., [Bramstoft, R.](http://orcid.org/0000-0002-8875-8718) (2023). **The impact of large-scale thermal energy storage in the energy system**. Applied Energy. doi:&nbsp;[10.1016/j.apenergy.2023.121663](http://dx.doi.org/10.1016/j.apenergy.2023.121663)
-
 Sifnaios, I., Gauthier, G., Trier, D., Fan, J., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2023). **Dronninglund water pit thermal energy storage dataset**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.12.046](http://dx.doi.org/10.1016/j.solener.2022.12.046)
 
 Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2023). **Experiences From the First Short-Term Pit Thermal Energy Storage**. Proceedings of Solar World Congress 2023. doi:&nbsp;[10.18086/swc.2023.04.12](http://dx.doi.org/10.18086/swc.2023.04.12)
 
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2023). **Heat losses in water pit thermal energy storage systems in the presence of groundwater**. Applied Thermal Engineering. doi:&nbsp;[10.1016/j.applthermaleng.2023.121382](http://dx.doi.org/10.1016/j.applthermaleng.2023.121382)
+
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [Sneum, D. M.](https://orcid.org/0000-0003-2789-2910), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Fan, J., [Bramstoft, R.](https://orcid.org/0000-0002-8875-8718) (2023). **The impact of large-scale thermal energy storage in the energy system**. Applied Energy. doi:&nbsp;[10.1016/j.apenergy.2023.121663](http://dx.doi.org/10.1016/j.apenergy.2023.121663)
+
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [Holmgren, W. F.](https://orcid.org/0000-0001-6218-9767), [Mikofski, M. A.](https://orcid.org/0000-0001-8001-8582), [Hansen, C. W.](https://orcid.org/0000-0002-8620-5378), [Boeman, L. J.](https://orcid.org/0000-0002-3528-247X), [Loonen, R.](https://orcid.org/0000-0001-6101-1449) (2023). **pvlib iotools—Open-source Python functions for seamless access to solar irradiance data**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112092](http://dx.doi.org/10.1016/j.solener.2023.112092)
+
+[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [Hansen, C. W.](https://orcid.org/0000-0002-8620-5378), [Holmgren, W. F.](https://orcid.org/0000-0001-6218-9767), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Mikofski, M. A.](https://orcid.org/0000-0001-8001-8582), [Driesse, A.](https://orcid.org/0000-0003-3023-2155) (2023). **pvlib python: 2023 project update**. Journal of Open Source Software. doi:&nbsp;[10.21105/joss.05994](http://dx.doi.org/10.21105/joss.05994)
+
 
 ## 2022
-[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Perers, B., Holst Rothmann, J., Mørch, S. D., [**Jensen, P. V.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Furbo, S. (2022). **Demonstration of a concentrated solar power and biomass plant for combined heat and power**. Energy Conversion and Management. doi:&nbsp;[10.1016/j.enconman.2022.116207](http://dx.doi.org/10.1016/j.enconman.2022.116207)
-
 Sifnaios, I., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Performance comparison of two water pit thermal energy storage (PTES) systems using energy, exergy, and stratification indicators**. Journal of Energy Storage. doi:&nbsp;[10.1016/j.est.2022.104947](http://dx.doi.org/10.1016/j.est.2022.104947)
-
-[**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952) (2022). **Modeling, Validation, and Analysis of a Concentrating Solar Collector Field Integrated with a District Heating Network**. Solar. doi:&nbsp;[10.3390/solar2020013](http://dx.doi.org/10.3390/solar2020013)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Caringal, G. P., Furbo, S., Dragsted, J. (2022). **Thermal performance assessment of the world’s first solar thermal Fresnel lens collector field**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.01.067](http://dx.doi.org/10.1016/j.solener.2022.01.067)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Furbo, S., Dragsted, J. (2022). **Self-shading of two-axis tracking solar collectors: Impact of field layout, latitude, and aperture shape**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2022.02.023](http://dx.doi.org/10.1016/j.solener.2022.02.023)
 
-[Tschopp, D.](https://orcid.org/0000-0002-6285-981X), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Ohnewein, P., Furbo, S. (2022). **Measurement and modeling of diffuse irradiance masking on tilted planes for solar engineering applications**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2021.10.083](http://dx.doi.org/10.1016/j.solener.2021.10.083)
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Perers, B., Holst Rothmann, J., Mørch, S. D., [**Jensen, P. V.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Furbo, S. (2022). **Demonstration of a concentrated solar power and biomass plant for combined heat and power**. Energy Conversion and Management. doi:&nbsp;[10.1016/j.enconman.2022.116207](http://dx.doi.org/10.1016/j.enconman.2022.116207)
 
 Sifnaios, I., Sifnaios, I., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Furbo, S., Fan, J. (2022). **Effect of Design Characteristics on Pit Thermal Energy Storage (PTES) Performance**. Proceedings of EuroSun 2022 - ISES and IEA SHC International Conference on Solar Energy for Buildings and Industry. doi:&nbsp;[10.18086/eurosun.2022.13.21](http://dx.doi.org/10.18086/eurosun.2022.13.21)
 
 [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Furbo, S.](https://orcid.org/0000-0003-2578-4780), [Fan, J.](https://orcid.org/0000-0003-0936-6677) (2022). **Evaluation of Stratification in Thermal Energy Storages**. Lecture Notes in Electrical Engineering. doi:&nbsp;[10.1007/978-981-19-4360-7_6](http://dx.doi.org/10.1007/978-981-19-4360-7_6)
 
+[**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952) (2022). **Modeling, Validation, and Analysis of a Concentrating Solar Collector Field Integrated with a District Heating Network**. Solar. doi:&nbsp;[10.3390/solar2020013](http://dx.doi.org/10.3390/solar2020013)
+
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Anderson, K. (2022). **twoaxistracking – a python package for simulating self-shading of two-axis tracking solar collectors**. MethodsX. doi:&nbsp;[10.1016/j.mex.2022.101876](http://dx.doi.org/10.1016/j.mex.2022.101876)
+
+[Tschopp, D.](https://orcid.org/0000-0002-6285-981X), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Dragsted, J., Ohnewein, P., Furbo, S. (2022). **Measurement and modeling of diffuse irradiance masking on tilted planes for solar engineering applications**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2021.10.083](http://dx.doi.org/10.1016/j.solener.2021.10.083)
 
 
 ## 2021
