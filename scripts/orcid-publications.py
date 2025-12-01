@@ -19,7 +19,7 @@
 # +
 import pandas as pd
 import requests
-from IPython.display import Markdown, JSON
+# from IPython.display import Markdown, JSON
 from pathlib import Path
 from rich import progress
 
@@ -128,7 +128,7 @@ for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"]
         if meta['type'] not in ['thesis']:
             doi_url = meta["URL"]
             title = meta["title"]
-            references_count = meta["references-count"]
+            # references_count = meta["references-count"]
             year = meta["issued"]["date-parts"][0][0]
             url = meta["URL"]
     
@@ -150,7 +150,7 @@ for iwork in progress.track(orcid_record["activities-summary"]["works"]["group"]
                         autht.append(name)
             autht = ", ".join(autht)
     
-            journal = meta['container-title']
+            journal = meta.get('container-title', None)
             # if meta['type'] == 'journal-article':
             #     journal = meta['container-title-short']
             # else:
