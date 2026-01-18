@@ -2,9 +2,9 @@
 
 Great to see that you have stumbled upon my blog!
 
-I'm a research scientist at the Technical University of Denmark (DTU), working on modeling and assessment of solar energy systems and the solar resource.
+I am an associate professor at the Technical University of Denmark (DTU), working on modeling and assessment of solar energy systems and the solar resource.
 
-On this blog, I'll share some of the many interesting things I work on, including tips and tricks to working with solar resource data in Python.
+On this blog, I'll share some of the many interesting things I work on, including tips and tricks for working with solar resource data in Python.
 
 ## Recent posts
 

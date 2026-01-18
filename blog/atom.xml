@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2025-12-01T18:15:00.692561+00:00</updated>
+  <updated>2026-01-18T19:07:46.881597+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -91,7 +91,7 @@
       <name>Adam R. Jensen</name>
     </author>
     <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This tutorial gives an introduction on how to use the &lt;a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI"&gt;Danish Meteorological Institute’s (DMI) API&lt;/a&gt; to download meterological observation data (v2).&lt;/p&gt;
-&lt;img alt="http://predictablysunny.com/_images/9046c1b8257c515745a476a970db7b834e27deca4dcf02784baa11aaab9c8ce2.png" src="http://predictablysunny.com/_images/9046c1b8257c515745a476a970db7b834e27deca4dcf02784baa11aaab9c8ce2.png" /&gt;&lt;/p&gt;
+&lt;img alt="http://predictablysunny.com/_images/05687d30c18e9eb31fdd60fa3a8c06d808e407eb8629399d00c4893b064ad030.png" src="http://predictablysunny.com/_images/05687d30c18e9eb31fdd60fa3a8c06d808e407eb8629399d00c4893b064ad030.png" /&gt;&lt;/p&gt;
 </content>
     <link href="http://predictablysunny.com/posts/dmi_data/"/>
     <summary>This tutorial gives an introduction on how to use the Danish Meteorological Institute’s (DMI) API to download meterological observation data (v2).</summary>
