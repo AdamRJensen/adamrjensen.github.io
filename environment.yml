@@ -1,0 +1,11 @@
+name: blog
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip:
+    - pvlib==0.10.2
+    - numpy==1.26.2
+    - matplotlib==3.8.2
+    - pandas==2.1.3
+
