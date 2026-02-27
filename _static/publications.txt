@@ -1,3 +1,9 @@
+## 2026
+[Bjerre, L.](https://orcid.org/0000-0002-2364-1607), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Larsen, S. N., Hylstrup Olsen, F. B., Pedersen, J. S., Thorup, M., Toft, M. (2026). **Safe to Speak, Teach, and Research? Experiences of Reprisals in Danish Academia**. The British Journal of Sociology. doi:&nbsp;[10.1111/1468-4446.70096](http://dx.doi.org/10.1111/1468-4446.70096)
+
+[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Riley, D. M.](https://orcid.org/0009-0008-0789-1535) (2026). **A Linear Programming Approach to Backtracking for Single-Axis Trackers on Rolling Terrain**. IEEE Journal of Photovoltaics. doi:&nbsp;[10.1109/JPHOTOV.2025.3645781](http://dx.doi.org/10.1109/JPHOTOV.2025.3645781)
+
+
 ## 2025
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [Luis, E.](https://orcid.org/0009-0009-0253-267X) (2025). **solposx: A Python package for determining solar position and atmospheric refraction**. Journal of Open Source Software. doi:&nbsp;[10.21105/joss.09239](http://dx.doi.org/10.21105/joss.09239)
 
@@ -9,7 +15,11 @@
 
 [Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), Furbo, S., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2025). **Monitoring data of the Høje Taastrup water pit thermal energy storage**. Data in Brief. doi:&nbsp;[10.1016/j.dib.2025.111305](http://dx.doi.org/10.1016/j.dib.2025.111305)
 
+Lewis, M. R., Riedel-Lyngskær, N., Thorning, J. K., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hinzer, K. (2025). **Comparison of Spectral Correction Methods: Spectral Irradiance Measurements and Parameterized Spectral Models**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132723](http://dx.doi.org/10.1109/PVSC59419.2025.11132723)
+
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Sifnaios, I., Riedel-Lyngskær, N. C. (2025). **Solar Radiometer Comparison**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132736](http://dx.doi.org/10.1109/PVSC59419.2025.11132736)
+
+Chen, Y., [Yang, D.](https://orcid.org/0000-0003-2162-6873), [Huang, C.](https://orcid.org/0000-0003-3863-3754), [Shi, H.](https://orcid.org/0000-0002-5650-0077), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Xia, X.](https://orcid.org/0000-0002-4187-6311), Saint-Drenan, Y., Gueymard, C. A., Mayer, M. J., Shen, Y. (2025). **Validating physical and semi-empirical satellite-based irradiance retrievals using high- and low-accuracy radiometric observations in a monsoon-influenced continental climate**. Atmospheric Measurement Techniques. doi:&nbsp;[10.5194/amt-18-7315-2025](http://dx.doi.org/10.5194/amt-18-7315-2025)
 
 Thorning, J. K., Spataru, S. V., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Poulsen, P. B. (2025). **Validation of Shadow Motion Sensor**. 2025 IEEE 53rd Photovoltaic Specialists Conference (PVSC). doi:&nbsp;[10.1109/PVSC59419.2025.11132543](http://dx.doi.org/10.1109/PVSC59419.2025.11132543)
 
