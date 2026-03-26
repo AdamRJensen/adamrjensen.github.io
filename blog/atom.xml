@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>http://predictablysunny.com/</id>
   <title>Predictably Sunny</title>
-  <updated>2026-02-27T13:17:25.755285+00:00</updated>
+  <updated>2026-03-26T21:51:44.166060+00:00</updated>
   <link href="http://predictablysunny.com/"/>
   <link href="http://predictablysunny.com/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.io/" version="0.11.10">ABlog</generator>
@@ -90,11 +90,11 @@
     <author>
       <name>Adam R. Jensen</name>
     </author>
-    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This tutorial gives an introduction on how to use the &lt;a class="reference external" href="https://confluence.govcloud.dk/display/FDAPI"&gt;Danish Meteorological Institute’s (DMI) API&lt;/a&gt; to download meterological observation data (v2).&lt;/p&gt;
-&lt;img alt="http://predictablysunny.com/_images/05687d30c18e9eb31fdd60fa3a8c06d808e407eb8629399d00c4893b064ad030.png" src="http://predictablysunny.com/_images/05687d30c18e9eb31fdd60fa3a8c06d808e407eb8629399d00c4893b064ad030.png" /&gt;&lt;/p&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This tutorial gives an introduction to how to access meteorological observation data from the &lt;a class="reference external" href="https://www.dmi.dk/friedata/dokumentation/getting-started"&gt;Danish Meteorological Institute (DMI)&lt;/a&gt;. Data is retrieved from the meteorological observation data API (v2). Note that these near-real-time observational data are not quality-controlled. Quality-controlled hourly data is available from another API.&lt;/p&gt;
+&lt;img alt="http://predictablysunny.com/_images/37ae1c36105ef34e716e52c10e2205d71ca782549b49a3ded02c1fba0b74d1e3.png" src="http://predictablysunny.com/_images/37ae1c36105ef34e716e52c10e2205d71ca782549b49a3ded02c1fba0b74d1e3.png" /&gt;&lt;/p&gt;
 </content>
     <link href="http://predictablysunny.com/posts/dmi_data/"/>
-    <summary>This tutorial gives an introduction on how to use the Danish Meteorological Institute’s (DMI) API to download meterological observation data (v2).</summary>
+    <summary>This tutorial gives an introduction to how to access meteorological observation data from the Danish Meteorological Institute (DMI). Data is retrieved from the meteorological observation data API (v2). Note that these near-real-time observational data are not quality-controlled. Quality-controlled hourly data is available from another API.</summary>
     <category term="openscience" label="open science"/>
     <published>2022-02-22T00:00:00+00:00</published>
   </entry>
