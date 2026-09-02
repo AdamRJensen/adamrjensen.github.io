@@ -442,7 +442,7 @@
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\_distributor_init.py:30: UserWarning: loaded more than 1 DLL from .libs:
 C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\.libs\libopenblas.GK7GX5KEQ4F6UYO3P26ULGBQYHGQO7J4.gfortran-win_amd64.dll
 C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\.libs\libopenblas.XWYDX2IKJW2NMTWSFYNGFUWKQU3LYTCZ.gfortran-win_amd64.dll
-  warnings.warn(&quot;loaded more than 1 DLL from .libs:&quot;
+  warnings.warn("loaded more than 1 DLL from .libs:"
 </pre></div>
 </div>
 </div>
@@ -450,17 +450,17 @@ C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\.libs\libopenbl
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># credentials for EOSDIS/Earthdata</span>
-<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;arjdk&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;Elefant11?&#39;</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s1">'arjdk'</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">'Elefant11?'</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="s1">&#39;M2T1NXRAD&#39;</span>
-<span class="n">base</span> <span class="o">=</span> <span class="s1">&#39;https://goldsmr4.gesdisc.eosdis.nasa.gov/dods&#39;</span>
-<span class="n">url</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">dataset</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="s1">'M2T1NXRAD'</span>
+<span class="n">base</span> <span class="o">=</span> <span class="s1">'https://goldsmr4.gesdisc.eosdis.nasa.gov/dods'</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">base</span> <span class="o">+</span> <span class="s1">'/'</span> <span class="o">+</span> <span class="n">dataset</span>
 </pre></div>
 </div>
 </div>
@@ -536,16 +536,16 @@ C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\.libs\libopenbl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;grads_dim&#39;: &#39;t&#39;,
- &#39;grads_mapping&#39;: &#39;linear&#39;,
- &#39;grads_size&#39;: &#39;363768&#39;,
- &#39;grads_min&#39;: &#39;00:30z01jan1980&#39;,
- &#39;grads_step&#39;: &#39;60mn&#39;,
- &#39;units&#39;: &#39;days since 1-1-1 00:00:0.0&#39;,
- &#39;long_name&#39;: &#39;time&#39;,
- &#39;minimum&#39;: &#39;00:30z01jan1980&#39;,
- &#39;maximum&#39;: &#39;23:30z30jun2021&#39;,
- &#39;resolution&#39;: 0.041666668}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'grads_dim': 't',
+ 'grads_mapping': 'linear',
+ 'grads_size': '363768',
+ 'grads_min': '00:30z01jan1980',
+ 'grads_step': '60mn',
+ 'units': 'days since 1-1-1 00:00:0.0',
+ 'long_name': 'time',
+ 'minimum': '00:30z01jan1980',
+ 'maximum': '23:30z30jun2021',
+ 'resolution': 0.041666668}
 </pre></div>
 </div>
 </div>
@@ -563,7 +563,7 @@ C:\Users\arajen\Anaconda3\envs\pvlib-dev\lib\site-packages\numpy\.libs\libopenbl
 <span class="n">end</span> <span class="o">=</span> <span class="n">end</span><span class="o">.</span><span class="n">dayofyear</span> <span class="o">+</span> <span class="n">end</span><span class="o">.</span><span class="n">year</span><span class="o">*</span><span class="mi">365</span>
 
 
-<span class="n">subset</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">({</span><span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span><span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">)})</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">({</span><span class="s1">'lat'</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="s1">'lon'</span><span class="p">:</span> <span class="o">-</span><span class="mi">80</span><span class="p">,</span> <span class="s1">'time'</span><span class="p">:</span><span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">end</span><span class="p">)})</span>
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1696,7 @@ Attributes:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#xr.coding.times.CFDatetimeCoder(use_cftime=True).decode(ds,name=&#39;time&#39;)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#xr.coding.times.CFDatetimeCoder(use_cftime=True).decode(ds,name='time')</span>
 </pre></div>
 </div>
 </div>
@@ -1717,7 +1717,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">subset_decoded</span><span class="p">[[</span><span class="s1">&#39;swgdn&#39;</span><span class="p">,</span> <span class="s1">&#39;albedo&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">subset_decoded</span><span class="p">[[</span><span class="s1">'swgdn'</span><span class="p">,</span> <span class="s1">'albedo'</span><span class="p">]]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2112,7 +2112,7 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">end</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="s1">&#39;RAD&#39;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="s1">'RAD'</span>
 </pre></div>
 </div>
 </div>
@@ -2120,7 +2120,7 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
-<span class="n">MERRA2_BASE_URL</span> <span class="o">=</span> <span class="s1">&#39;https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/&#39;</span>
+<span class="n">MERRA2_BASE_URL</span> <span class="o">=</span> <span class="s1">'https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/'</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">_merra_stream</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">month</span> <span class="o">==</span> <span class="mi">9</span><span class="p">):</span>
@@ -2136,7 +2136,7 @@ Attributes:
     <span class="k">elif</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">1980</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="mi">1992</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">100</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Requested period cannot be before 1980.&#39;</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'Requested period cannot be before 1980.'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2150,16 +2150,16 @@ Attributes:
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1"># Generate list of months to download</span>
-<span class="n">date_range</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;1d&#39;</span><span class="p">)</span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'1d'</span><span class="p">)</span>
 
 <span class="c1"># filename format for 1-hour time-averaged 2D data</span>
 <span class="n">filenames</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">MERRA2_BASE_URL</span> <span class="o">+</span> <span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;M2T1NX</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">.5.12.4/&quot;</span>  <span class="c1"># dataset folder</span>
-    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y/%m&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">/&quot;</span>  <span class="c1"># year-month subfolder</span>
-    <span class="sa">f</span><span class="s2">&quot;MERRA2_</span><span class="si">{</span><span class="n">_merra_stream</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="si">}</span><span class="s2">.tavg1_2d_</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">_Nx.&quot;</span>
-    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.nc4&quot;</span>
-    <span class="s2">&quot;#mode=bytes&quot;</span><span class="p">)</span>
+    <span class="sa">f</span><span class="s2">"M2T1NX</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">.5.12.4/"</span>  <span class="c1"># dataset folder</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y/%m'</span><span class="p">)</span><span class="si">}</span><span class="s2">/"</span>  <span class="c1"># year-month subfolder</span>
+    <span class="sa">f</span><span class="s2">"MERRA2_</span><span class="si">{</span><span class="n">_merra_stream</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="si">}</span><span class="s2">.tavg1_2d_</span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="si">}</span><span class="s2">_Nx."</span>
+    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">d</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y%m</span><span class="si">%d</span><span class="s1">'</span><span class="p">)</span><span class="si">}</span><span class="s2">.nc4"</span>
+    <span class="s2">"#mode=bytes"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">date_range</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -2195,7 +2195,7 @@ Attributes:
 <span class="ne">---&gt; </span><span class="mi">53</span>             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">54</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_cache</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
-<span class="ne">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXRAD.5.12.4/2020/01/MERRA2_400.tavg1_2d_rad_Nx.20200101.nc4#mode=bytes&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False))]
+<span class="ne">KeyError</span>: [&lt;class 'netCDF4._netCDF4.Dataset'&gt;, ('https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXRAD.5.12.4/2020/01/MERRA2_400.tavg1_2d_rad_Nx.20200101.nc4#mode=bytes',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
 
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
@@ -2204,7 +2204,7 @@ Attributes:
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\site-packages\xarray\backends\api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, group, decode_cf, mask_and_scale, decode_times, autoclose, concat_characters, decode_coords, engine, chunks, lock, cache, drop_variables, backend_kwargs, use_cftime, decode_timedelta)</span>
 <span class="g g-Whitespace">    </span><span class="mi">506</span>             <span class="n">engine</span> <span class="o">=</span> <span class="n">_get_default_engine</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">,</span> <span class="n">allow_remote</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">507</span>         <span class="k">if</span> <span class="n">engine</span> <span class="o">==</span> <span class="s2">&quot;netcdf4&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">507</span>         <span class="k">if</span> <span class="n">engine</span> <span class="o">==</span> <span class="s2">"netcdf4"</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">508</span>             <span class="n">store</span> <span class="o">=</span> <span class="n">backends</span><span class="o">.</span><span class="n">NetCDF4DataStore</span><span class="o">.</span><span class="n">open</span><span class="p">(</span>
 <span class="g g-Whitespace">    </span><span class="mi">509</span>                 <span class="n">filename_or_obj</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="n">group</span><span class="p">,</span> <span class="n">lock</span><span class="o">=</span><span class="n">lock</span><span class="p">,</span> <span class="o">**</span><span class="n">backend_kwargs</span>
 <span class="g g-Whitespace">    </span><span class="mi">510</span>             <span class="p">)</span>
@@ -2242,27 +2242,27 @@ Attributes:
 <span class="g g-Whitespace">    </span><span class="mi">116</span>         <span class="k">try</span><span class="p">:</span>
 <span class="ne">--&gt; </span><span class="mi">117</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">119</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">"generator didn't yield"</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\site-packages\xarray\backends\file_manager.py</span> in <span class="ni">acquire_context</span><span class="nt">(self, needs_lock)</span>
 <span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="k">def</span><span class="w"> </span><span class="nf">acquire_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">needs_lock</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">185</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;Context manager for acquiring a file.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span><span class="w">         </span><span class="sd">"""Context manager for acquiring a file."""</span>
 <span class="ne">--&gt; </span><span class="mi">186</span>         <span class="n">file</span><span class="p">,</span> <span class="n">cached</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_acquire_with_cache_info</span><span class="p">(</span><span class="n">needs_lock</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">187</span>         <span class="k">try</span><span class="p">:</span>
 <span class="g g-Whitespace">    </span><span class="mi">188</span>             <span class="k">yield</span> <span class="n">file</span>
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\site-packages\xarray\backends\file_manager.py</span> in <span class="ni">_acquire_with_cache_info</span><span class="nt">(self, needs_lock)</span>
 <span class="g g-Whitespace">    </span><span class="mi">202</span>                     <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span>                     <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span>                     <span class="n">kwargs</span><span class="p">[</span><span class="s2">"mode"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span>
 <span class="ne">--&gt; </span><span class="mi">204</span>                 <span class="n">file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_opener</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>                     <span class="c1"># ensure file doesn&#39;t get overriden when opened again</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">==</span> <span class="s2">"w"</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>                     <span class="c1"># ensure file doesn't get overriden when opened again</span>
 
 <span class="nn">src\netCDF4\_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4.Dataset.__init__</span><span class="nt">()</span>
 
 <span class="nn">src\netCDF4\_netCDF4.pyx</span> in <span class="ni">netCDF4._netCDF4._ensure_nc_success</span><span class="nt">()</span>
 
-<span class="ne">OSError</span>: [Errno -51] NetCDF: Unknown file format: b&#39;https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXRAD.5.12.4/2020/01/MERRA2_400.tavg1_2d_rad_Nx.20200101.nc4#mode=bytes&#39;
+<span class="ne">OSError</span>: [Errno -51] NetCDF: Unknown file format: b'https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXRAD.5.12.4/2020/01/MERRA2_400.tavg1_2d_rad_Nx.20200101.nc4#mode=bytes'
 </pre></div>
 </div>
 </div>
@@ -2274,16 +2274,16 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;grads_dim&#39;: &#39;t&#39;,
- &#39;grads_mapping&#39;: &#39;linear&#39;,
- &#39;grads_size&#39;: &#39;363768&#39;,
- &#39;grads_min&#39;: &#39;00:30z01jan1980&#39;,
- &#39;grads_step&#39;: &#39;60mn&#39;,
- &#39;units&#39;: &#39;days since 1-1-1 00:00:0.0&#39;,
- &#39;long_name&#39;: &#39;time&#39;,
- &#39;minimum&#39;: &#39;00:30z01jan1980&#39;,
- &#39;maximum&#39;: &#39;23:30z30jun2021&#39;,
- &#39;resolution&#39;: 0.041666668}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'grads_dim': 't',
+ 'grads_mapping': 'linear',
+ 'grads_size': '363768',
+ 'grads_min': '00:30z01jan1980',
+ 'grads_step': '60mn',
+ 'units': 'days since 1-1-1 00:00:0.0',
+ 'long_name': 'time',
+ 'minimum': '00:30z01jan1980',
+ 'maximum': '23:30z30jun2021',
+ 'resolution': 0.041666668}
 </pre></div>
 </div>
 </div>
@@ -2294,9 +2294,9 @@ Attributes:
 <span class="n">store</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">backends</span><span class="o">.</span><span class="n">PydapDataStore</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">)</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">store</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
-    <span class="p">{</span><span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">latitude</span><span class="p">,</span>
-     <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">longitude</span><span class="p">,</span>
-     <span class="s1">&#39;times&#39;</span><span class="p">:</span> <span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">),</span> <span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)),</span>
+    <span class="p">{</span><span class="s1">'lat'</span><span class="p">:</span> <span class="n">latitude</span><span class="p">,</span>
+     <span class="s1">'lon'</span><span class="p">:</span> <span class="n">longitude</span><span class="p">,</span>
+     <span class="s1">'times'</span><span class="p">:</span> <span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">),</span> <span class="n">end</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y-%m-</span><span class="si">%d</span><span class="s1">'</span><span class="p">)),</span>
      <span class="p">})</span>
 </pre></div>
 </div>

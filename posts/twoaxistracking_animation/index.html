@@ -573,7 +573,7 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">=</span> <span class="n">pvlib</span><span class="o">.</span><span class="n">location</span><span class="o">.</span><span class="n">Location</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mf">54.97870</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mf">12.2669</span><span class="p">)</span>
 
 <span class="c1"># Generate series of timestamps for one day</span>
-<span class="n">timestamps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;2021-03-28 05:00&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;2021-03-28 17:45&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;1min&#39;</span><span class="p">)</span>
+<span class="n">timestamps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">'2021-03-28 05:00'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'2021-03-28 17:45'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'1min'</span><span class="p">)</span>
 
 <span class="c1"># Calculate solar position</span>
 <span class="n">solpos</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">get_solarposition</span><span class="p">(</span><span class="n">timestamps</span><span class="p">)</span>
@@ -599,11 +599,11 @@
 
     <span class="c1"># Create path collections</span>
     <span class="n">active_patches</span> <span class="o">=</span> <span class="n">twoaxistracking</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">_polygons_to_patch_collection</span><span class="p">(</span>
-        <span class="n">active_collector_geometry</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">active_collector_geometry</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
     <span class="n">unshaded_patches</span> <span class="o">=</span> <span class="n">twoaxistracking</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">_polygons_to_patch_collection</span><span class="p">(</span>
-        <span class="n">unshaded_geometry</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">unshaded_geometry</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">shading_patches</span> <span class="o">=</span> <span class="n">twoaxistracking</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">_polygons_to_patch_collection</span><span class="p">(</span>
-        <span class="n">shading_geometries</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
+        <span class="n">shading_geometries</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">)</span>
 
     <span class="c1"># Plot path collections</span>
     <span class="n">ax0</span><span class="o">.</span><span class="n">add_collection</span><span class="p">(</span><span class="n">active_patches</span><span class="p">,</span> <span class="n">autolim</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -617,33 +617,33 @@
     <span class="n">ax0</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
 
     <span class="c1"># Create legend for the main plot</span>
-    <span class="n">green_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Unshaded area&#39;</span><span class="p">)</span>
-    <span class="n">black_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Shading areas&#39;</span><span class="p">)</span>
-    <span class="n">red_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Shaded area&#39;</span><span class="p">)</span>
+    <span class="n">green_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Unshaded area'</span><span class="p">)</span>
+    <span class="n">black_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Shading areas'</span><span class="p">)</span>
+    <span class="n">red_patch</span> <span class="o">=</span> <span class="n">mpatches</span><span class="o">.</span><span class="n">Patch</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Shaded area'</span><span class="p">)</span>
     <span class="n">ax0</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="p">[</span><span class="n">green_patch</span><span class="p">,</span> <span class="n">black_patch</span><span class="p">,</span> <span class="n">red_patch</span><span class="p">],</span>
                <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">handlelength</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># Plot solar elevation</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">shading_fractions</span><span class="p">)],</span> <span class="n">solpos</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">shading_fractions</span><span class="p">)])</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">shading_fractions</span><span class="p">)],</span> <span class="n">solpos</span><span class="p">[</span><span class="s1">'elevation'</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">shading_fractions</span><span class="p">)])</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
-    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Solar elevation&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Solar elevation'</span><span class="p">)</span>
 
     <span class="c1"># Plot shading fraction</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">shading_fractions</span><span class="p">)],</span> <span class="n">shading_fractions</span><span class="p">)</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">1.01</span><span class="p">)</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Shaded fraction&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Shaded fraction'</span><span class="p">)</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">1.00</span><span class="p">])</span>
 
     <span class="c1"># Format xticks</span>
-    <span class="n">xticks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="s1">&#39;1h&#39;</span><span class="p">),</span>
-                           <span class="n">end</span><span class="o">=</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;3h&#39;</span><span class="p">)</span>
+    <span class="n">xticks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="s1">'1h'</span><span class="p">),</span>
+                           <span class="n">end</span><span class="o">=</span><span class="n">solpos</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'3h'</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">xticks</span><span class="p">)</span>
     <span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([])</span>  <span class="c1"># Only have x-tick labels on bottom plot</span>
-    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xticks</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H:%M&#39;</span><span class="p">))</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">xticks</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%H:%M'</span><span class="p">))</span>
 
     <span class="c1"># Make figure pretty</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">align_ylabels</span><span class="p">()</span>
@@ -653,7 +653,7 @@
     <span class="k">if</span> <span class="n">save_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">'tight'</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -670,8 +670,8 @@
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">solpos</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
     <span class="c1"># Calculate shading fraction and shading geometries</span>
     <span class="n">sf</span><span class="p">,</span> <span class="n">geometries</span> <span class="o">=</span> <span class="n">twoaxistracking</span><span class="o">.</span><span class="n">shaded_fraction</span><span class="p">(</span>
-        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">],</span>
-        <span class="n">row</span><span class="p">[</span><span class="s1">&#39;azimuth&#39;</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">'elevation'</span><span class="p">],</span>
+        <span class="n">row</span><span class="p">[</span><span class="s1">'azimuth'</span><span class="p">],</span>
         <span class="n">tracker_field</span><span class="o">.</span><span class="n">total_collector_geometry</span><span class="p">,</span>
         <span class="n">tracker_field</span><span class="o">.</span><span class="n">active_collector_geometry</span><span class="p">,</span>
         <span class="n">tracker_field</span><span class="o">.</span><span class="n">min_tracker_spacing</span><span class="p">,</span>
@@ -691,10 +691,10 @@
     <span class="n">_</span> <span class="o">=</span> <span class="n">plot_shading_conditions</span><span class="p">(</span>
         <span class="n">shading_fractions</span><span class="o">=</span><span class="n">shading_fractions</span><span class="p">,</span>
         <span class="n">active_collector_geometry</span><span class="o">=</span><span class="n">tracker_field</span><span class="o">.</span><span class="n">active_collector_geometry</span><span class="p">,</span>
-        <span class="n">unshaded_geometry</span><span class="o">=</span><span class="n">geometries</span><span class="p">[</span><span class="s1">&#39;unshaded_geometry&#39;</span><span class="p">],</span>
-        <span class="n">shading_geometries</span><span class="o">=</span><span class="n">geometries</span><span class="p">[</span><span class="s1">&#39;shading_geometries&#39;</span><span class="p">],</span>
+        <span class="n">unshaded_geometry</span><span class="o">=</span><span class="n">geometries</span><span class="p">[</span><span class="s1">'unshaded_geometry'</span><span class="p">],</span>
+        <span class="n">shading_geometries</span><span class="o">=</span><span class="n">geometries</span><span class="p">[</span><span class="s1">'shading_geometries'</span><span class="p">],</span>
         <span class="n">min_tracker_spacing</span><span class="o">=</span><span class="n">tracker_field</span><span class="o">.</span><span class="n">min_tracker_spacing</span><span class="p">,</span>
-        <span class="n">save_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;GIF/</span><span class="si">{</span><span class="n">index</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">.png&quot;</span><span class="p">)</span>
+        <span class="n">save_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">"GIF/</span><span class="si">{</span><span class="n">index</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">':'</span><span class="p">,</span><span class="s1">'-'</span><span class="p">)</span><span class="si">}</span><span class="s2">.png"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -707,19 +707,19 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get filenames of all images</span>
-<span class="n">filenames</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;GIF/*&quot;</span><span class="p">)</span>
+<span class="n">filenames</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"GIF/*"</span><span class="p">)</span>
 
 <span class="c1"># Load all images and append to list</span>
 <span class="n">images</span> <span class="o">=</span> <span class="p">[</span><span class="n">imageio</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">]</span>
 
 <span class="c1"># Save GIF</span>
-<span class="n">imageio</span><span class="o">.</span><span class="n">mimsave</span><span class="p">(</span><span class="s1">&#39;shading_demonstration.gif&#39;</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+<span class="n">imageio</span><span class="o">.</span><span class="n">mimsave</span><span class="p">(</span><span class="s1">'shading_demonstration.gif'</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\arajen\Anaconda3\envs\twoaxistracking\lib\site-packages\ipykernel_launcher.py:5: DeprecationWarning: Starting with ImageIO v3 the behavior of this function will switch to that of iio.v3.imread. To keep the current behavior (and make this warning disappear) use `import imageio.v2 as imageio` or call `imageio.v2.imread` directly.
-  &quot;&quot;&quot;
+  """
 </pre></div>
 </div>
 </div>

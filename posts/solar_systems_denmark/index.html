@@ -490,28 +490,28 @@
 <span class="nb">map</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span>
     <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">55.70</span><span class="p">,</span> <span class="mf">9.20</span><span class="p">],</span>
     <span class="n">zoom_start</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
-    <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;openstreetmap&#39;</span><span class="p">,</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s1">'openstreetmap'</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">names_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;solceller&#39;</span><span class="p">:</span> <span class="s1">&#39;PV plants&#39;</span><span class="p">,</span> <span class="s1">&#39;solfanger&#39;</span><span class="p">:</span> <span class="s1">&#39;Solar district heating plants&#39;</span><span class="p">}</span>
+<span class="n">names_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'solceller'</span><span class="p">:</span> <span class="s1">'PV plants'</span><span class="p">,</span> <span class="s1">'solfanger'</span><span class="p">:</span> <span class="s1">'Solar district heating plants'</span><span class="p">}</span>
 
 <span class="k">for</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">names_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="n">folium</span><span class="o">.</span><span class="n">raster_layers</span><span class="o">.</span><span class="n">WmsTileLayer</span><span class="p">(</span>
-        <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=</span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">url</span><span class="o">=</span><span class="sa">f</span><span class="s1">'https://api.dataforsyningen.dk/wms/solenergianlaeg?token=</span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span>
         <span class="n">layers</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span>
         <span class="n">styles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;image/png&quot;</span><span class="p">,</span>
+        <span class="n">fmt</span><span class="o">=</span><span class="s2">"image/png"</span><span class="p">,</span>
         <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-        <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;Styrelsen for Dataforsyning og Infrastruktur&#39;</span><span class="p">,</span>
+        <span class="n">attr</span><span class="o">=</span><span class="s1">'Styrelsen for Dataforsyning og Infrastruktur'</span><span class="p">,</span>
         <span class="n">name</span><span class="o">=</span><span class="n">names_dict</span><span class="p">[</span><span class="nb">type</span><span class="p">],</span>
         <span class="n">overlay</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">control</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
 
-<span class="n">EsriImagery</span> <span class="o">=</span> <span class="s2">&quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/</span><span class="si">{z}</span><span class="s2">/</span><span class="si">{y}</span><span class="s2">/</span><span class="si">{x}</span><span class="s2">&quot;</span>
-<span class="n">EsriAttribution</span> <span class="o">=</span> <span class="s2">&quot;Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community&quot;</span>
-<span class="n">folium</span><span class="o">.</span><span class="n">raster_layers</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">EsriImagery</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;World imagery&#39;</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="n">EsriAttribution</span><span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
+<span class="n">EsriImagery</span> <span class="o">=</span> <span class="s2">"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/</span><span class="si">{z}</span><span class="s2">/</span><span class="si">{y}</span><span class="s2">/</span><span class="si">{x}</span><span class="s2">"</span>
+<span class="n">EsriAttribution</span> <span class="o">=</span> <span class="s2">"Tiles &amp;copy; Esri &amp;mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">raster_layers</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">EsriImagery</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">'World imagery'</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="n">EsriAttribution</span><span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
 
 <span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>
 <span class="n">folium</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">Fullscreen</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="nb">map</span><span class="p">)</span>  <span class="c1"># Add full screen button to map</span>
@@ -542,7 +542,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_62f57df6ba3b63a9f4c986945ac70a74 {
+                #map_0f08c5ba3921c04cf67e83bdcd93793b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -581,14 +581,14 @@
 &lt;body&gt;
     
     
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_62f57df6ba3b63a9f4c986945ac70a74&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_0f08c5ba3921c04cf67e83bdcd93793b&quot; &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_62f57df6ba3b63a9f4c986945ac70a74 = L.map(
-                &quot;map_62f57df6ba3b63a9f4c986945ac70a74&quot;,
+            var map_0f08c5ba3921c04cf67e83bdcd93793b = L.map(
+                &quot;map_0f08c5ba3921c04cf67e83bdcd93793b&quot;,
                 {
                     center: [55.7, 9.2],
                     crs: L.CRS.EPSG3857,
@@ -605,7 +605,7 @@
 
         
     
-            var tile_layer_608b7e939182c123b5e9f3898c609fbf = L.tileLayer(
+            var tile_layer_a8fe303ed37c8b1338f0f56be4977bbe = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -622,28 +622,28 @@
             );
         
     
-            tile_layer_608b7e939182c123b5e9f3898c609fbf.addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            tile_layer_a8fe303ed37c8b1338f0f56be4977bbe.addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
         
     
-            var macro_element_3c6cf26973312feb1fd2a9350c907907 = L.tileLayer.wms(
+            var macro_element_b5563c8eeb967e0872a1a5bad07bbb0b = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solceller&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_3c6cf26973312feb1fd2a9350c907907.addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            macro_element_b5563c8eeb967e0872a1a5bad07bbb0b.addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
         
     
-            var macro_element_b855cfd0eeefc26cb01eb3022631df89 = L.tileLayer.wms(
+            var macro_element_1bab03e7ebe38d65cb7628525849dcf6 = L.tileLayer.wms(
                 &quot;https://api.dataforsyningen.dk/wms/solenergianlaeg?token=1d0dde96bdf27962f612b4df087bbdcc&quot;,
                 {&quot;attribution&quot;: &quot;Styrelsen for Dataforsyning og Infrastruktur&quot;, &quot;format&quot;: &quot;image/png&quot;, &quot;layers&quot;: &quot;solfanger&quot;, &quot;transparent&quot;: true, &quot;version&quot;: &quot;1.1.1&quot;}
             );
         
     
-            macro_element_b855cfd0eeefc26cb01eb3022631df89.addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            macro_element_1bab03e7ebe38d65cb7628525849dcf6.addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
         
     
-            var tile_layer_0bf57e157440e9309412f4f3264e2f07 = L.tileLayer(
+            var tile_layer_5c9b1b8909a8ca75d256b97a1ed5def3 = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -660,28 +660,28 @@
             );
         
     
-            tile_layer_0bf57e157440e9309412f4f3264e2f07.addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            tile_layer_5c9b1b8909a8ca75d256b97a1ed5def3.addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
         
     
-            var layer_control_312c4dc6574a32150b397fd05b1813ef_layers = {
+            var layer_control_4acdd5c81f8a820424eb0ecca4a44bd7_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_608b7e939182c123b5e9f3898c609fbf,
-                    &quot;World imagery&quot; : tile_layer_0bf57e157440e9309412f4f3264e2f07,
+                    &quot;openstreetmap&quot; : tile_layer_a8fe303ed37c8b1338f0f56be4977bbe,
+                    &quot;World imagery&quot; : tile_layer_5c9b1b8909a8ca75d256b97a1ed5def3,
                 },
                 overlays :  {
-                    &quot;PV plants&quot; : macro_element_3c6cf26973312feb1fd2a9350c907907,
-                    &quot;Solar district heating plants&quot; : macro_element_b855cfd0eeefc26cb01eb3022631df89,
+                    &quot;PV plants&quot; : macro_element_b5563c8eeb967e0872a1a5bad07bbb0b,
+                    &quot;Solar district heating plants&quot; : macro_element_1bab03e7ebe38d65cb7628525849dcf6,
                 },
             };
-            let layer_control_312c4dc6574a32150b397fd05b1813ef = L.control.layers(
-                layer_control_312c4dc6574a32150b397fd05b1813ef_layers.base_layers,
-                layer_control_312c4dc6574a32150b397fd05b1813ef_layers.overlays,
+            let layer_control_4acdd5c81f8a820424eb0ecca4a44bd7 = L.control.layers(
+                layer_control_4acdd5c81f8a820424eb0ecca4a44bd7_layers.base_layers,
+                layer_control_4acdd5c81f8a820424eb0ecca4a44bd7_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: true,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            ).addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
 
         
     
@@ -692,18 +692,18 @@
   &quot;titleCancel&quot;: &quot;Exit Full Screen&quot;,
   &quot;forceSeparateButton&quot;: false,
 }
-            ).addTo(map_62f57df6ba3b63a9f4c986945ac70a74);
+            ).addTo(map_0f08c5ba3921c04cf67e83bdcd93793b);
         
     
-                var lat_lng_popup_6798a132a347b957bf18b36793532330 = L.popup();
+                var lat_lng_popup_8a4a6804b874c763c44d089e4182ad8f = L.popup();
                 function latLngPop(e) {
-                    lat_lng_popup_6798a132a347b957bf18b36793532330
+                    lat_lng_popup_8a4a6804b874c763c44d089e4182ad8f
                         .setLatLng(e.latlng)
                         .setContent(&quot;Latitude: &quot; + e.latlng.lat.toFixed(4) +
                                     &quot;&lt;br&gt;Longitude: &quot; + e.latlng.lng.toFixed(4))
-                        .openOn(map_62f57df6ba3b63a9f4c986945ac70a74);
+                        .openOn(map_0f08c5ba3921c04cf67e83bdcd93793b);
                     }
-                map_62f57df6ba3b63a9f4c986945ac70a74.on(&#x27;click&#x27;, latLngPop);
+                map_0f08c5ba3921c04cf67e83bdcd93793b.on(&#x27;click&#x27;, latLngPop);
             
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>

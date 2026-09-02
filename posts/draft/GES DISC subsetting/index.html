@@ -432,9 +432,9 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a urllib PoolManager instance to make requests.</span>
-<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span><span class="n">cert_reqs</span><span class="o">=</span><span class="s1">&#39;CERT_REQUIRED&#39;</span><span class="p">,</span> <span class="n">ca_certs</span><span class="o">=</span><span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">())</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">(</span><span class="n">cert_reqs</span><span class="o">=</span><span class="s1">'CERT_REQUIRED'</span><span class="p">,</span> <span class="n">ca_certs</span><span class="o">=</span><span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">())</span>
 <span class="c1"># Set the URL for the GES DISC subset service endpoint</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://disc.gsfc.nasa.gov/service/subset/jsonwsp&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://disc.gsfc.nasa.gov/service/subset/jsonwsp'</span>
 </pre></div>
 </div>
 </div>
@@ -444,15 +444,15 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This method POSTs formatted JSON WSP requests to the GES DISC endpoint URL</span>
 <span class="c1"># It is created for convenience since this task will be repeated more than once</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_http_data</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="n">hdrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;Accept&#39;</span>      <span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+    <span class="n">hdrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Content-Type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+            <span class="s1">'Accept'</span>      <span class="p">:</span> <span class="s1">'application/json'</span><span class="p">}</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>       
-    <span class="n">r</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdrs</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">'POST'</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">hdrs</span><span class="p">)</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>   
     <span class="c1"># Check for errors</span>
-    <span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;jsonwsp/fault&#39;</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s1">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'jsonwsp/fault'</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;API Error: faulty </span><span class="si">%s</span><span class="s1"> request&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;methodname&#39;</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'API Error: faulty </span><span class="si">%s</span><span class="s1"> request'</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">'methodname'</span><span class="p">])</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">response</span>
 </pre></div>
@@ -462,19 +462,19 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the parameters for the second subset example</span>
-<span class="n">product</span> <span class="o">=</span> <span class="s1">&#39;M2T1NXSLV_5.12.4&#39;</span>
-<span class="n">varNames</span> <span class="o">=</span><span class="p">[</span><span class="s1">&#39;T2M&#39;</span><span class="p">,</span> <span class="s1">&#39;PS&#39;</span><span class="p">,</span> <span class="s1">&#39;T2MDEW&#39;</span><span class="p">]</span>
+<span class="n">product</span> <span class="o">=</span> <span class="s1">'M2T1NXSLV_5.12.4'</span>
+<span class="n">varNames</span> <span class="o">=</span><span class="p">[</span><span class="s1">'T2M'</span><span class="p">,</span> <span class="s1">'PS'</span><span class="p">,</span> <span class="s1">'T2MDEW'</span><span class="p">]</span>
 <span class="n">minlon</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">maxlon</span> <span class="o">=</span> <span class="mf">15.2</span>
 <span class="n">minlat</span> <span class="o">=</span> <span class="mi">55</span>
 <span class="n">maxlat</span> <span class="o">=</span> <span class="mf">55.2</span>
-<span class="n">begTime</span> <span class="o">=</span> <span class="s1">&#39;2020-01-01&#39;</span>
-<span class="n">endTime</span> <span class="o">=</span> <span class="s1">&#39;2020-01-31&#39;</span>
-<span class="n">begHour</span> <span class="o">=</span> <span class="s1">&#39;00:30&#39;</span>
-<span class="n">endHour</span> <span class="o">=</span> <span class="s1">&#39;23:30&#39;</span>
+<span class="n">begTime</span> <span class="o">=</span> <span class="s1">'2020-01-01'</span>
+<span class="n">endTime</span> <span class="o">=</span> <span class="s1">'2020-01-31'</span>
+<span class="n">begHour</span> <span class="o">=</span> <span class="s1">'00:30'</span>
+<span class="n">endHour</span> <span class="o">=</span> <span class="s1">'23:30'</span>
 <span class="c1">#doMean = True</span>
-<span class="c1">#interp = &#39;remapbil&#39;</span>
-<span class="c1">#destGrid = &#39;cfsr0.5a&#39;</span>
+<span class="c1">#interp = 'remapbil'</span>
+<span class="c1">#destGrid = 'cfsr0.5a'</span>
 </pre></div>
 </div>
 </div>
@@ -483,28 +483,28 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Construct JSON WSP request for API method: subset</span>
 <span class="n">subset_request</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;methodname&#39;</span><span class="p">:</span> <span class="s1">&#39;subset&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;jsonwsp/request&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;role&#39;</span>  <span class="p">:</span> <span class="s1">&#39;subset&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;start&#39;</span> <span class="p">:</span> <span class="n">begTime</span><span class="p">,</span>
-        <span class="s1">&#39;end&#39;</span>   <span class="p">:</span> <span class="n">endTime</span><span class="p">,</span>
-        <span class="s1">&#39;box&#39;</span>   <span class="p">:</span> <span class="p">[</span><span class="n">minlon</span><span class="p">,</span> <span class="n">minlat</span><span class="p">,</span> <span class="n">maxlon</span><span class="p">,</span> <span class="n">maxlat</span><span class="p">],</span>
-        <span class="s1">&#39;crop&#39;</span>  <span class="p">:</span> <span class="kc">True</span><span class="p">,</span> 
-        <span class="s1">&#39;diurnalFrom&#39;</span><span class="p">:</span> <span class="n">begHour</span><span class="p">,</span> 
-        <span class="s1">&#39;diurnalTo&#39;</span><span class="p">:</span> <span class="n">endHour</span><span class="p">,</span>
-        <span class="c1">#&#39;diurnalMean&#39;: doMean,</span>
-        <span class="c1">#&#39;mapping&#39;: interp,</span>
-        <span class="c1">#&#39;grid&#39;  : destGrid,</span>
-        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;datasetId&#39;</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
-                  <span class="s1">&#39;variable&#39;</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="s1">'methodname'</span><span class="p">:</span> <span class="s1">'subset'</span><span class="p">,</span>
+    <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'jsonwsp/request'</span><span class="p">,</span>
+    <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.0'</span><span class="p">,</span>
+    <span class="s1">'args'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'role'</span>  <span class="p">:</span> <span class="s1">'subset'</span><span class="p">,</span>
+        <span class="s1">'start'</span> <span class="p">:</span> <span class="n">begTime</span><span class="p">,</span>
+        <span class="s1">'end'</span>   <span class="p">:</span> <span class="n">endTime</span><span class="p">,</span>
+        <span class="s1">'box'</span>   <span class="p">:</span> <span class="p">[</span><span class="n">minlon</span><span class="p">,</span> <span class="n">minlat</span><span class="p">,</span> <span class="n">maxlon</span><span class="p">,</span> <span class="n">maxlat</span><span class="p">],</span>
+        <span class="s1">'crop'</span>  <span class="p">:</span> <span class="kc">True</span><span class="p">,</span> 
+        <span class="s1">'diurnalFrom'</span><span class="p">:</span> <span class="n">begHour</span><span class="p">,</span> 
+        <span class="s1">'diurnalTo'</span><span class="p">:</span> <span class="n">endHour</span><span class="p">,</span>
+        <span class="c1">#'diurnalMean': doMean,</span>
+        <span class="c1">#'mapping': interp,</span>
+        <span class="c1">#'grid'  : destGrid,</span>
+        <span class="s1">'data'</span><span class="p">:</span> <span class="p">[{</span><span class="s1">'datasetId'</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
+                  <span class="s1">'variable'</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
                  <span class="p">},</span>
-                 <span class="p">{</span><span class="s1">&#39;datasetId&#39;</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
-                  <span class="s1">&#39;variable&#39;</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                 <span class="p">{</span><span class="s1">'datasetId'</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
+                  <span class="s1">'variable'</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
                  <span class="p">},</span>
-                 <span class="p">{</span><span class="s1">&#39;datasetId&#39;</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
-                  <span class="s1">&#39;variable&#39;</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+                 <span class="p">{</span><span class="s1">'datasetId'</span><span class="p">:</span> <span class="n">product</span><span class="p">,</span>
+                  <span class="s1">'variable'</span> <span class="p">:</span> <span class="n">varNames</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
                  <span class="p">}]</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -518,9 +518,9 @@
 <span class="c1"># Submit the subset request to the GES DISC Server</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">get_http_data</span><span class="p">(</span><span class="n">subset_request</span><span class="p">)</span>
 <span class="c1"># Report the JobID and initial status</span>
-<span class="n">myJobId</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;jobId&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Job ID: &#39;</span><span class="o">+</span><span class="n">myJobId</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Job status: &#39;</span><span class="o">+</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;Status&#39;</span><span class="p">])</span>
+<span class="n">myJobId</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'jobId'</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job ID: '</span><span class="o">+</span><span class="n">myJobId</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Job status: '</span><span class="o">+</span><span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'Status'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -537,23 +537,23 @@ Wall time: 2.5 s
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1"># Construct JSON WSP request for API method: GetStatus</span>
 <span class="n">status_request</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;methodname&#39;</span><span class="p">:</span> <span class="s1">&#39;GetStatus&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;jsonwsp/request&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;jobId&#39;</span><span class="p">:</span> <span class="n">myJobId</span><span class="p">}</span>
+    <span class="s1">'methodname'</span><span class="p">:</span> <span class="s1">'GetStatus'</span><span class="p">,</span>
+    <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.0'</span><span class="p">,</span>
+    <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'jsonwsp/request'</span><span class="p">,</span>
+    <span class="s1">'args'</span><span class="p">:</span> <span class="p">{</span><span class="s1">'jobId'</span><span class="p">:</span> <span class="n">myJobId</span><span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1"># Check on the job status after a brief nap</span>
-<span class="k">while</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Accepted&#39;</span><span class="p">,</span> <span class="s1">&#39;Running&#39;</span><span class="p">]:</span>
+<span class="k">while</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'Status'</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'Accepted'</span><span class="p">,</span> <span class="s1">'Running'</span><span class="p">]:</span>
     <span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">get_http_data</span><span class="p">(</span><span class="n">status_request</span><span class="p">)</span>
-    <span class="n">status</span>  <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span>
-    <span class="n">percent</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;PercentCompleted&#39;</span><span class="p">]</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Job status: </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%d%c</span><span class="s1"> complete)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">status</span><span class="p">,</span><span class="n">percent</span><span class="p">,</span><span class="s1">&#39;%&#39;</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Succeeded&#39;</span> <span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Job Finished:  </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;message&#39;</span><span class="p">])</span>
+    <span class="n">status</span>  <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'Status'</span><span class="p">]</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'PercentCompleted'</span><span class="p">]</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'Job status: </span><span class="si">%s</span><span class="s1"> (</span><span class="si">%d%c</span><span class="s1"> complete)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">status</span><span class="p">,</span><span class="n">percent</span><span class="p">,</span><span class="s1">'%'</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'Status'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Succeeded'</span> <span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s1">'Job Finished:  </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'message'</span><span class="p">])</span>
 <span class="k">else</span> <span class="p">:</span> 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Job Failed: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;fault&#39;</span><span class="p">][</span><span class="s1">&#39;code&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Job Failed: </span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">response</span><span class="p">[</span><span class="s1">'fault'</span><span class="p">][</span><span class="s1">'code'</span><span class="p">])</span>
     <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -572,13 +572,13 @@ Wall time: 5.45 s
 <span class="c1"># Construct JSON WSP request for API method: GetResult</span>
 <span class="n">batchsize</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="n">results_request</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;methodname&#39;</span><span class="p">:</span> <span class="s1">&#39;GetResult&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;jsonwsp/request&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s1">&#39;jobId&#39;</span><span class="p">:</span> <span class="n">myJobId</span><span class="p">,</span>
-        <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="n">batchsize</span><span class="p">,</span>
-        <span class="s1">&#39;startIndex&#39;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="s1">'methodname'</span><span class="p">:</span> <span class="s1">'GetResult'</span><span class="p">,</span>
+    <span class="s1">'version'</span><span class="p">:</span> <span class="s1">'1.0'</span><span class="p">,</span>
+    <span class="s1">'type'</span><span class="p">:</span> <span class="s1">'jsonwsp/request'</span><span class="p">,</span>
+    <span class="s1">'args'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">'jobId'</span><span class="p">:</span> <span class="n">myJobId</span><span class="p">,</span>
+        <span class="s1">'count'</span><span class="p">:</span> <span class="n">batchsize</span><span class="p">,</span>
+        <span class="s1">'startIndex'</span><span class="p">:</span> <span class="mi">0</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -588,19 +588,19 @@ Wall time: 5.45 s
 <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span> 
 <span class="n">response</span> <span class="o">=</span> <span class="n">get_http_data</span><span class="p">(</span><span class="n">results_request</span><span class="p">)</span> 
-<span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;itemsPerPage&#39;</span><span class="p">]</span>
-<span class="n">results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">])</span> 
+<span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'itemsPerPage'</span><span class="p">]</span>
+<span class="n">results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'items'</span><span class="p">])</span> 
 
 <span class="c1"># Increment the startIndex and keep asking for more results until we have them all</span>
-<span class="n">total</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;totalResults&#39;</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'totalResults'</span><span class="p">]</span>
 <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">total</span> <span class="p">:</span>
-    <span class="n">results_request</span><span class="p">[</span><span class="s1">&#39;args&#39;</span><span class="p">][</span><span class="s1">&#39;startIndex&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">batchsize</span> 
+    <span class="n">results_request</span><span class="p">[</span><span class="s1">'args'</span><span class="p">][</span><span class="s1">'startIndex'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">batchsize</span> 
     <span class="n">response</span> <span class="o">=</span> <span class="n">get_http_data</span><span class="p">(</span><span class="n">results_request</span><span class="p">)</span> 
-    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;itemsPerPage&#39;</span><span class="p">]</span>
-    <span class="n">results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">])</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'itemsPerPage'</span><span class="p">]</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s1">'result'</span><span class="p">][</span><span class="s1">'items'</span><span class="p">])</span>
        
 <span class="c1"># Check on the bookkeeping</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Retrieved </span><span class="si">%d</span><span class="s1"> out of </span><span class="si">%d</span><span class="s1"> expected items&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="n">total</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Retrieved </span><span class="si">%d</span><span class="s1"> out of </span><span class="si">%d</span><span class="s1"> expected items'</span> <span class="o">%</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">),</span> <span class="n">total</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -616,13 +616,13 @@ Wall time: 894 ms
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1"># Retrieve a plain-text list of results in a single shot using the saved JobID</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://disc.gsfc.nasa.gov/api/jobs/results/&#39;</span><span class="o">+</span><span class="n">myJobId</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://disc.gsfc.nasa.gov/api/jobs/results/'</span><span class="o">+</span><span class="n">myJobId</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="n">result</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-    <span class="n">urls</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="c1">#for i in urls : print(&#39;\n%s&#39; % i)</span>
+    <span class="n">urls</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span>
+    <span class="c1">#for i in urls : print('\n%s' % i)</span>
 <span class="k">except</span> <span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Request returned error code </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Request returned error code </span><span class="si">%d</span><span class="s1">'</span> <span class="o">%</span> <span class="n">result</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -641,12 +641,12 @@ Wall time: 894 ms
 <span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">results</span> <span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;start&#39;</span><span class="p">]</span> <span class="ow">and</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;end&#39;</span><span class="p">]</span> <span class="p">:</span> <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> 
+        <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="s1">'start'</span><span class="p">]</span> <span class="ow">and</span> <span class="n">item</span><span class="p">[</span><span class="s1">'end'</span><span class="p">]</span> <span class="p">:</span> <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> 
     <span class="k">except</span><span class="p">:</span>
         <span class="n">docs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
 <span class="c1"># Print out the documentation links, but do not download them</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Documentation:&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">docs</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">+</span><span class="s1">&#39;: &#39;</span><span class="o">+</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">Documentation:'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">docs</span> <span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span><span class="o">+</span><span class="s1">': '</span><span class="o">+</span><span class="n">item</span><span class="p">[</span><span class="s1">'link'</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -662,21 +662,21 @@ Wall time: 997 µs
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
 <span class="c1"># Use the requests library to submit the HTTP_Services URLs and write out the results.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">HTTP_services output:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">HTTP_services output:'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">urls</span> <span class="p">:</span>
-    <span class="n">URL</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">]</span> 
+    <span class="n">URL</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">'link'</span><span class="p">]</span> 
     <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">result</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-        <span class="n">outfn</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
-        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">outfn</span><span class="p">,</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">outfn</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">outfn</span><span class="p">,</span><span class="s1">'wb'</span><span class="p">)</span>
         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
         <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">outfn</span><span class="p">)</span>
     <span class="k">except</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Error! Status code is </span><span class="si">%d</span><span class="s1"> for this URL:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">code</span><span class="p">,</span><span class="n">URL</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Help for downloading data is at https://disc.gsfc.nasa.gov/data-access&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;OK&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Error! Status code is </span><span class="si">%d</span><span class="s1"> for this URL:</span><span class="se">\n</span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">status</span><span class="o">.</span><span class="n">code</span><span class="p">,</span><span class="n">URL</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Help for downloading data is at https://disc.gsfc.nasa.gov/data-access'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'OK'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -694,8 +694,8 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\site-packages\requests\api.py</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
 <span class="g g-Whitespace">     </span><span class="mi">74</span> 
-<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">76</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">&#39;get&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">75</span>     <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">'allow_redirects'</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">76</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">'get'</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">77</span> 
 <span class="g g-Whitespace">     </span><span class="mi">78</span> 
 
@@ -788,9 +788,9 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\http\client.py</span> in <span class="ni">_read_status</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">    </span><span class="mi">266</span> 
 <span class="g g-Whitespace">    </span><span class="mi">267</span>     <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">268</span>         <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">268</span>         <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"iso-8859-1"</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>             <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>             <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">"status line"</span><span class="p">)</span>
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\socket.py</span> in <span class="ni">readinto</span><span class="nt">(self, b)</span>
 <span class="g g-Whitespace">    </span><span class="mi">702</span>         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -800,7 +800,7 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 <span class="g g-Whitespace">    </span><span class="mi">706</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\ssl.py</span> in <span class="ni">recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1239</span>                   <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1239</span>                   <span class="s2">"non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span>
 <span class="g g-Whitespace">   </span><span class="mi">1240</span>                   <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
 <span class="ne">-&gt; </span><span class="mi">1241</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1242</span>         <span class="k">else</span><span class="p">:</span>
@@ -825,7 +825,7 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;https://goldsmr4.gesdisc.eosdis.nasa.gov/daac-bin/OTF/HTTP_services.cgi?FILENAME=%2Fdata%2FMERRA2%2FM2T1NXSLV.5.12.4%2F2020%2F01%2FMERRA2_400.tavg1_2d_slv_Nx.20200131.nc4&amp;FORMAT=bmM0Lw&amp;BBOX=55%2C15%2C55.2%2C15.2&amp;TIME=2020-01-31T00%3A30%3A00%2F2020-01-31T00%3A00%3A00&amp;LABEL=MERRA2_400.tavg1_2d_slv_Nx.20200131.SUB.nc&amp;SHORTNAME=M2T1NXSLV&amp;SERVICE=L34RS_MERRA2&amp;VERSION=1.02&amp;DATASET_VERSION=5.12.4&amp;VARIABLES=TQV%2CTQL%2CTQI&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'https://goldsmr4.gesdisc.eosdis.nasa.gov/daac-bin/OTF/HTTP_services.cgi?FILENAME=%2Fdata%2FMERRA2%2FM2T1NXSLV.5.12.4%2F2020%2F01%2FMERRA2_400.tavg1_2d_slv_Nx.20200131.nc4&amp;FORMAT=bmM0Lw&amp;BBOX=55%2C15%2C55.2%2C15.2&amp;TIME=2020-01-31T00%3A30%3A00%2F2020-01-31T00%3A00%3A00&amp;LABEL=MERRA2_400.tavg1_2d_slv_Nx.20200131.SUB.nc&amp;SHORTNAME=M2T1NXSLV&amp;SERVICE=L34RS_MERRA2&amp;VERSION=1.02&amp;DATASET_VERSION=5.12.4&amp;VARIABLES=TQV%2CTQL%2CTQI'
 </pre></div>
 </div>
 </div>
@@ -836,11 +836,11 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 <span class="c1"># Create a password manager to deal with the 401 response that is returned from</span>
 <span class="c1"># Earthdata Login</span>
 
-<span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;arjdk&quot;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;Elefant11?&quot;</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s2">"arjdk"</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s2">"Elefant11?"</span>
 
 <span class="n">password_manager</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">HTTPPasswordMgrWithDefaultRealm</span><span class="p">()</span>
-<span class="n">password_manager</span><span class="o">.</span><span class="n">add_password</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;https://urs.earthdata.nasa.gov&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<span class="n">password_manager</span><span class="o">.</span><span class="n">add_password</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"https://urs.earthdata.nasa.gov"</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
 <span class="c1"># Create a cookie jar for storing cookies. This is used to store and return the session cookie #given to use by the data server</span>
 <span class="n">cookie_jar</span> <span class="o">=</span> <span class="n">CookieJar</span><span class="p">()</span>
@@ -850,9 +850,9 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">)</span>
  
 <span class="c1"># Open a request for the data, and download files</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">HTTP_services output:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">HTTP_services output:'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
-    <span class="n">URL</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;link&#39;</span><span class="p">]</span> 
+    <span class="n">URL</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">'link'</span><span class="p">]</span> 
     <span class="n">DataRequest</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span>
     <span class="n">DataResponse</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">DataRequest</span><span class="p">)</span>
 
@@ -861,11 +861,11 @@ MERRA2_400.tavg1_2d_slv_Nx.20200104.SUB.nc
 
 <span class="c1"># Save file to working directory</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="n">file_name</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
-        <span class="n">file_</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">'label'</span><span class="p">]</span>
+        <span class="n">file_</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span>
         <span class="n">file_</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DataBody</span><span class="p">)</span>
         <span class="n">file_</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;has downloaded&quot;</span><span class="p">)</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">"has downloaded"</span><span class="p">)</span>
     <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
          <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
@@ -926,12 +926,12 @@ MERRA2_400.tavg1_2d_slv_Nx.20200129.SUB.nc has downloaded
 <span class="g g-Whitespace">    </span><span class="mi">630</span>         <span class="c1"># request was successfully received, understood, and accepted.</span>
 <span class="g g-Whitespace">    </span><span class="mi">631</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">632</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">633</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">633</span>                 <span class="s1">'http'</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">634</span> 
 
 <span class="nn">~\Anaconda3\envs\pvlib-dev\lib\urllib\request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
 <span class="g g-Whitespace">    </span><span class="mi">559</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">560</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">'default'</span><span class="p">,</span> <span class="s1">'http_error_default'</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
 <span class="ne">--&gt; </span><span class="mi">561</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">562</span> 
 <span class="g g-Whitespace">    </span><span class="mi">563</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>

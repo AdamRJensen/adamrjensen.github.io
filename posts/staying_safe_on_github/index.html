@@ -504,8 +504,8 @@
 <h2>Using secrets<a class="headerlink" href="#using-secrets" title="Permalink to this heading">#</a></h2>
 <p>Once the environment variables have been set up correctly, they can simply be called in any script like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="n">BSRN_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;BSRN_FTP_USERNAME&#39;</span><span class="p">]</span>
-<span class="n">BSRN_PASSWORD</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;BSRN_FTP_PASSWORD&#39;</span><span class="p">)</span>  <span class="c1"># using .get returns None if the variable is not available</span>
+<span class="n">BSRN_USERNAME</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">'BSRN_FTP_USERNAME'</span><span class="p">]</span>
+<span class="n">BSRN_PASSWORD</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'BSRN_FTP_PASSWORD'</span><span class="p">)</span>  <span class="c1"># using .get returns None if the variable is not available</span>
 </pre></div>
 </div>
 <p>and no one will be the wiser of your passwords!</p>
