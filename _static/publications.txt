@@ -1,7 +1,13 @@
 ## 2026
+[Sifnaios, I.](https://orcid.org/0000-0003-0933-2952), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2026). **Independent assessment of temperature models for floating photovoltaics**. Energy. doi:&nbsp;[10.1016/j.energy.2026.141267](http://dx.doi.org/10.1016/j.energy.2026.141267)
+
 [Bjerre, L.](https://orcid.org/0000-0002-2364-1607), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Larsen, S. N., Hylstrup Olsen, F. B., Pedersen, J. S., Thorup, M., Toft, M. (2026). **Safe to Speak, Teach, and Research? Experiences of Reprisals in Danish Academia**. The British Journal of Sociology. doi:&nbsp;[10.1111/1468-4446.70096](http://dx.doi.org/10.1111/1468-4446.70096)
 
+[Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Hansen, C. W.](https://orcid.org/0000-0002-8620-5378) (2026). **A Bifacial View Factor Model Considering Terrain Slope and Nonuniform Albedo**. IEEE Journal of Photovoltaics. doi:&nbsp;[10.1109/JPHOTOV.2026.3677506](http://dx.doi.org/10.1109/JPHOTOV.2026.3677506)
+
 [Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Riley, D. M.](https://orcid.org/0009-0008-0789-1535) (2026). **A Linear Programming Approach to Backtracking for Single-Axis Trackers on Rolling Terrain**. IEEE Journal of Photovoltaics. doi:&nbsp;[10.1109/JPHOTOV.2025.3645781](http://dx.doi.org/10.1109/JPHOTOV.2025.3645781)
+
+[**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), [Anderson, K. S.](https://orcid.org/0000-0002-1166-7957), [King, B. H.](https://orcid.org/0000-0002-5732-6226) (2026). **Shading Effects of Thin-Film Photovoltaic Modules**. IEEE Journal of Photovoltaics. doi:&nbsp;[10.1109/JPHOTOV.2026.3702674](http://dx.doi.org/10.1109/JPHOTOV.2026.3702674)
 
 
 ## 2025
@@ -25,11 +31,11 @@ Thorning, J. K., Spataru, S. V., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/
 
 
 ## 2024
-[Sengupta, M.](https://orcid.org/0000-0001-5622-4503), Habte, A., Wilbert, S., Gueymard, C., Remund, J., Lorenz, E., van Sark, W., [**Jensen, A.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856) (2024). **Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Fourth Edition**. []. doi:&nbsp;[10.2172/2448063](http://dx.doi.org/10.2172/2448063)
-
 Anderson, K. S., Hansen, C. W., Holmgren, W. F., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Mikofski, M. A., Driesse, A. (2024). **Pvlib Python: Recent Updates and Community Growth**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/pvsc57443.2024.10749197](http://dx.doi.org/10.1109/pvsc57443.2024.10749197)
 
 Driesse, A., [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Perez, R. (2024). **A continuous form of the Perez diffuse sky model for forward and reverse transposition**. Solar Energy. doi:&nbsp;[10.1016/j.solener.2023.112093](http://dx.doi.org/10.1016/j.solener.2023.112093)
+
+ (2024). **Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Fourth Edition**. []. doi:&nbsp;[10.69766/eneh5295](http://dx.doi.org/10.69766/eneh5295)
 
 [**Jensen, A. R.**](https://pub.orcid.org/v3.0/0000-0002-5554-9856), Hobbs, W. B., Anderson, K. S., Holmgren, W. F. (2024). **Missed Clouds in the NSRDB at Low Sun Elevation Angles**. 2024 IEEE 52nd Photovoltaic Specialist Conference (PVSC). doi:&nbsp;[10.1109/PVSC57443.2024.10748762](http://dx.doi.org/10.1109/PVSC57443.2024.10748762)
 
